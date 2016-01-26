@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,SKSplashDelegate {
     var window: UIWindow?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-   
+        
         Storyboard()
         IQKeyboard()
         HeYueSplash()
@@ -38,13 +38,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate,SKSplashDelegate {
     
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-         ShadowAnimation.start()
+        ShadowAnimation.start()
     }
     
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
     func Storyboard(){
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("intialVC") as UIViewController
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
@@ -69,6 +69,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,SKSplashDelegate {
         MobClick.startWithAppkey(UMENG_ID, reportPolicy: BATCH, channelId: nil)
         MobClick.setEncryptEnabled(true)
     }
-
+    
 }
 
