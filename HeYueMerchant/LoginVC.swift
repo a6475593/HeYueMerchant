@@ -10,6 +10,7 @@ import UIKit
 
 class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
     
+    @IBOutlet weak var WelcomeLabel: UILabel!
     @IBOutlet weak var usernameTF: DesignableTextField!
     @IBOutlet weak var passwordTF: DesignableTextField!
     @IBOutlet weak var isRememberPassWord: UIImageView!
@@ -22,12 +23,12 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
     @IBOutlet weak var mainIndicator: UIActivityIndicatorView!
     
     var isRememberpassword : Bool = false
-    
+    let  shadowAnimation =  JTSlideShadowAnimation()
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
-
+        shadowAnimation.animatedView = WelcomeLabel
+        shadowAnimation.start()
         passwordTF.delegate = self
         if SSKeychain.passwordForService(COM_FUSIDE_HEYUE_MERCHANT, account: USER_PASS_WORD) == nil{
             isRememberImage.image = UIImage(named: "check")

@@ -46,7 +46,7 @@
                                     <constraint firstAttribute="height" constant="20" id="CcM-Zq-Fe8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.98823529409999999" green="0.9408670436616825" blue="0.23726569604102629" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入帐号" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="KDa-II-dy6" userLabel="usernameTextField" customClass="DesignableTextField" customModule="HeYueMerchant" customModuleProvider="target">
@@ -137,7 +137,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -303,6 +303,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="WelcomeLabel" destination="CJR-Wu-MoO" id="FZS-S5-w2i"/>
                         <outlet property="isRememberBT" destination="o1b-2d-N3N" id="PRH-J0-EB0"/>
                         <outlet property="isRememberImage" destination="Um9-f2-nVn" id="MIZ-yo-3DH"/>
                         <outlet property="isRememberPassWord" destination="Um9-f2-nVn" id="7dv-yf-P6O"/>
