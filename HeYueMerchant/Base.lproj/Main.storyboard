@@ -33,6 +33,7 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="3wf-dA-yEH"/>
+                                        <exclude reference="PZx-kU-EFK"/>
                                     </mask>
                                 </variation>
                             </imageView>
@@ -228,6 +229,7 @@
                             <constraint firstItem="EpN-YT-Ydw" firstAttribute="leading" secondItem="MhK-aw-R95" secondAttribute="trailing" constant="-45" id="bo9-fx-BBO"/>
                             <constraint firstItem="CJR-Wu-MoO" firstAttribute="top" secondItem="Zb8-Xy-1Ar" secondAttribute="bottom" constant="15" id="c6H-gZ-9rz"/>
                             <constraint firstItem="Zb8-Xy-1Ar" firstAttribute="centerX" secondItem="b4N-AN-ly3" secondAttribute="centerX" id="cCb-Em-1pB"/>
+                            <constraint firstItem="Zb8-Xy-1Ar" firstAttribute="height" secondItem="b4N-AN-ly3" secondAttribute="height" multiplier="1:6" id="cq9-el-NMU"/>
                             <constraint firstItem="EpN-YT-Ydw" firstAttribute="centerX" secondItem="b4N-AN-ly3" secondAttribute="centerX" id="gFs-0J-5Jg"/>
                             <constraint firstItem="PwN-Bc-27o" firstAttribute="height" secondItem="bff-7o-07M" secondAttribute="height" id="gMv-r6-GHb"/>
                             <constraint firstItem="bff-7o-07M" firstAttribute="leading" secondItem="EpN-YT-Ydw" secondAttribute="leading" id="h41-QF-0fE"/>

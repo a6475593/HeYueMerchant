@@ -33,6 +33,8 @@ let ShareAPPlication = UIApplication.sharedApplication()
 
 let FileManager = NSFileManager.defaultManager()
 
+let ShadowAnimation =  JTSlideShadowAnimation()
+
 let COM_FUSIDE_HEYUE_MERCHANT = "com.fuside.heyuemerchant"
 
 let USER_IS_HAS_LOGINED = "user_is_has_logined"

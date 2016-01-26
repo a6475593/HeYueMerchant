@@ -23,12 +23,12 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
     @IBOutlet weak var mainIndicator: UIActivityIndicatorView!
     
     var isRememberpassword : Bool = false
-    let  shadowAnimation =  JTSlideShadowAnimation()
+    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        shadowAnimation.animatedView = WelcomeLabel
-        shadowAnimation.start()
+        ShadowAnimation.animatedView = WelcomeLabel
+        ShadowAnimation.start()
         passwordTF.delegate = self
         if SSKeychain.passwordForService(COM_FUSIDE_HEYUE_MERCHANT, account: USER_PASS_WORD) == nil{
             isRememberImage.image = UIImage(named: "check")
@@ -57,6 +57,7 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        ShadowAnimation.start()
         isRememberBT.addTarget(self, action: "isRememberpasswordBTAction", forControlEvents: .TouchUpInside)
         resigntextfieldBT.addTarget(self, action: "resignfirsttextfield", forControlEvents: .TouchUpInside)
         
