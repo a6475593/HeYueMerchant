@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="140" id="KGk-i7-Jjw" customClass="Goods" customModule="HeYueMerchant" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="114"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goods" translatesAutoresizingMaskIntoConstraints="NO" id="pkq-JC-YLA">
+                        <rect key="frame" x="8" y="8" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="eW7-hF-ciK"/>
+                            <constraint firstAttribute="width" secondItem="pkq-JC-YLA" secondAttribute="height" multiplier="1:1" id="z6K-uM-IOX"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="产品名称哦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naT-mn-4TY">
+                        <rect key="frame" x="123" y="23" width="85" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="单价：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxY-4h-jaa">
+                        <rect key="frame" x="123" y="54" width="51" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000.00元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSl-HT-8kN">
+                        <rect key="frame" x="175" y="54" width="80" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.91939570395862369" green="1" blue="0.90949441100164863" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="naT-mn-4TY" firstAttribute="leading" secondItem="pkq-JC-YLA" secondAttribute="trailing" constant="15" id="4e0-QA-sGb"/>
+                    <constraint firstItem="pkq-JC-YLA" firstAttribute="width" secondItem="pkq-JC-YLA" secondAttribute="height" multiplier="1:1" id="5kR-iH-DwC"/>
+                    <constraint firstItem="dxY-4h-jaa" firstAttribute="leading" secondItem="naT-mn-4TY" secondAttribute="leading" id="EJt-D1-ZUP"/>
+                    <constraint firstItem="lSl-HT-8kN" firstAttribute="top" secondItem="dxY-4h-jaa" secondAttribute="top" id="FkT-9O-zQp"/>
+                    <constraint firstItem="naT-mn-4TY" firstAttribute="top" secondItem="pkq-JC-YLA" secondAttribute="top" constant="15" id="HfZ-gQ-8XF"/>
+                    <constraint firstAttribute="topMargin" secondItem="pkq-JC-YLA" secondAttribute="top" id="MKl-aC-cz5"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="pkq-JC-YLA" secondAttribute="leading" id="iAs-8a-yNh"/>
+                    <constraint firstItem="lSl-HT-8kN" firstAttribute="leading" secondItem="dxY-4h-jaa" secondAttribute="trailing" constant="1" id="vTu-gu-6hC"/>
+                    <constraint firstItem="dxY-4h-jaa" firstAttribute="top" secondItem="naT-mn-4TY" secondAttribute="bottom" constant="10" id="vkD-vr-FSx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="goodsImage" destination="pkq-JC-YLA" id="1nd-1N-ShA"/>
+                <outlet property="goodsname" destination="naT-mn-4TY" id="nXN-J5-C0h"/>
+                <outlet property="prices" destination="lSl-HT-8kN" id="Rrl-4n-CAv"/>
+            </connections>
+            <point key="canvasLocation" x="1073" y="616.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="goods" width="64" height="64"/>
+    </resources>
+</document>
