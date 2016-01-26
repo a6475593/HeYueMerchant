@@ -75,6 +75,10 @@
 		A7316E2F1C57A0C700AC6262 /* UserHelpDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7316E221C57A0C700AC6262 /* UserHelpDetailsVC.swift */; };
 		A7316E301C57A0C700AC6262 /* UserHelpTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7316E231C57A0C700AC6262 /* UserHelpTVC.swift */; };
 		A7316E321C57A11A00AC6262 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7316E311C57A11A00AC6262 /* SCLAlertView.swift */; };
+		A749D95A1C57C0CA00036BE5 /* Video.plist in Resources */ = {isa = PBXBuildFile; fileRef = A749D9551C57C0CA00036BE5 /* Video.plist */; };
+		A749D95B1C57C0CA00036BE5 /* STLVideoFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = A749D9571C57C0CA00036BE5 /* STLVideoFunctions.m */; };
+		A749D95C1C57C0CA00036BE5 /* STLVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A749D9591C57C0CA00036BE5 /* STLVideoViewController.m */; };
+		A749D95E1C57C23100036BE5 /* BridgeLoop-640p.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A749D95D1C57C23100036BE5 /* BridgeLoop-640p.mp4 */; };
 		A74E53841C37C73300387114 /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = A74E53651C37C73300387114 /* IQNSArray+Sort.m */; };
 		A74E53851C37C73300387114 /* IQUITextFieldView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = A74E53671C37C73300387114 /* IQUITextFieldView+Additions.m */; };
 		A74E53861C37C73300387114 /* IQUIView+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = A74E53691C37C73300387114 /* IQUIView+Hierarchy.m */; };
@@ -232,6 +236,12 @@
 		A7316E221C57A0C700AC6262 /* UserHelpDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserHelpDetailsVC.swift; path = ViewController/UserHelpDetailsVC.swift; sourceTree = "<group>"; };
 		A7316E231C57A0C700AC6262 /* UserHelpTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserHelpTVC.swift; path = ViewController/UserHelpTVC.swift; sourceTree = "<group>"; };
 		A7316E311C57A11A00AC6262 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCLAlertView.swift; path = SCLAlertView/SCLAlertView.swift; sourceTree = "<group>"; };
+		A749D9551C57C0CA00036BE5 /* Video.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Video.plist; sourceTree = "<group>"; };
+		A749D9561C57C0CA00036BE5 /* STLVideoFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLVideoFunctions.h; sourceTree = "<group>"; };
+		A749D9571C57C0CA00036BE5 /* STLVideoFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLVideoFunctions.m; sourceTree = "<group>"; };
+		A749D9581C57C0CA00036BE5 /* STLVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLVideoViewController.h; sourceTree = "<group>"; };
+		A749D9591C57C0CA00036BE5 /* STLVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLVideoViewController.m; sourceTree = "<group>"; };
+		A749D95D1C57C23100036BE5 /* BridgeLoop-640p.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BridgeLoop-640p.mp4"; path = "Resources/BridgeLoop-640p.mp4"; sourceTree = "<group>"; };
 		A74E53641C37C73300387114 /* IQNSArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQNSArray+Sort.h"; sourceTree = "<group>"; };
 		A74E53651C37C73300387114 /* IQNSArray+Sort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQNSArray+Sort.m"; sourceTree = "<group>"; };
 		A74E53661C37C73300387114 /* IQUITextFieldView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUITextFieldView+Additions.h"; sourceTree = "<group>"; };
@@ -389,6 +399,7 @@
 		A721DEEC1C31568D008F34F5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A749D9541C57C0CA00036BE5 /* STLBGVideo */,
 				A7FD6B0D1C57DA2800219B4A /* JTSlideShadowAnimation */,
 				A7FD6B011C57C05F00219B4A /* LeafNotificationView */,
 				A7CB2D7E1C56563200A2D04B /* PickerView */,
@@ -511,9 +522,22 @@
 			name = Service;
 			sourceTree = "<group>";
 		};
+		A749D9541C57C0CA00036BE5 /* STLBGVideo */ = {
+			isa = PBXGroup;
+			children = (
+				A749D9551C57C0CA00036BE5 /* Video.plist */,
+				A749D9561C57C0CA00036BE5 /* STLVideoFunctions.h */,
+				A749D9571C57C0CA00036BE5 /* STLVideoFunctions.m */,
+				A749D9581C57C0CA00036BE5 /* STLVideoViewController.h */,
+				A749D9591C57C0CA00036BE5 /* STLVideoViewController.m */,
+			);
+			path = STLBGVideo;
+			sourceTree = "<group>";
+		};
 		A74BB02F1C3FFBED00AB152F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A749D95D1C57C23100036BE5 /* BridgeLoop-640p.mp4 */,
 				A7316DD71C57A01F00AC6262 /* bg0@2x.png */,
 				A7316DD81C57A01F00AC6262 /* bg1@2x.png */,
 				A7316DD91C57A01F00AC6262 /* bg2@2x.png */,
@@ -727,10 +751,10 @@
 			children = (
 				A7316E051C57A05700AC6262 /* AppDelegate.swift */,
 				A7316E061C57A05700AC6262 /* Assets.xcassets */,
+				A7316E0A1C57A05700AC6262 /* Main.storyboard */,
+				A7316E091C57A05700AC6262 /* LaunchScreen.storyboard */,
 				A7316E071C57A05700AC6262 /* Header.h */,
 				A7316E081C57A05700AC6262 /* Info.plist */,
-				A7316E091C57A05700AC6262 /* LaunchScreen.storyboard */,
-				A7316E0A1C57A05700AC6262 /* Main.storyboard */,
 			);
 			name = Original;
 			sourceTree = "<group>";
@@ -946,6 +970,8 @@
 				A7316DE41C57A01F00AC6262 /* bg3@2x.png in Resources */,
 				A7316DE81C57A01F00AC6262 /* title1@2x.png in Resources */,
 				A7316E041C57A03C00AC6262 /* TradeDetailsHeader.xib in Resources */,
+				A749D95A1C57C0CA00036BE5 /* Video.plist in Resources */,
+				A749D95E1C57C23100036BE5 /* BridgeLoop-640p.mp4 in Resources */,
 				A7316DEA1C57A01F00AC6262 /* title3@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -982,6 +1008,7 @@
 				A72AD9781C3EC96E004628E3 /* SweetAlert.swift in Sources */,
 				A74E53841C37C73300387114 /* IQNSArray+Sort.m in Sources */,
 				A72D02DB1C4E955500F162BF /* SDWebImageDecoder.m in Sources */,
+				A749D95B1C57C0CA00036BE5 /* STLVideoFunctions.m in Sources */,
 				A7316E271C57A0C700AC6262 /* LoginVC.swift in Sources */,
 				A7316DF21C57A02E00AC6262 /* DesignableTextField.swift in Sources */,
 				A7316DF31C57A02E00AC6262 /* DesignableTextView.swift in Sources */,
@@ -1035,6 +1062,7 @@
 				A7FD6B081C57C05F00219B4A /* LeafNotification.m in Sources */,
 				A7FA5CFB1C3ACF4300ECC879 /* MJRefreshStateHeader.m in Sources */,
 				A74E538C1C37C73300387114 /* IQBarButtonItem.m in Sources */,
+				A749D95C1C57C0CA00036BE5 /* STLVideoViewController.m in Sources */,
 				A7316E291C57A0C700AC6262 /* MineVC.swift in Sources */,
 				A74E53871C37C73300387114 /* IQUIViewController+Additions.m in Sources */,
 				A7AD715D1C42A7A1000D58E6 /* Upload.swift in Sources */,
