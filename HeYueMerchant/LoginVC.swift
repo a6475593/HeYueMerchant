@@ -26,6 +26,7 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+
         passwordTF.delegate = self
         if SSKeychain.passwordForService(COM_FUSIDE_HEYUE_MERCHANT, account: USER_PASS_WORD) == nil{
             isRememberImage.image = UIImage(named: "check")
