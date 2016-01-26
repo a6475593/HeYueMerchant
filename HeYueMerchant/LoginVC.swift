@@ -22,10 +22,11 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
     @IBOutlet weak var mainIndicator: UIActivityIndicatorView!
     
     var isRememberpassword : Bool = false
-  
+    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
 
         passwordTF.delegate = self
         if SSKeychain.passwordForService(COM_FUSIDE_HEYUE_MERCHANT, account: USER_PASS_WORD) == nil{
@@ -151,7 +152,7 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
             let url = "http://apis.baidu.com/netpopo/express/express2"
             request(.GET, url, parameters: nil, encoding: .JSON).responseJSON { (response) -> Void in
                 if response.result.isFailure {
-                    SweetAlert().showAlert("警告", subTitle: "你的网络好像挂了", style: AlertStyle.CustomImag(imageFile: "title0.png"))
+                    LeafNotification.showInController(self, withText: "您的网络好像挂了", type: LeafNotificationTypeWarrning)
                 }else if response.result.isSuccess {
                     //MARK
                     
@@ -181,15 +182,15 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
                     }else if response.response?.statusCode == 404 {
                         self.mainIndicator.stopAnimating()
                         ShareAPPlication.networkActivityIndicatorVisible = false
-                        SweetAlert().showAlert("警告", subTitle: "404错误，请联系我们", style: AlertStyle.CustomImag(imageFile: "title1.png"))
+                        LeafNotification.showInController(self, withText: "404错误，请联系我们", type: LeafNotificationTypeWarrning)
                     }else if response.response?.statusCode == 500{
                         self.mainIndicator.stopAnimating()
                         ShareAPPlication.networkActivityIndicatorVisible = false
-                        SweetAlert().showAlert("警告", subTitle: "500错误，请联系我们", style: AlertStyle.CustomImag(imageFile: "title2.png"))
+                        LeafNotification.showInController(self, withText: "500错误，请联系我们", type: LeafNotificationTypeWarrning)
                     }else{
                         self.mainIndicator.stopAnimating()
                         ShareAPPlication.networkActivityIndicatorVisible = false
-                        SweetAlert().showAlert("警告", subTitle: "未知错误，请联系我们", style: AlertStyle.CustomImag(imageFile: "title3.png"))
+                        LeafNotification.showInController(self, withText: "未知错误，请联系我们", type: LeafNotificationTypeWarrning)
                     }
                 }
             }

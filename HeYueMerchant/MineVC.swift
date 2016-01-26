@@ -27,9 +27,9 @@ class MineVC: BaseViewController ,UIActionSheetDelegate,UINavigationControllerDe
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-  
-   
         
+
+     
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "和悦商户", style: .Plain, target: self, action: nil)
         checkPortraitBT.addTarget(self, action:
             "toCheckPortrait", forControlEvents: .TouchUpInside)
@@ -55,7 +55,7 @@ class MineVC: BaseViewController ,UIActionSheetDelegate,UINavigationControllerDe
                 PortraitPickerController.sourceType = .Camera
                 self.presentViewController(PortraitPickerController, animated: true, completion: nil)
             }else{
-                SweetAlert().showAlert("温馨提示", subTitle: "您的手机没有相机功能", style: AlertStyle.CustomImag(imageFile: "title2.png"))
+                LeafNotification.showInController(self, withText: "您的手机没有相机功能", type: LeafNotificationTypeSuccess)
             }
             break
         case 2 : //从相册选择
@@ -64,7 +64,7 @@ class MineVC: BaseViewController ,UIActionSheetDelegate,UINavigationControllerDe
                 PortraitPickerController.sourceType = .PhotoLibrary
                 self.presentViewController(PortraitPickerController, animated: true, completion: nil)
             }else{
-                SweetAlert().showAlert("温馨提示", subTitle: "您的手机没有图库功能", style: AlertStyle.CustomImag(imageFile: "title2.png"))
+                LeafNotification.showInController(self, withText: "您的手机没有图库功能", type: LeafNotificationTypeWarrning)
             }
             break
         default : break
@@ -79,6 +79,7 @@ class MineVC: BaseViewController ,UIActionSheetDelegate,UINavigationControllerDe
             UIImageWriteToSavedPhotosAlbum(portraitimage,nil,nil,nil)
             // MARK : - to upload
         }
+        LeafNotification.showInController(self, withText: "更改成功", type: LeafNotificationTypeSuccess)
         PortraitPickerController.dismissViewControllerAnimated(true, completion: nil)
     }
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {

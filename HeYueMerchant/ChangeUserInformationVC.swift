@@ -1,5 +1,5 @@
 //
-//  CheckPortrailVC.swift
+//  ChangeUserInformationVC.swift
 //  HeYueMerchant
 //
 //  Created by 王玉琨 on 15/12/31.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CheckPortrailVC: BaseViewController {
+class ChangeUserInformationVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1456,10 +1456,10 @@
             </objects>
             <point key="canvasLocation" x="1766" y="-890"/>
         </scene>
-        <!--Check PortrailVC-->
+        <!--Change User InformationVC-->
         <scene sceneID="Zbg-K0-MoJ">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="xRr-mP-DaA" customClass="CheckPortrailVC" customModule="HeYueMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="xRr-mP-DaA" customClass="ChangeUserInformationVC" customModule="HeYueMerchant" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qSB-LF-EmZ"/>
                         <viewControllerLayoutGuide type="bottom" id="SWF-Le-8vq"/>
