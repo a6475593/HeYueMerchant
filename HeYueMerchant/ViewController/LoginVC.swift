@@ -27,6 +27,8 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        ShareAPPlication.setStatusBarStyle(.LightContent, animated: true)
+
         ShadowAnimation.animatedView = WelcomeLabel
         ShadowAnimation.start()
         passwordTF.delegate = self

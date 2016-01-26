@@ -23,13 +23,14 @@ class MineVC: BaseViewController ,UIActionSheetDelegate,UINavigationControllerDe
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-
+        
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        ShareAPPlication.setStatusBarStyle(.Default, animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
-     
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "和悦商户", style: .Plain, target: self, action: nil)
         checkPortraitBT.addTarget(self, action:
             "toCheckPortrait", forControlEvents: .TouchUpInside)
