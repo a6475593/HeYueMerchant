@@ -12,22 +12,25 @@ import UIKit
 
 class MineVC: BaseViewController ,UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate{
     
+    @IBOutlet weak var PortraitView: UIView!
     @IBOutlet weak var checkPortraitBT: DesignableButton!
     @IBOutlet weak var PortraitImage: DesignableImageView!
     @IBOutlet weak var MainScrollView: UIScrollView!
+
+    
     var checkPortraitActionSheet = UIActionSheet()
     let PortraitPickerController = UIImagePickerController()
     let Idleimages = NSMutableArray()
     let Refreshingimages = NSMutableArray()
     var fromCamera = true
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-    }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         ShareAPPlication.setStatusBarStyle(.Default, animated: true)
+    }
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        PortraitImage.cornerRadius = self.view.frame.height/2.5/2/2
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +42,7 @@ class MineVC: BaseViewController ,UIActionSheetDelegate,UINavigationControllerDe
         PortraitPickerController.delegate = self
         
         PortraitImage.sd_setImageWithURL(NSURL(string: "http://article.joyme.com/article/uploads/allimg/201408/1409033740225216.jpg"), placeholderImage: UIImage(named: "myheader.png"), options: .RefreshCached)
+  
         SetUpScrollView()
         
         
@@ -87,6 +91,7 @@ class MineVC: BaseViewController ,UIActionSheetDelegate,UINavigationControllerDe
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     func SetUpScrollView(){
+        
         for var i = 1;i<60;i++ {
             let image = UIImage(named: "dropdown_anim__000\(i)")
             Idleimages.addObject(image!)

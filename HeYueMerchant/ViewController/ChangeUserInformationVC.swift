@@ -12,10 +12,14 @@ class ChangeUserInformationVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let CompleteButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "CompleteAction")
+        self.navigationItem.rightBarButtonItem = CompleteButton
     }
 
-    
+    func CompleteAction(){
+        print("has complete user infomation ")
+        self.navigationController?.popViewControllerAnimated(true)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

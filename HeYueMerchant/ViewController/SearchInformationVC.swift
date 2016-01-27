@@ -77,6 +77,7 @@ class SearchInformationVC: BaseViewController,UIPickerViewDelegate,UIPickerViewD
     }
     func Search(){
         print("完成")
+        self.navigationController?.popViewControllerAnimated(true)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

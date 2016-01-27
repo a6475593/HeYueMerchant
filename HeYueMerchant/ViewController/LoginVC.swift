@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginVC: STLVideoViewController,EAIntroDelegate,UITextFieldDelegate{
+class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
     
     @IBOutlet weak var WelcomeLabel: UILabel!
     @IBOutlet weak var usernameTF: DesignableTextField!

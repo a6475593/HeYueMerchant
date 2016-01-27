@@ -10,10 +10,9 @@ import UIKit
 
 class MoreVC: BaseViewController,UIAlertViewDelegate {
     
+    @IBOutlet weak var MainScrollView: UIScrollView!
     @IBOutlet weak var logoutButton: DesignableButton!
-    @IBOutlet weak var currentversionButton: UILabel!
     @IBOutlet weak var TelePhoneButton: UIButton!
-    @IBOutlet weak var TelePhoneLabel: UILabel!
     @IBOutlet weak var ClearCacheButton: UIButton!
     @IBOutlet weak var UpdateButton: UIButton!
     
@@ -33,13 +32,17 @@ class MoreVC: BaseViewController,UIAlertViewDelegate {
         UpdateButton.addTarget(self, action: "updateaction", forControlEvents: .TouchUpInside)
         SetUpClearAlertView()
         
+        MainScrollView.header = MJRefreshHeader(refreshingBlock: { () -> Void in
+            self.MainScrollView.header.endRefreshing()
+        })
         
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         if let appVersion = GetSetValue.stringForKey(APP_VERSION){
-            currentversionButton.text = "当前版本: \(appVersion)"
+            UpdateButton.setTitle("版本信息:\(appVersion)", forState: .Normal)
+
         }
     }
     
@@ -61,7 +64,8 @@ class MoreVC: BaseViewController,UIAlertViewDelegate {
     
     func telephoneaction(){
         callAlertView.title = "提示"
-        callAlertView.message = "确定要给\(TelePhoneLabel.text!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)打电话吗？"
+        callAlertView.message = "确定要给\(CUSTOMER_SERVICE_PHONE_NUMBER)打电话吗？"
+        //TelePhoneLabel.text!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         callAlertView.addButtonWithTitle("取消")
         callAlertView.addButtonWithTitle("确定")
         callAlertView.cancelButtonIndex = 0
@@ -109,7 +113,8 @@ class MoreVC: BaseViewController,UIAlertViewDelegate {
             if(buttonIndex==alertView.cancelButtonIndex){
                 return
             } else {
-                let myurl = NSURL(string: "tel://"+TelePhoneLabel.text!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!
+                let myurl = NSURL(string: "tel://" + CUSTOMER_SERVICE_PHONE_NUMBER)!
+                //TelePhoneLabel.text!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
                 ShareAPPlication.openURL(myurl)
             }
             break

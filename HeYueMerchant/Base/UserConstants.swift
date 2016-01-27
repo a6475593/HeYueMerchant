@@ -47,3 +47,5 @@ let HAD_SHOWN_USER_GUIDER_VC = "had_shown_user_guider_vc"
 
 let APP_VERSION = "app_version"
 
+let CUSTOMER_SERVICE_PHONE_NUMBER = "400-067-8685"
+
