@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A70259271C592AB6009A179C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A70259261C592AB6009A179C /* README.md */; };
 		A72AD9741C3EC961004628E3 /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A72AD9711C3EC961004628E3 /* EAIntroPage.m */; };
 		A72AD9751C3EC961004628E3 /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = A72AD9731C3EC961004628E3 /* EAIntroView.m */; };
 		A72AD9781C3EC96E004628E3 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AD9771C3EC96E004628E3 /* SweetAlert.swift */; };
@@ -146,7 +145,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A70259261C592AB6009A179C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A721DEBB1C31540E008F34F5 /* HeYueMerchant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeYueMerchant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72AD9701C3EC961004628E3 /* EAIntroPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroPage.h; sourceTree = "<group>"; };
 		A72AD9711C3EC961004628E3 /* EAIntroPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroPage.m; sourceTree = "<group>"; };
@@ -373,7 +371,6 @@
 			children = (
 				A721DEBD1C31540E008F34F5 /* HeYueMerchant */,
 				A721DEBC1C31540E008F34F5 /* Products */,
-				A70259261C592AB6009A179C /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1028,7 +1025,6 @@
 				A7914EE91C4FBF7800A2E087 /* SSKeychain.m in Sources */,
 				A74E53891C37C73300387114 /* IQKeyboardManager.m in Sources */,
 				A7316E2E1C57A0C700AC6262 /* UserGuiderVC.swift in Sources */,
-				A70259271C592AB6009A179C /* README.md in Sources */,
 				A72D02E11C4E955500F162BF /* UIImage+GIF.m in Sources */,
 				A74E538D1C37C73300387114 /* IQTitleBarButtonItem.m in Sources */,
 				A7FA5CF61C3ACF4300ECC879 /* MJRefreshBackGifFooter.m in Sources */,
