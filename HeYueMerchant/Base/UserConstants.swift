@@ -36,6 +36,8 @@ let FileManager = NSFileManager.defaultManager()
 let ShadowAnimation =  JTSlideShadowAnimation()
 
 let COM_FUSIDE_HEYUE_MERCHANT = "com.fuside.heyuemerchant"
+//MARK: 0券码 1实物
+let USER_TYPE = "user_type"
 
 let USER_IS_HAS_LOGINED = "user_is_has_logined"
 

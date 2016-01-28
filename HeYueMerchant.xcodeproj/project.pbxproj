@@ -111,6 +111,7 @@
 		A7AD715D1C42A7A1000D58E6 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD714F1C42A7A1000D58E6 /* Upload.swift */; };
 		A7AD715E1C42A7A1000D58E6 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD71501C42A7A1000D58E6 /* Validation.swift */; };
 		A7B0F50B1C4805C30095966E /* PendulumView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0F50A1C4805C30095966E /* PendulumView.m */; };
+		A7BA9F421C5A6B9300D254DB /* ObjectMerchantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA9F411C5A6B9300D254DB /* ObjectMerchantVC.swift */; };
 		A7C3381A1C3C1C9900FEEA10 /* SKSplashIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C338171C3C1C9900FEEA10 /* SKSplashIcon.m */; };
 		A7C3381B1C3C1C9900FEEA10 /* SKSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C338191C3C1C9900FEEA10 /* SKSplashView.m */; };
 		A7C338231C3C2C2D00FEEA10 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C338221C3C2C2D00FEEA10 /* UIView+Toast.m */; };
@@ -293,6 +294,7 @@
 		A7AD71501C42A7A1000D58E6 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A7B0F5091C4805C30095966E /* PendulumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendulumView.h; sourceTree = "<group>"; };
 		A7B0F50A1C4805C30095966E /* PendulumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendulumView.m; sourceTree = "<group>"; };
+		A7BA9F411C5A6B9300D254DB /* ObjectMerchantVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObjectMerchantVC.swift; path = ViewController/ObjectMerchantVC.swift; sourceTree = "<group>"; };
 		A7C338161C3C1C9900FEEA10 /* SKSplashIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSplashIcon.h; sourceTree = "<group>"; };
 		A7C338171C3C1C9900FEEA10 /* SKSplashIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSplashIcon.m; sourceTree = "<group>"; };
 		A7C338181C3C1C9900FEEA10 /* SKSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSplashView.h; sourceTree = "<group>"; };
@@ -433,6 +435,7 @@
 				A7316E211C57A0C700AC6262 /* UserGuiderVC.swift */,
 				A7316E221C57A0C700AC6262 /* UserHelpDetailsVC.swift */,
 				A7316E231C57A0C700AC6262 /* UserHelpTVC.swift */,
+				A7BA9F411C5A6B9300D254DB /* ObjectMerchantVC.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -1066,6 +1069,7 @@
 				A7316E291C57A0C700AC6262 /* MineVC.swift in Sources */,
 				A74E53871C37C73300387114 /* IQUIViewController+Additions.m in Sources */,
 				A7AD715D1C42A7A1000D58E6 /* Upload.swift in Sources */,
+				A7BA9F421C5A6B9300D254DB /* ObjectMerchantVC.swift in Sources */,
 				A7316DF11C57A02E00AC6262 /* DesignableImageView.swift in Sources */,
 				A7316E321C57A11A00AC6262 /* SCLAlertView.swift in Sources */,
 				A74E538E1C37C73300387114 /* IQToolbar.m in Sources */,

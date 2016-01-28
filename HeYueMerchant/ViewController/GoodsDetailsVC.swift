@@ -34,6 +34,8 @@ class GoodsDetailsVC: BaseViewController,UITextFieldDelegate,UITextViewDelegate{
     
     func setupView(){
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "商品详情", style: .Plain, target: self, action: nil)
+        let SearchButton = UIBarButtonItem(title: "查询余额", style: UIBarButtonItemStyle.Done, target: self, action: "searchremainingaction")
+        self.navigationItem.rightBarButtonItem = SearchButton
         for var i = 1;i<60;i++ {
             let image = UIImage(named: "dropdown_anim__000\(i)")
             Idleimages.addObject(image!)
@@ -48,6 +50,16 @@ class GoodsDetailsVC: BaseViewController,UITextFieldDelegate,UITextViewDelegate{
         header.setImages(Refreshingimages as [AnyObject], forState: MJRefreshStatePulling)
         mainScrollView.header = header
     }
+    
+    func searchremainingaction(){
+        if isTelNumber(mobileTextField.text!){
+            // 请求服务器等后及progress
+            LeafNotification.showInController(self, withText: "请求成功，请耐心等待", type: LeafNotificationTypeSuccess)
+        }else{
+            LeafNotification.showInController(self, withText: "请输入正确的手机号", type: LeafNotificationTypeWarrning)
+        }
+    }
+    
     func goodsgountsbuttonaction(){
         goodsCountsTextField.becomeFirstResponder()
         

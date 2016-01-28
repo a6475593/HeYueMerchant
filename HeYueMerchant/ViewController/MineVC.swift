@@ -16,12 +16,14 @@ class MineVC: BaseViewController ,UIActionSheetDelegate,UINavigationControllerDe
     @IBOutlet weak var checkPortraitBT: DesignableButton!
     @IBOutlet weak var PortraitImage: DesignableImageView!
     @IBOutlet weak var MainScrollView: UIScrollView!
+    @IBOutlet weak var CashButton: UIButton!
 
     
     var checkPortraitActionSheet = UIActionSheet()
     let PortraitPickerController = UIImagePickerController()
     let Idleimages = NSMutableArray()
     let Refreshingimages = NSMutableArray()
+    let usertype = GetSetValue.integerForKey(USER_TYPE)
     var fromCamera = true
     
     override func viewWillAppear(animated: Bool) {
@@ -37,6 +39,7 @@ class MineVC: BaseViewController ,UIActionSheetDelegate,UINavigationControllerDe
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "和悦商户", style: .Plain, target: self, action: nil)
         checkPortraitBT.addTarget(self, action:
             "toCheckPortrait", forControlEvents: .TouchUpInside)
+        CashButton.addTarget(self, action: "cashaction", forControlEvents: .TouchUpInside)
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
         PortraitPickerController.allowsEditing = true
         PortraitPickerController.delegate = self
@@ -50,8 +53,18 @@ class MineVC: BaseViewController ,UIActionSheetDelegate,UINavigationControllerDe
     func toCheckPortrait(){
         checkPortraitActionSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "取消", destructiveButtonTitle: nil, otherButtonTitles: "拍照", "从相册选择")
         checkPortraitActionSheet.showFromTabBar((self.tabBarController?.tabBar)!)
-        
     }
+    
+    func cashaction(){
+        if usertype == 0 {
+            let goodstvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ticketmerchant")
+            self.navigationController?.pushViewController(goodstvc, animated: true)
+        }else if usertype == 1 {
+            let objectvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("objectmerchant")
+            self.navigationController?.pushViewController(objectvc, animated: true)
+        }
+    }
+    
     func actionSheet(actionSheet: UIActionSheet, didDismissWithButtonIndex buttonIndex: Int) {
         switch buttonIndex{
         case 1 ://拍照

@@ -28,7 +28,7 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         ShareAPPlication.setStatusBarStyle(.LightContent, animated: true)
-
+        
         ShadowAnimation.animatedView = WelcomeLabel
         ShadowAnimation.start()
         passwordTF.delegate = self
@@ -59,6 +59,17 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        /*
+        let url = "http://192.168.1.109:8080/ws/orderRefund.action"
+        let parameters = ["shopId":"2888","terminalNo":"88156408","encodingType":"1","signType":"1","orderId":"20160127094158000005","amount":"2","signData":"61ED50B5CBB73FF67792763C4AD1CBFB"]
+        _ = "shopId=2888&terminalNo=88156408&encodingType=1&signType=1&orderId=20160127094158000005&amount=2"
+        AlamofireRequest(.POST, url, parameters: parameters, encoding: ParameterEncoding.URL).responseJSON { (response) -> Void in
+            if let value = response.result.value{
+                let data = JSON(value)
+                print("from huaiyu data is  \(data)")
+            }
+        }
+        */
         ShadowAnimation.start()
         isRememberBT.addTarget(self, action: "isRememberpasswordBTAction", forControlEvents: .TouchUpInside)
         resigntextfieldBT.addTarget(self, action: "resignfirsttextfield", forControlEvents: .TouchUpInside)
@@ -154,7 +165,7 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
         let password = self.passwordTF.text?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         if identifier == "logintomine"{
             let url = "http://apis.baidu.com/netpopo/express/express2"
-            request(.GET, url, parameters: nil, encoding: .JSON).responseJSON { (response) -> Void in
+            AlamofireRequest(.GET, url, parameters: nil, encoding: .JSON).responseJSON { (response) -> Void in
                 if response.result.isFailure {
                     LeafNotification.showInController(self, withText: "您的网络好像挂了", type: LeafNotificationTypeWarrning)
                 }else if response.result.isSuccess {
@@ -162,7 +173,7 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
                     
                     SSKeychain.setPassword(password, forService: COM_FUSIDE_HEYUE_MERCHANT, account: USER_PASS_WORD)
                     
-                    if response.response?.statusCode == 200 && username == "wang" && password == "yukun"{
+                    if response.response?.statusCode == 200 && (username == "wang" || username == "liu" ) && password == "123456"{
                         //MARK:Umeng 帐号统计
                         MobClick.profileSignInWithPUID(username)
                         //MARK:页面
@@ -175,6 +186,11 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
                             SSKeychain.setPassword(password, forService: COM_FUSIDE_HEYUE_MERCHANT, account: USER_PASS_WORD)
                         }else{
                             SSKeychain.setPassword("", forService: COM_FUSIDE_HEYUE_MERCHANT, account: USER_PASS_WORD)
+                        }
+                        if username == "wang"{
+                            GetSetValue.setInteger(0, forKey: USER_TYPE)
+                        }else{
+                            GetSetValue.setInteger(1, forKey: USER_TYPE)
                         }
                         //MARK:跳转
                         self.performSegueWithIdentifier("logintomine", sender: self)
@@ -201,4 +217,5 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
         }
         return false
     }
+    
 }
