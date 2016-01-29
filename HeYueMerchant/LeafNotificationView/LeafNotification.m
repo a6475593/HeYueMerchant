@@ -62,7 +62,8 @@
     }
 }
 -(instancetype)initWithController:(UIViewController *)controller text:(NSString *)text{
-    if([self initWithFrame:CGRectMake(0, -DEFAULT_HEIGHT, controller.view.bounds.size.width*DEFAULT_RATE_WIDTH, DEFAULT_HEIGHT)]){
+    self = [self initWithFrame:CGRectMake(0, -DEFAULT_HEIGHT, controller.view.bounds.size.width*DEFAULT_RATE_WIDTH, DEFAULT_HEIGHT)];
+    if(self){
         self.text = text;
         self.controller = controller;
         self.textLabel.text = text;
@@ -83,12 +84,16 @@
 }
 -(void)showWithAnimation:(BOOL)animation{
     CGRect frame = self.frame;
-    if([self.controller.parentViewController isKindOfClass:[UINavigationController class]] && !self.controller.navigationController.navigationBar.isHidden && self.controller.edgesForExtendedLayout != UIRectEdgeNone ){
+    if([self.controller.parentViewController isKindOfClass:[UINavigationController class]] && !self.controller.navigationController.navigationBar.isHidden ){
+        frame.origin.y = -DEFAULT_SPACE_IMG_TEXT;
+    }
+    /*
+     else if ([self.controller.parentViewController isKindOfClass:[UINavigationController class]] && !self.controller.navigationController.navigationBar.isHidden && self.controller.edgesForExtendedLayout != UIRectEdgeNone){
+     frame.origin.y = -DEFAULT_SPACE_IMG_TEXT;
+     }
+    */
+    else{
         frame.origin.y = 64-DEFAULT_SPACE_IMG_TEXT;
-    }else if ([self.controller.parentViewController isKindOfClass:[UINavigationController class]] && !self.controller.navigationController.navigationBar.isHidden && self.controller.edgesForExtendedLayout == UIRectEdgeNone){
-        frame.origin.y = -DEFAULT_SPACE_IMG_TEXT;
-    }else{
-        frame.origin.y = -DEFAULT_SPACE_IMG_TEXT;
     }
     if(animation){
         [UIView animateWithDuration:DEFAULT_ANIMATON_DURATION animations:^{

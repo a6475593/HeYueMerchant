@@ -1193,7 +1193,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LanchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Na Boyuan Internet Technology Service Co., LTD (X5ZQ4LVAUA)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HeYueMerchant/Original/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1216,7 +1216,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LanchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Na Boyuan Internet Technology Service Co., LTD (X5ZQ4LVAUA)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HeYueMerchant/Original/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;

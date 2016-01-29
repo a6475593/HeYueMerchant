@@ -17,14 +17,14 @@
                         <viewControllerLayoutGuide type="bottom" id="4pn-XR-3gI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="b4N-AN-ly3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="ris-Oc-sQO">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stone" translatesAutoresizingMaskIntoConstraints="NO" id="Zb8-Xy-1Ar">
-                                <rect key="frame" x="233" y="84" width="134" height="100"/>
+                                <rect key="frame" x="241" y="20" width="118" height="89"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Zb8-Xy-1Ar" secondAttribute="height" multiplier="1:1" id="3wf-dA-yEH"/>
                                     <constraint firstAttribute="height" constant="100" id="PZx-kU-EFK"/>
@@ -38,11 +38,11 @@
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2g-ze-IIA" userLabel="resignfirstBT">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎登录和悦商家客户端" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJR-Wu-MoO">
-                                <rect key="frame" x="207" y="199" width="187" height="20"/>
+                                <rect key="frame" x="207" y="124" width="187" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="CcM-Zq-Fe8"/>
                                 </constraints>
@@ -51,7 +51,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入帐号" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="KDa-II-dy6" userLabel="usernameTextField" customClass="DesignableTextField" customModule="HeYueMerchant" customModuleProvider="target">
-                                <rect key="frame" x="20" y="229" width="560" height="44"/>
+                                <rect key="frame" x="20" y="154" width="560" height="44"/>
                                 <color key="backgroundColor" red="0.13822091468738137" green="0.40724964989209944" blue="0.41502168174962306" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Xxh-3u-bGq"/>
@@ -81,7 +81,7 @@
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="EpN-YT-Ydw" userLabel="passwordTextField" customClass="DesignableTextField" customModule="HeYueMerchant" customModuleProvider="target">
-                                <rect key="frame" x="20" y="293" width="560" height="44"/>
+                                <rect key="frame" x="20" y="218" width="560" height="44"/>
                                 <color key="backgroundColor" red="0.1382209147" green="0.40724964990000001" blue="0.41502168169999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -102,7 +102,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginleftimage" translatesAutoresizingMaskIntoConstraints="NO" id="uI8-e1-kgv" userLabel="usernameImage">
-                                <rect key="frame" x="35" y="236" width="30" height="30"/>
+                                <rect key="frame" x="35" y="161" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="AyD-1N-302"/>
                                     <constraint firstAttribute="width" secondItem="uI8-e1-kgv" secondAttribute="height" multiplier="1:1" id="ZYC-1g-kLO"/>
@@ -115,7 +115,7 @@
                                 </variation>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginrightimage" translatesAutoresizingMaskIntoConstraints="NO" id="MhK-aw-R95" userLabel="passwordImage">
-                                <rect key="frame" x="35" y="300" width="30" height="30"/>
+                                <rect key="frame" x="35" y="225" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="fVV-ja-6aN"/>
                                     <constraint firstAttribute="width" secondItem="MhK-aw-R95" secondAttribute="height" multiplier="1:1" id="n5Y-n2-RWp"/>
@@ -128,7 +128,7 @@
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bff-7o-07M" customClass="DesignableButton" customModule="HeYueMerchant" customModuleProvider="target">
-                                <rect key="frame" x="393" y="357" width="187" height="44"/>
+                                <rect key="frame" x="393" y="282" width="187" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="kFe-Li-y6D"/>
                                 </constraints>
@@ -153,7 +153,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PwN-Bc-27o" userLabel="rememberpasswordView">
-                                <rect key="frame" x="20" y="357" width="187" height="44"/>
+                                <rect key="frame" x="20" y="282" width="187" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="记住密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDU-E7-Qko">
                                         <rect key="frame" x="119" y="11" width="68" height="21"/>
@@ -195,7 +195,7 @@
                                 </constraints>
                             </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="l6j-yN-PIi">
-                                <rect key="frame" x="282" y="282" width="37" height="37"/>
+                                <rect key="frame" x="282" y="250" width="37" height="37"/>
                                 <color key="color" red="0.97166144489225403" green="0.99860970836982688" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -264,6 +264,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="ik7-fr-BWn">
                         <barButtonItem key="leftBarButtonItem" id="1yv-YP-Z3I">
                             <view key="customView" contentMode="scaleToFill" id="SRD-SR-lh6" userLabel="leftbarView">
@@ -1346,6 +1347,7 @@
                             <constraint firstItem="kQd-kv-EKb" firstAttribute="width" secondItem="Hrr-o7-hRm" secondAttribute="width" id="zMK-K2-6LL"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="userPhoneTextField" destination="JJG-QS-vKw" id="FUT-tj-nvp"/>
                     </connections>
@@ -1401,7 +1403,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFq-PC-LcD" userLabel="MainView">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="391"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="401"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zdg-b3-ioM" userLabel="portraitView">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="195"/>
@@ -1575,7 +1577,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ly9-fe-3Bb" userLabel="账户信息view">
-                                                <rect key="frame" x="0.0" y="334" width="600" height="42"/>
+                                                <rect key="frame" x="0.0" y="343" width="600" height="42"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hp-Zk-dM0" userLabel="账户信息button" customClass="DesignableButton" customModule="HeYueMerchant" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="600" height="42"/>
@@ -1626,7 +1628,7 @@
                                             <constraint firstAttribute="trailing" secondItem="CTA-EM-GPw" secondAttribute="trailing" id="JHY-3w-8xr"/>
                                             <constraint firstItem="Mxn-in-drt" firstAttribute="top" secondItem="Zdg-b3-ioM" secondAttribute="bottom" constant="8" id="Oux-BS-eeC"/>
                                             <constraint firstItem="Zdg-b3-ioM" firstAttribute="leading" secondItem="fFq-PC-LcD" secondAttribute="leading" id="Ua6-1s-lEm"/>
-                                            <constraint firstItem="ly9-fe-3Bb" firstAttribute="top" secondItem="CTA-EM-GPw" secondAttribute="bottom" constant="1" id="Uyy-ci-jW3"/>
+                                            <constraint firstItem="ly9-fe-3Bb" firstAttribute="top" secondItem="CTA-EM-GPw" secondAttribute="bottom" constant="10" id="Uyy-ci-jW3"/>
                                             <constraint firstItem="CTA-EM-GPw" firstAttribute="leading" secondItem="fFq-PC-LcD" secondAttribute="leading" id="VAc-Fh-Jhy"/>
                                             <constraint firstAttribute="height" constant="487" id="bSo-PP-BGr"/>
                                             <constraint firstItem="Zdg-b3-ioM" firstAttribute="top" secondItem="fFq-PC-LcD" secondAttribute="top" id="ftc-AK-y1k"/>
@@ -1646,7 +1648,7 @@
                                 <constraints>
                                     <constraint firstItem="fFq-PC-LcD" firstAttribute="leading" secondItem="9PX-Il-w7U" secondAttribute="leading" id="D8q-0l-twf"/>
                                     <constraint firstItem="Zdg-b3-ioM" firstAttribute="height" secondItem="9PX-Il-w7U" secondAttribute="height" multiplier="1:2.5" id="H1A-Ks-TjZ"/>
-                                    <constraint firstItem="fFq-PC-LcD" firstAttribute="height" secondItem="9PX-Il-w7U" secondAttribute="height" multiplier="1:2.5" constant="196" id="RhU-jw-uns"/>
+                                    <constraint firstItem="fFq-PC-LcD" firstAttribute="height" secondItem="9PX-Il-w7U" secondAttribute="height" multiplier="1:2.5" constant="206" id="RhU-jw-uns"/>
                                     <constraint firstItem="fFq-PC-LcD" firstAttribute="centerX" secondItem="9PX-Il-w7U" secondAttribute="centerX" id="T2z-mY-NJ2"/>
                                     <constraint firstAttribute="trailing" secondItem="fFq-PC-LcD" secondAttribute="trailing" id="pNU-gD-JZA"/>
                                     <constraint firstItem="fFq-PC-LcD" firstAttribute="top" secondItem="9PX-Il-w7U" secondAttribute="top" id="r6V-fa-1aL"/>
@@ -2187,7 +2189,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="Zqj-AE-1TQ" firstAttribute="leading" secondItem="ecA-QQ-z1f" secondAttribute="leading" id="0gE-0Q-h15"/>
                                             <constraint firstItem="Zqj-AE-1TQ" firstAttribute="width" secondItem="ecA-QQ-z1f" secondAttribute="width" id="2CQ-uW-V8m"/>
@@ -2261,6 +2263,7 @@
                                         </variation>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="6EP-Wf-enK" secondAttribute="bottom" id="0dY-vr-xD2"/>
                                     <constraint firstItem="6EP-Wf-enK" firstAttribute="top" secondItem="923-RH-ShE" secondAttribute="top" id="28X-ch-pcZ"/>
@@ -2518,6 +2521,6 @@
         <image name="yzm" width="31" height="38"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Udo-VN-ydr"/>
+        <segue reference="yAD-n4-A5f"/>
     </inferredMetricsTieBreakers>
 </document>

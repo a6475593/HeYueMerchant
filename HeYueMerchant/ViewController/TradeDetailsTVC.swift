@@ -13,18 +13,16 @@ class TradeDetailsTVC: BaseTableViewController {
     let NoDataCellIdentifier = "nodatacellidentifier"
     let Idleimages = NSMutableArray()
     let Refreshingimages = NSMutableArray()
-    let Temporary = true
+    let Temporary = false
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //MARK: Umeng 页面统计
         MobClick.beginLogPageView("交易详情列表页")
         SetUpTableView()
-        
-        let SearchButton = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "tosearchinfomation")
-        self.navigationItem.rightBarButtonItem = SearchButton
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "交易统计", style: .Plain, target: self, action: nil)
+        IsTemporary()
     }
+    
     override func viewWillDisappear(animated: Bool) {
         super.viewWillAppear(animated)
         MobClick.endLogPageView("交易详情列表页")
@@ -74,7 +72,7 @@ class TradeDetailsTVC: BaseTableViewController {
         self.navigationController?.pushViewController(searchinfomationvc, animated: true)
     }
     
-    override  func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if Temporary{
             return 44
         }else{
@@ -111,7 +109,7 @@ class TradeDetailsTVC: BaseTableViewController {
             let tradedetailscell = tableView.dequeueReusableCellWithIdentifier(TradeDetailsIdentifier) as! TradeDetails
             return tradedetailscell
         }else{
-            let nodatacell  = tableView.dequeueReusableCellWithIdentifier(NoDataCellIdentifier) as! NoDataCell
+            let nodatacell = tableView.dequeueReusableCellWithIdentifier(NoDataCellIdentifier) as! NoDataCell
             return nodatacell
         }
     }
@@ -119,10 +117,17 @@ class TradeDetailsTVC: BaseTableViewController {
         if Temporary{
             return 44
         }else{
-            return tableView.frame.height
+            return tableView.frame.height-64
         }
     }
-    
+    func IsTemporary(){
+        guard Temporary else{
+            return
+        }
+        let SearchButton = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "tosearchinfomation")
+        self.navigationItem.rightBarButtonItem = SearchButton
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "交易统计", style: .Plain, target: self, action: nil)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

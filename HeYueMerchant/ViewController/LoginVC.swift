@@ -59,26 +59,6 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        
-        let url = "http://192.168.1.109:8080/ws/fastPayResultSearch.action"
-        let softurl = "http://www.test.and361.com:9064/ws/fastPayResultSearch.action"
-        //        let url = "http://192.168.1.109:8080/ws/queryBalance.action"
-        //        let softurl = "http://www.test.and361.com:9064/ws/queryBalance.action"
-        //let parameters = ["shopId":"2888","terminalNo":"88156408","encodingType":"1","signType":"1","orderId":"20160127094158000005","amount":"2","signData":"61ED50B5CBB73FF67792763C4AD1CBFB"]
-        //        let parameters = ["shopId":"2888","terminalNo":"88156408","encodingType":"1","signType":"1","mobile":"18232184018","signData":"40B42209E9CED00113D2BCE21CBEAB81"]//,"signData":"61ED50B5CBB73FF67792763C4AD1CBFB"
-        let parameters = ["shopId":"2888","terminalNo":"88156408","encodingType":"1","signType":"1","orderId":"20160128134112000019","signData":"B0365DB899094D593D3CB2D7514CD153"]//,"signData":"61ED50B5CBB73FF67792763C4AD1CBFB"
-        AlamofireRequest(.GET, url, parameters: parameters, encoding: ParameterEncoding.URL).responseJSON (options: NSJSONReadingOptions.AllowFragments){ (response) -> Void in
-            print(response.result.error)
-                        if let value = response.result.value{
-                            let data = JSON(value)
-                            print("from huaiyu data is  \(data)")
-                        }
-        }
-        
-        
         ShadowAnimation.start()
         isRememberBT.addTarget(self, action: "isRememberpasswordBTAction", forControlEvents: .TouchUpInside)
         resigntextfieldBT.addTarget(self, action: "resignfirsttextfield", forControlEvents: .TouchUpInside)
@@ -228,3 +208,30 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
     }
     
 }
+/*
+
+
+
+
+let url = "http://192.168.1.109:8080/ws/fastPayResultSearch.action"
+let softurl = "http://www.test.and361.com:9064/ws/fastPayResultSearch.action"
+//        let url = "http://192.168.1.109:8080/ws/queryBalance.action"
+//        let softurl = "http://www.test.and361.com:9064/ws/queryBalance.action"
+//let parameters = ["shopId":"2888","terminalNo":"88156408","encodingType":"1","signType":"1","orderId":"20160127094158000005","amount":"2","signData":"61ED50B5CBB73FF67792763C4AD1CBFB"]
+//        let parameters = ["shopId":"2888","terminalNo":"88156408","encodingType":"1","signType":"1","mobile":"18232184018","signData":"40B42209E9CED00113D2BCE21CBEAB81"]//,"signData":"61ED50B5CBB73FF67792763C4AD1CBFB"
+
+//B0365DB899094D593D3CB2D7514CD153
+let parameters = ["shopId":"2888","terminalNo":"88156408","encodingType":"1","signType":"1","orderId":"20160128134112000019","signData":"B0365DB899094D593D3CB2D7514CD153"]
+
+let parameter : NSString = "shopId=2888&terminalNo=88156408&encodingType=1&signType=1&orderId=20160128134112000019"
+
+AlamofireRequest(.POST, softurl, parameters: parameters, encoding: ParameterEncoding.URL).responseJSON { (response) -> Void in
+print(response.result.error)
+if let value = response.result.value{
+let data = JSON(value)
+print("from huaiyu data is  \(data)")
+}
+}
+let shuzi = "123456"
+print( shuzi.MD5HexDigest() )
+*/
