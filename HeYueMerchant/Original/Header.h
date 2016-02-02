@@ -23,7 +23,10 @@
 
 #import "SSKeychain.h"
 
-#import "MobClick.h"
+#import "UMSocial.h"
+
+#import "UMSocialQQHandler.h"
+#import "UMSocialWechatHandler.h"
 
 #import "RMPickerViewController.h"
 

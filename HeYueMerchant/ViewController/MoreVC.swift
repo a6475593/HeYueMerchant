@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoreVC: BaseViewController,UIAlertViewDelegate {
+class MoreVC: BaseViewController,UIAlertViewDelegate,UMSocialUIDelegate{
     
     @IBOutlet weak var MainScrollView: UIScrollView!
     @IBOutlet weak var logoutButton: DesignableButton!
@@ -16,6 +16,7 @@ class MoreVC: BaseViewController,UIAlertViewDelegate {
     @IBOutlet weak var ClearCacheButton: UIButton!
     @IBOutlet weak var UpdateButton: UIButton!
     
+    @IBOutlet weak var ShareButton: UIButton!
     
     
     var logoutAlertView = UIAlertView()
@@ -30,6 +31,7 @@ class MoreVC: BaseViewController,UIAlertViewDelegate {
         TelePhoneButton.addTarget(self, action: "telephoneaction", forControlEvents: .TouchUpInside)
         ClearCacheButton.addTarget(self, action: "clearcacheaction", forControlEvents: .TouchUpInside)
         UpdateButton.addTarget(self, action: "updateaction", forControlEvents: .TouchUpInside)
+        ShareButton.addTarget(self, action: "shareaction", forControlEvents: .TouchUpInside)
         SetUpClearAlertView()
         
         MainScrollView.header = MJRefreshHeader(refreshingBlock: { () -> Void in
@@ -42,7 +44,7 @@ class MoreVC: BaseViewController,UIAlertViewDelegate {
         super.viewWillAppear(animated)
         if let appVersion = GetSetValue.stringForKey(APP_VERSION){
             UpdateButton.setTitle("版本信息:\(appVersion)", forState: .Normal)
-
+            
         }
     }
     
@@ -104,7 +106,6 @@ class MoreVC: BaseViewController,UIAlertViewDelegate {
                 return
             } else {
                 //MARK:Umeng 登出
-                MobClick.profileSignOff()
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
             
@@ -143,7 +144,35 @@ class MoreVC: BaseViewController,UIAlertViewDelegate {
     }
     
     func updateaction(){
-      //MARK:不需要么？
+        //MARK:不需要么？
+    }
+    
+    func shareaction(){
+        
+        UMSocialSnsService.presentSnsIconSheetView(self, appKey: UMENG_ID, shareText: "和悦商家，一款专注移动积分的App。", shareImage:         UIImage(named: "title0.png")
+            , shareToSnsNames:
+            [   UMShareToSina,//新浪
+                UMShareToTencent,//腾讯微博
+                UMShareToEmail,//email
+                UMShareToSms,//短信
+                UMShareToQQ,//QQ
+                UMShareToQzone,//QQ空间
+                UMShareToWechatSession,//微信好友
+                UMShareToWechatTimeline,//微信朋友圈
+                UMShareToWechatFavorite//微信收藏
+            ],
+            delegate: self)
+        UMSocialData.defaultData().extConfig.wechatSessionData.url = "http://www.and361.com/"
+        UMSocialData.defaultData().extConfig.wechatTimelineData.url = "http://www.and361.com/"
+        UMSocialData.defaultData().extConfig.wechatFavoriteData.url = "http://www.and361.com/"
+        
+        
+        
+    }
+    func didFinishGetUMSocialDataInViewController(response: UMSocialResponseEntity!) {
+        if response.responseCode == UMSResponseCodeSuccess {
+            LeafNotification.showInController(self, withText: "分享成功", type: LeafNotificationTypeSuccess)
+        }
     }
     
     /*

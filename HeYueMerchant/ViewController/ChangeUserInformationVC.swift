@@ -14,6 +14,7 @@ class ChangeUserInformationVC: BaseViewController {
         super.viewDidLoad()
         let CompleteButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "CompleteAction")
         self.navigationItem.rightBarButtonItem = CompleteButton
+       
     }
 
     func CompleteAction(){

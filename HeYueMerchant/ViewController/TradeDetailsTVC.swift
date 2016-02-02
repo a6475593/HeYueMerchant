@@ -18,15 +18,11 @@ class TradeDetailsTVC: BaseTableViewController {
         super.viewDidLoad()
         
         //MARK: Umeng 页面统计
-        MobClick.beginLogPageView("交易详情列表页")
         SetUpTableView()
         IsTemporary()
     }
     
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillAppear(animated)
-        MobClick.endLogPageView("交易详情列表页")
-    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

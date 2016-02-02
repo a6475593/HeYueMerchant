@@ -164,7 +164,6 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
                     
                     if response.response?.statusCode == 200 && (username == "wang" || username == "liu" ) && password == "123456"{
                         //MARK:Umeng 帐号统计
-                        MobClick.profileSignInWithPUID(username)
                         //MARK:页面
                         self.mainIndicator.stopAnimating()
                         ShareAPPlication.networkActivityIndicatorVisible = false

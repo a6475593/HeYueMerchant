@@ -8,6 +8,10 @@
 
 import Foundation
 
+//MARK:our weburl
+
+let HEYUE_URL = "http://www.and361.com/"
+
 //MARK:UserGuider
 let title0 = "小助手"
 let title1 = "又长又臭的台词"
@@ -20,9 +24,15 @@ let introduce3 = "老奶奶看完奥运会百米赛跑后惊呼：“真吓人�
 let titlearray = [title0,title1,title2,title3]
 let introducearray = [introduce0,introduce1,introduce2,introduce3]
 
-//umeng
+//MARK:Umeng ID
 
 let UMENG_ID = "56a03e22e0f55a20df002b82"
+
+//MARK:WXAPP
+
+let WXAPP_ID = "wxa338ade859601c32"
+
+let WXAPP_SECRET = "c84c772fff5b069528224bcc71339c57"
 
 //MARK:Others
 let GetSetValue = NSUserDefaults.standardUserDefaults()
