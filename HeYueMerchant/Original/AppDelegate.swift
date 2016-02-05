@@ -67,7 +67,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,SKSplashDelegate {
     }
     func UmengSwitch(){
         UMSocialData.setAppKey(UMENG_ID)
-        //    UMSocialQQHandler.setQQWithAppId(<#T##appId: String!##String!#>, appKey: <#T##String!#>, url: <#T##String!#>)
+        
+        UMSocialQQHandler.setQQWithAppId(QQAPP_ID, appKey: QQAPP_KEY, url: "http://www.and361.com/")
+        
         UMSocialWechatHandler.setWXAppId(WXAPP_ID, appSecret: WXAPP_SECRET, url: "http://www.and361.com/")
 
     }

@@ -28,11 +28,17 @@ let introducearray = [introduce0,introduce1,introduce2,introduce3]
 
 let UMENG_ID = "56a03e22e0f55a20df002b82"
 
-//MARK:WXAPP
+//MARK:WX ID
 
 let WXAPP_ID = "wxa338ade859601c32"
 
 let WXAPP_SECRET = "c84c772fff5b069528224bcc71339c57"
+
+//MARK:QQ ID
+
+let QQAPP_ID = "1105151770"
+
+let QQAPP_KEY = "3ReMibknZ9vVI9vE"
 
 //MARK:Others
 let GetSetValue = NSUserDefaults.standardUserDefaults()

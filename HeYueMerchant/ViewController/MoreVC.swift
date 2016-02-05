@@ -148,12 +148,11 @@ class MoreVC: BaseViewController,UIAlertViewDelegate,UMSocialUIDelegate{
     }
     
     func shareaction(){
-        
         UMSocialSnsService.presentSnsIconSheetView(self, appKey: UMENG_ID, shareText: "和悦商家，一款专注移动积分的App。", shareImage:         UIImage(named: "title0.png")
             , shareToSnsNames:
             [   UMShareToSina,//新浪
                 UMShareToTencent,//腾讯微博
-                UMShareToEmail,//email
+//                UMShareToEmail,//email
                 UMShareToSms,//短信
                 UMShareToQQ,//QQ
                 UMShareToQzone,//QQ空间
@@ -162,17 +161,24 @@ class MoreVC: BaseViewController,UIAlertViewDelegate,UMSocialUIDelegate{
                 UMShareToWechatFavorite//微信收藏
             ],
             delegate: self)
-        UMSocialData.defaultData().extConfig.wechatSessionData.url = "http://www.and361.com/"
-        UMSocialData.defaultData().extConfig.wechatTimelineData.url = "http://www.and361.com/"
-        UMSocialData.defaultData().extConfig.wechatFavoriteData.url = "http://www.and361.com/"
+        let baidu = "http://www.baidu.com/"
+        UMSocialData.defaultData().extConfig.sinaData.urlResource.url = baidu
+        UMSocialData.defaultData().extConfig.tencentData.urlResource.url = baidu
+        UMSocialData.defaultData().extConfig.smsData.urlResource.url = baidu
+        UMSocialData.defaultData().extConfig.qqData.url = baidu
+        UMSocialData.defaultData().extConfig.qzoneData.url = baidu
+        UMSocialData.defaultData().extConfig.wechatSessionData.url = baidu
+        UMSocialData.defaultData().extConfig.wechatTimelineData.url = baidu
+        UMSocialData.defaultData().extConfig.wechatFavoriteData.url = baidu
+        
         
         
         
     }
     func didFinishGetUMSocialDataInViewController(response: UMSocialResponseEntity!) {
-        if response.responseCode == UMSResponseCodeSuccess {
-            LeafNotification.showInController(self, withText: "分享成功", type: LeafNotificationTypeSuccess)
-        }
+//        if response.responseCode == UMSResponseCodeSuccess {
+//            LeafNotification.showInController(self, withText: "分享成功", type: LeafNotificationTypeSuccess)
+//        }
     }
     
     /*
