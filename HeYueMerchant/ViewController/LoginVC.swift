@@ -157,6 +157,7 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
             AlamofireRequest(.GET, url, parameters: nil, encoding: .JSON).responseJSON { (response) -> Void in
                 if response.result.isFailure {
                     LeafNotification.showInController(self, withText: "您的网络好像挂了", type: LeafNotificationTypeWarrning)
+                    self.mainIndicator.stopAnimating()
                 }else if response.result.isSuccess {
                     //MARK
                     

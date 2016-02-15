@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,SKSplashDelegate {
         IQKeyboard()
         HeYueSplash()
         UmengSwitch()
+       
         return true
     }
     
@@ -73,6 +74,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,SKSplashDelegate {
         UMSocialWechatHandler.setWXAppId(WXAPP_ID, appSecret: WXAPP_SECRET, url: "http://www.and361.com/")
 
     }
+    
+
+    
     func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
         return UMSocialSnsService.handleOpenURL(url)
     }

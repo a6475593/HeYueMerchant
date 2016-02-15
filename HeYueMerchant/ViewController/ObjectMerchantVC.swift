@@ -15,6 +15,7 @@ class ObjectMerchantVC: BaseViewController {
         super.viewDidLoad()
         let SearchButton = UIBarButtonItem(title: "查询余额", style: UIBarButtonItemStyle.Done, target: self, action: "searchremainingaction")
         self.navigationItem.rightBarButtonItem = SearchButton
+        
     }
 
     override func didReceiveMemoryWarning() {
