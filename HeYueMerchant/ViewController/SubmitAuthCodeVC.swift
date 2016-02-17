@@ -28,7 +28,6 @@ class SubmitAuthCodeVC: BaseViewController,UITextFieldDelegate {
         SubmitAutoCode.addTarget(self, action: "submitautocodeaction", forControlEvents: .TouchUpInside)
         let Obtain = UITapGestureRecognizer(target: self, action: "foucus")
         ObtainAuthCodeImage.addGestureRecognizer(Obtain)
-
     }
     func foucus(){
         ObtainAuthCodeTextField.becomeFirstResponder()

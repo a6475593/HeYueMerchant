@@ -32,20 +32,18 @@
 
 #import "LeafNotification.h"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #import "JTSlideShadowAnimation.h"
 
 #import "STLVideoViewController.h"
+
+#import "UIImage+MDQRCode.h"
+
+
+
+
+
+
+
+
+
+

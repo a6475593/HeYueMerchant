@@ -133,6 +133,14 @@
 		A7AD715E1C42A7A1000D58E6 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD71501C42A7A1000D58E6 /* Validation.swift */; };
 		A7B0F50B1C4805C30095966E /* PendulumView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0F50A1C4805C30095966E /* PendulumView.m */; };
 		A7BA9F421C5A6B9300D254DB /* ObjectMerchantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA9F411C5A6B9300D254DB /* ObjectMerchantVC.swift */; };
+		A7C0B8B21C74C1700011C8FC /* bitstream.c in Sources */ = {isa = PBXBuildFile; fileRef = A7C0B8A21C74C1700011C8FC /* bitstream.c */; };
+		A7C0B8B31C74C1700011C8FC /* mask.c in Sources */ = {isa = PBXBuildFile; fileRef = A7C0B8A41C74C1700011C8FC /* mask.c */; };
+		A7C0B8B41C74C1700011C8FC /* qrencode.c in Sources */ = {isa = PBXBuildFile; fileRef = A7C0B8A61C74C1700011C8FC /* qrencode.c */; };
+		A7C0B8B51C74C1700011C8FC /* qrinput.c in Sources */ = {isa = PBXBuildFile; fileRef = A7C0B8A81C74C1700011C8FC /* qrinput.c */; };
+		A7C0B8B61C74C1700011C8FC /* qrspec.c in Sources */ = {isa = PBXBuildFile; fileRef = A7C0B8AA1C74C1700011C8FC /* qrspec.c */; };
+		A7C0B8B71C74C1700011C8FC /* rscode.c in Sources */ = {isa = PBXBuildFile; fileRef = A7C0B8AC1C74C1700011C8FC /* rscode.c */; };
+		A7C0B8B81C74C1700011C8FC /* split.c in Sources */ = {isa = PBXBuildFile; fileRef = A7C0B8AE1C74C1700011C8FC /* split.c */; };
+		A7C0B8B91C74C1700011C8FC /* UIImage+MDQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0B8B11C74C1700011C8FC /* UIImage+MDQRCode.m */; };
 		A7C3381A1C3C1C9900FEEA10 /* SKSplashIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C338171C3C1C9900FEEA10 /* SKSplashIcon.m */; };
 		A7C3381B1C3C1C9900FEEA10 /* SKSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C338191C3C1C9900FEEA10 /* SKSplashView.m */; };
 		A7C338231C3C2C2D00FEEA10 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C338221C3C2C2D00FEEA10 /* UIView+Toast.m */; };
@@ -352,6 +360,22 @@
 		A7B0F5091C4805C30095966E /* PendulumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendulumView.h; sourceTree = "<group>"; };
 		A7B0F50A1C4805C30095966E /* PendulumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendulumView.m; sourceTree = "<group>"; };
 		A7BA9F411C5A6B9300D254DB /* ObjectMerchantVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObjectMerchantVC.swift; path = ViewController/ObjectMerchantVC.swift; sourceTree = "<group>"; };
+		A7C0B8A21C74C1700011C8FC /* bitstream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bitstream.c; sourceTree = "<group>"; };
+		A7C0B8A31C74C1700011C8FC /* bitstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitstream.h; sourceTree = "<group>"; };
+		A7C0B8A41C74C1700011C8FC /* mask.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mask.c; sourceTree = "<group>"; };
+		A7C0B8A51C74C1700011C8FC /* mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mask.h; sourceTree = "<group>"; };
+		A7C0B8A61C74C1700011C8FC /* qrencode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrencode.c; sourceTree = "<group>"; };
+		A7C0B8A71C74C1700011C8FC /* qrencode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrencode.h; sourceTree = "<group>"; };
+		A7C0B8A81C74C1700011C8FC /* qrinput.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrinput.c; sourceTree = "<group>"; };
+		A7C0B8A91C74C1700011C8FC /* qrinput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrinput.h; sourceTree = "<group>"; };
+		A7C0B8AA1C74C1700011C8FC /* qrspec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrspec.c; sourceTree = "<group>"; };
+		A7C0B8AB1C74C1700011C8FC /* qrspec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrspec.h; sourceTree = "<group>"; };
+		A7C0B8AC1C74C1700011C8FC /* rscode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rscode.c; sourceTree = "<group>"; };
+		A7C0B8AD1C74C1700011C8FC /* rscode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rscode.h; sourceTree = "<group>"; };
+		A7C0B8AE1C74C1700011C8FC /* split.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = split.c; sourceTree = "<group>"; };
+		A7C0B8AF1C74C1700011C8FC /* split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = split.h; sourceTree = "<group>"; };
+		A7C0B8B01C74C1700011C8FC /* UIImage+MDQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MDQRCode.h"; sourceTree = "<group>"; };
+		A7C0B8B11C74C1700011C8FC /* UIImage+MDQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MDQRCode.m"; sourceTree = "<group>"; };
 		A7C338161C3C1C9900FEEA10 /* SKSplashIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSplashIcon.h; sourceTree = "<group>"; };
 		A7C338171C3C1C9900FEEA10 /* SKSplashIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSplashIcon.m; sourceTree = "<group>"; };
 		A7C338181C3C1C9900FEEA10 /* SKSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSplashView.h; sourceTree = "<group>"; };
@@ -588,6 +612,7 @@
 				A72D02B51C4E955500F162BF /* SDWebImage */,
 				A7AD71421C42A798000D58E6 /* Alamofire */,
 				A7316E141C57A0AA00AC6262 /* SwiftyJSON */,
+				A7C0B8A01C74C1700011C8FC /* QR */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -858,6 +883,37 @@
 				A7B0F50A1C4805C30095966E /* PendulumView.m */,
 			);
 			path = PendulumView;
+			sourceTree = "<group>";
+		};
+		A7C0B8A01C74C1700011C8FC /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				A7C0B8A11C74C1700011C8FC /* libqrencode */,
+				A7C0B8B01C74C1700011C8FC /* UIImage+MDQRCode.h */,
+				A7C0B8B11C74C1700011C8FC /* UIImage+MDQRCode.m */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		A7C0B8A11C74C1700011C8FC /* libqrencode */ = {
+			isa = PBXGroup;
+			children = (
+				A7C0B8A21C74C1700011C8FC /* bitstream.c */,
+				A7C0B8A31C74C1700011C8FC /* bitstream.h */,
+				A7C0B8A41C74C1700011C8FC /* mask.c */,
+				A7C0B8A51C74C1700011C8FC /* mask.h */,
+				A7C0B8A61C74C1700011C8FC /* qrencode.c */,
+				A7C0B8A71C74C1700011C8FC /* qrencode.h */,
+				A7C0B8A81C74C1700011C8FC /* qrinput.c */,
+				A7C0B8A91C74C1700011C8FC /* qrinput.h */,
+				A7C0B8AA1C74C1700011C8FC /* qrspec.c */,
+				A7C0B8AB1C74C1700011C8FC /* qrspec.h */,
+				A7C0B8AC1C74C1700011C8FC /* rscode.c */,
+				A7C0B8AD1C74C1700011C8FC /* rscode.h */,
+				A7C0B8AE1C74C1700011C8FC /* split.c */,
+				A7C0B8AF1C74C1700011C8FC /* split.h */,
+			);
+			path = libqrencode;
 			sourceTree = "<group>";
 		};
 		A7C338151C3C1C9900FEEA10 /* SKSplashView */ = {
@@ -1160,6 +1216,7 @@
 				A7FA5D001C3ACF4300ECC879 /* UIView+MJExtension.m in Sources */,
 				A7316DD51C579FF100AC6262 /* Define.swift in Sources */,
 				A7AD715B1C42A7A1000D58E6 /* ServerTrustPolicy.swift in Sources */,
+				A7C0B8B21C74C1700011C8FC /* bitstream.c in Sources */,
 				A7FA5CF71C3ACF4300ECC879 /* MJRefreshBackNormalFooter.m in Sources */,
 				A7AD715A1C42A7A1000D58E6 /* Result.swift in Sources */,
 				A74E53861C37C73300387114 /* IQUIView+Hierarchy.m in Sources */,
@@ -1176,12 +1233,14 @@
 				A749D95B1C57C0CA00036BE5 /* STLVideoFunctions.m in Sources */,
 				A7316E271C57A0C700AC6262 /* LoginVC.swift in Sources */,
 				A7316DF21C57A02E00AC6262 /* DesignableTextField.swift in Sources */,
+				A7C0B8B51C74C1700011C8FC /* qrinput.c in Sources */,
 				A7316DF31C57A02E00AC6262 /* DesignableTextView.swift in Sources */,
 				A7FD6B101C57DA2800219B4A /* JTSlideShadowAnimation.m in Sources */,
 				A7AD71541C42A7A1000D58E6 /* Manager.swift in Sources */,
 				A7316E0B1C57A05700AC6262 /* AppDelegate.swift in Sources */,
 				A7316E161C57A0AA00AC6262 /* SwiftyJSON.swift in Sources */,
 				A7316E131C57A08700AC6262 /* URLService.swift in Sources */,
+				A7C0B8B91C74C1700011C8FC /* UIImage+MDQRCode.m in Sources */,
 				A72D02E31C4E955500F162BF /* UIImage+WebP.m in Sources */,
 				A7FA5CF41C3ACF4300ECC879 /* MJRefreshAutoNormalFooter.m in Sources */,
 				A7AD71571C42A7A1000D58E6 /* Request.swift in Sources */,
@@ -1197,6 +1256,7 @@
 				A72AD97B1C3ECA2F004628E3 /* EARestrictedScrollView.m in Sources */,
 				A7316E261C57A0C700AC6262 /* GoodsTVC.swift in Sources */,
 				A7AD71531C42A7A1000D58E6 /* Error.swift in Sources */,
+				A7C0B8B61C74C1700011C8FC /* qrspec.c in Sources */,
 				A7316E121C57A08700AC6262 /* CheckTextField.swift in Sources */,
 				A7316E301C57A0C700AC6262 /* UserHelpTVC.swift in Sources */,
 				A7FA5CF31C3ACF4300ECC879 /* MJRefreshAutoGifFooter.m in Sources */,
@@ -1212,6 +1272,7 @@
 				A7316E2A1C57A0C700AC6262 /* MoreVC.swift in Sources */,
 				A72D02E61C4E955500F162BF /* UIView+WebCacheOperation.m in Sources */,
 				A72D02E21C4E955500F162BF /* UIImage+MultiFormat.m in Sources */,
+				A7C0B8B31C74C1700011C8FC /* mask.c in Sources */,
 				A7316E011C57A03C00AC6262 /* TradeDetails.swift in Sources */,
 				A7316DD31C579FF100AC6262 /* BaseTableViewController.swift in Sources */,
 				A74E538B1C37C73300387114 /* IQTextView.m in Sources */,
@@ -1227,6 +1288,7 @@
 				A7FD6B081C57C05F00219B4A /* LeafNotification.m in Sources */,
 				A7FA5CFB1C3ACF4300ECC879 /* MJRefreshStateHeader.m in Sources */,
 				A74E538C1C37C73300387114 /* IQBarButtonItem.m in Sources */,
+				A7C0B8B41C74C1700011C8FC /* qrencode.c in Sources */,
 				A749D95C1C57C0CA00036BE5 /* STLVideoViewController.m in Sources */,
 				A7316E291C57A0C700AC6262 /* MineVC.swift in Sources */,
 				A74E53871C37C73300387114 /* IQUIViewController+Additions.m in Sources */,
@@ -1234,6 +1296,7 @@
 				A7BA9F421C5A6B9300D254DB /* ObjectMerchantVC.swift in Sources */,
 				A7316DF11C57A02E00AC6262 /* DesignableImageView.swift in Sources */,
 				A7316E321C57A11A00AC6262 /* SCLAlertView.swift in Sources */,
+				A7C0B8B71C74C1700011C8FC /* rscode.c in Sources */,
 				A74E538E1C37C73300387114 /* IQToolbar.m in Sources */,
 				A72D02DA1C4E955500F162BF /* SDWebImageCompat.m in Sources */,
 				A7AD71591C42A7A1000D58E6 /* ResponseSerialization.swift in Sources */,
@@ -1245,6 +1308,7 @@
 				A7D6C0561C53BBC000DF1E4D /* RMActionController.m in Sources */,
 				A72D02E51C4E955500F162BF /* UIImageView+WebCache.m in Sources */,
 				A7CB2D801C56563200A2D04B /* PickerView.swift in Sources */,
+				A7C0B8B81C74C1700011C8FC /* split.c in Sources */,
 				A7316E2B1C57A0C700AC6262 /* SearchInformationVC.swift in Sources */,
 				A7FA5CFF1C3ACF4300ECC879 /* UIScrollView+MJRefresh.m in Sources */,
 				A7316DD41C579FF100AC6262 /* BaseViewController.swift in Sources */,
