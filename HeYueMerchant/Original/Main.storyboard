@@ -701,14 +701,36 @@
                                             </mask>
                                         </variation>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nb4-VJ-BgA">
+                                        <rect key="frame" x="20" y="408" width="560" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="Khm-8H-HMg" kind="show" id="0JZ-sY-z4k"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23O-Z9-9cq">
+                                        <rect key="frame" x="20" y="446" width="560" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.2651040838" blue="0.31934074379999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="ITE-Qs-jSo" kind="show" id="JDx-PV-sUA"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="23O-Z9-9cq" firstAttribute="leading" secondItem="nb4-VJ-BgA" secondAttribute="leading" id="8B9-66-B0l"/>
+                                    <constraint firstItem="23O-Z9-9cq" firstAttribute="top" secondItem="nb4-VJ-BgA" secondAttribute="bottom" constant="8" id="8OY-cd-Dno"/>
+                                    <constraint firstItem="nb4-VJ-BgA" firstAttribute="centerX" secondItem="95x-du-KRl" secondAttribute="centerX" id="BTe-od-cmO"/>
                                     <constraint firstAttribute="trailing" secondItem="M8X-Z5-T2X" secondAttribute="trailing" id="C7q-3g-ail"/>
                                     <constraint firstItem="M8X-Z5-T2X" firstAttribute="centerX" secondItem="Urp-hp-fg4" secondAttribute="centerX" id="LX5-ci-uya"/>
                                     <constraint firstItem="M8X-Z5-T2X" firstAttribute="leading" secondItem="Urp-hp-fg4" secondAttribute="leading" id="SnP-8k-9EB"/>
+                                    <constraint firstItem="nb4-VJ-BgA" firstAttribute="top" secondItem="M8X-Z5-T2X" secondAttribute="bottom" constant="8" symbolic="YES" id="YoQ-Mg-HqO"/>
+                                    <constraint firstItem="23O-Z9-9cq" firstAttribute="trailing" secondItem="nb4-VJ-BgA" secondAttribute="trailing" id="hQ5-yB-M8Z"/>
                                     <constraint firstItem="M8X-Z5-T2X" firstAttribute="top" secondItem="Urp-hp-fg4" secondAttribute="top" id="mxM-JB-fgL"/>
                                     <constraint firstAttribute="bottom" secondItem="M8X-Z5-T2X" secondAttribute="bottom" id="qRj-ds-bRh"/>
+                                    <constraint firstItem="nb4-VJ-BgA" firstAttribute="trailing" secondItem="95x-du-KRl" secondAttribute="trailing" id="vls-EM-p7c"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -764,6 +786,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAF-0r-pKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="878" y="543"/>
+        </scene>
+        <!--CodeVC-->
+        <scene sceneID="Fk2-vq-rHy">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="ITE-Qs-jSo" customClass="CodeVC" customModule="HeYueMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HuR-GS-2o6"/>
+                        <viewControllerLayoutGuide type="bottom" id="kMW-BB-kTz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VXU-ZV-fyg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kh0-BH-e7y">
+                                <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Kh0-BH-e7y" secondAttribute="height" multiplier="1:1" id="N6x-8w-hHa"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kh0-BH-e7y" firstAttribute="leading" secondItem="VXU-ZV-fyg" secondAttribute="leadingMargin" constant="-20" id="9wY-TK-TlL"/>
+                            <constraint firstItem="Kh0-BH-e7y" firstAttribute="top" secondItem="HuR-GS-2o6" secondAttribute="bottom" id="ZgC-iV-wDY"/>
+                            <constraint firstItem="Kh0-BH-e7y" firstAttribute="top" secondItem="HuR-GS-2o6" secondAttribute="bottom" id="aeT-bb-fSQ"/>
+                            <constraint firstItem="Kh0-BH-e7y" firstAttribute="leading" secondItem="VXU-ZV-fyg" secondAttribute="leadingMargin" constant="-20" id="aob-cn-vPt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kh0-BH-e7y" secondAttribute="trailing" constant="-20" id="jQf-hp-fHB"/>
+                            <constraint firstItem="kMW-BB-kTz" firstAttribute="top" secondItem="Kh0-BH-e7y" secondAttribute="bottom" id="ofM-VI-j2H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kh0-BH-e7y" secondAttribute="trailing" constant="-20" id="sBS-Zk-MIo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9wY-TK-TlL"/>
+                                <exclude reference="ZgC-iV-wDY"/>
+                                <exclude reference="sBS-Zk-MIo"/>
+                                <exclude reference="ofM-VI-j2H"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="codeimage" destination="Kh0-BH-e7y" id="g4Y-Kl-RKg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ETb-Cf-FUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1589" y="711"/>
+        </scene>
+        <!--ScanVC-->
+        <scene sceneID="dcm-Xx-tkH">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="Khm-8H-HMg" customClass="LGScanVC" customModule="HeYueMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r6v-MF-Zak"/>
+                        <viewControllerLayoutGuide type="bottom" id="5IW-Hd-1GU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PAr-ea-gfW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qhT-lb-lv2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="543"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dMw-uc-Tkf">

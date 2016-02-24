@@ -131,6 +131,8 @@
 		A7AD715C1C42A7A1000D58E6 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD714E1C42A7A1000D58E6 /* Stream.swift */; };
 		A7AD715D1C42A7A1000D58E6 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD714F1C42A7A1000D58E6 /* Upload.swift */; };
 		A7AD715E1C42A7A1000D58E6 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD71501C42A7A1000D58E6 /* Validation.swift */; };
+		A7AF496A1C75CE7D00127EA0 /* LGScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AF49691C75CE7D00127EA0 /* LGScanVC.swift */; };
+		A7AF496C1C75D98F00127EA0 /* CodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AF496B1C75D98F00127EA0 /* CodeVC.swift */; };
 		A7B0F50B1C4805C30095966E /* PendulumView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0F50A1C4805C30095966E /* PendulumView.m */; };
 		A7BA9F421C5A6B9300D254DB /* ObjectMerchantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA9F411C5A6B9300D254DB /* ObjectMerchantVC.swift */; };
 		A7C0B8B21C74C1700011C8FC /* bitstream.c in Sources */ = {isa = PBXBuildFile; fileRef = A7C0B8A21C74C1700011C8FC /* bitstream.c */; };
@@ -357,6 +359,8 @@
 		A7AD714E1C42A7A1000D58E6 /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		A7AD714F1C42A7A1000D58E6 /* Upload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Upload.swift; sourceTree = "<group>"; };
 		A7AD71501C42A7A1000D58E6 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		A7AF49691C75CE7D00127EA0 /* LGScanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGScanVC.swift; sourceTree = "<group>"; };
+		A7AF496B1C75D98F00127EA0 /* CodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeVC.swift; sourceTree = "<group>"; };
 		A7B0F5091C4805C30095966E /* PendulumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendulumView.h; sourceTree = "<group>"; };
 		A7B0F50A1C4805C30095966E /* PendulumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendulumView.m; sourceTree = "<group>"; };
 		A7BA9F411C5A6B9300D254DB /* ObjectMerchantVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObjectMerchantVC.swift; path = ViewController/ObjectMerchantVC.swift; sourceTree = "<group>"; };
@@ -527,6 +531,8 @@
 				A7316E221C57A0C700AC6262 /* UserHelpDetailsVC.swift */,
 				A7316E231C57A0C700AC6262 /* UserHelpTVC.swift */,
 				A7BA9F411C5A6B9300D254DB /* ObjectMerchantVC.swift */,
+				A7AF49691C75CE7D00127EA0 /* LGScanVC.swift */,
+				A7AF496B1C75D98F00127EA0 /* CodeVC.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -1130,7 +1136,7 @@
 				TargetAttributes = {
 					A721DEBA1C31540E008F34F5 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = X5ZQ4LVAUA;
+						DevelopmentTeam = 9E8S8ZZBL6;
 					};
 				};
 			};
@@ -1207,6 +1213,7 @@
 				A74E53851C37C73300387114 /* IQUITextFieldView+Additions.m in Sources */,
 				A7FA5CFA1C3ACF4300ECC879 /* MJRefreshNormalHeader.m in Sources */,
 				A72D02DE1C4E955500F162BF /* SDWebImageManager.m in Sources */,
+				A7AF496C1C75D98F00127EA0 /* CodeVC.swift in Sources */,
 				A7D6C0531C53BB2800DF1E4D /* RMPickerViewController.m in Sources */,
 				A7AD71511C42A7A1000D58E6 /* Alamofire.swift in Sources */,
 				A74E538A1C37C73300387114 /* IQKeyboardReturnKeyHandler.m in Sources */,
@@ -1311,6 +1318,7 @@
 				A7C0B8B81C74C1700011C8FC /* split.c in Sources */,
 				A7316E2B1C57A0C700AC6262 /* SearchInformationVC.swift in Sources */,
 				A7FA5CFF1C3ACF4300ECC879 /* UIScrollView+MJRefresh.m in Sources */,
+				A7AF496A1C75CE7D00127EA0 /* LGScanVC.swift in Sources */,
 				A7316DD41C579FF100AC6262 /* BaseViewController.swift in Sources */,
 				A7FA5CF51C3ACF4300ECC879 /* MJRefreshAutoStateFooter.m in Sources */,
 				A7FA5CEE1C3ACF4300ECC879 /* MJRefreshAutoFooter.m in Sources */,
