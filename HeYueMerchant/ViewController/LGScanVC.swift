@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import Foundation
 import AVFoundation
+import AudioToolbox
 
 
 class LGScanVC: BaseViewController , AVCaptureMetadataOutputObjectsDelegate{
@@ -19,15 +21,16 @@ class LGScanVC: BaseViewController , AVCaptureMetadataOutputObjectsDelegate{
     var traceNumber = 0
     var upORdown = false
     var timer:NSTimer!
-    
-    var device : AVCaptureDevice!
+  
+    let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+    let session = AVCaptureSession()
     var input  : AVCaptureDeviceInput!
-    var output : AVCaptureMetadataOutput!
-    var session: AVCaptureSession!
-    var preView: AVCaptureVideoPreviewLayer!
+    var layer  : AVCaptureVideoPreviewLayer!
     var line   : UIImageView!
     
-    // MARK: - init functions
+  
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,10 +38,12 @@ class LGScanVC: BaseViewController , AVCaptureMetadataOutputObjectsDelegate{
         setupScanLine()
         timer = NSTimer(timeInterval: 0.02, target: self, selector: "scanLineAnimation", userInfo: nil, repeats: true)
         NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
-        guard setupCamera() else{
-            return
-        }
-        session.startRunning()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setupCamera()
+        self.session.startRunning()
     }
     
     override func didReceiveMemoryWarning() {
@@ -60,48 +65,75 @@ class LGScanVC: BaseViewController , AVCaptureMetadataOutputObjectsDelegate{
         upORdown = false
         timer.invalidate()
         timer = nil
-        guard setupCamera() else{
-            return
-        }
-        session.stopRunning()
+    
     }
     
-    func setupCamera() -> Bool {
-        device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
-        do {
+    func setupCamera(){
+        //高质量采集率
+        self.session.sessionPreset = AVCaptureSessionPresetHigh
+        var error : NSError?
+        //输入流
+        let input : AVCaptureDeviceInput!
+        do{
             input = try AVCaptureDeviceInput(device: device)
         }
-        catch let error as NSError {
-            print(error.localizedDescription)
-            return false
+            //异常处理
+        catch let error1 as NSError {
+            error  = error1
+            input = nil
         }
-        
-        output = AVCaptureMetadataOutput()
-        output.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())
-        output.rectOfInterest = makeScanReaderInterestRect()
-        
-        session = AVCaptureSession()
-        session.sessionPreset = AVCaptureSessionPresetHigh
-        if session.canAddInput(input)
-        {
+        if(error != nil){
+            print(error?.description)
+            return
+        }
+        if session.canAddInput(input){
             session.addInput(input)
         }
-        if session.canAddOutput(output)
-        {
-            session.addOutput(output)
+        //显示图像
+        layer =  AVCaptureVideoPreviewLayer(session: session)
+        layer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        layer.frame = self.view.frame
+
+        self.view.layer.insertSublayer(self.layer!, atIndex: 0)
+        let output = AVCaptureMetadataOutput()
+
+        //设置代理在主线程里刷新makescr
+        output.rectOfInterest = CGRectMake(0.5,0.25,0.25,0.5)
+        print(output.rectOfInterest)
+        print(makeScanReaderInterestRect())
+        /*
+        CGRect lensRect = self.lensView.frame;
+        
+        CGFloat screenW = ScreenSize.width;
+        CGFloat screenH = ScreenSize.height;
+        CGRect rectInterest = CGRectMake(CGRectGetMinY(lensRect) / screenH,
+        ((screenW-CGRectGetWidth(lensRect)))/2/screenW,
+        CGRectGetHeight(lensRect) / screenH,
+        CGRectGetWidth(lensRect) / screenW);
+        
+        [captureMetadataOutput setRectOfInterest:rectInterest];
+        
+        func makeScanReaderRect() -> CGRect {
+        let scanSize = (min(screenWidth, screenHeight) * 3) / 5
+        var scanRect = CGRectMake(0, 0, scanSize, scanSize)
+        
+        scanRect.origin.x += (screenWidth / 2) - (scanRect.size.width / 2)
+        scanRect.origin.y += (screenHeight / 2) - (scanRect.size.height / 2)
+        
+        return scanRect
         }
-        
-        output.metadataObjectTypes = [AVMetadataObjectTypeQRCode, AVMetadataObjectTypeEAN13Code]
-        
-        preView = AVCaptureVideoPreviewLayer(session: session)
-        preView.videoGravity = AVLayerVideoGravityResizeAspectFill
-        preView.frame = self.view.bounds
-        
-        let shadowView = makeScanCameraShadowView(makeScanReaderRect())
-        self.view.layer.insertSublayer(preView, atIndex: 0)
-        self.view.addSubview(shadowView)
-        
-        return true
+        */
+        output.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())
+        if session.canAddOutput(output) {
+            session.addOutput(output)
+            //设置扫码支持的编码格式（如下设置各种条形码和二维码兼容）
+            output.metadataObjectTypes = [ AVMetadataObjectTypeQRCode,AVMetadataObjectTypeEAN13Code,AVMetadataObjectTypeEAN8Code,AVMetadataObjectTypeCode128Code,AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeUPCECode,AVMetadataObjectTypePDF417Code,
+                AVMetadataObjectTypeAztecCode,
+                AVMetadataObjectTypeCode93Code,
+                AVMetadataObjectTypeEAN13Code,AVMetadataObjectTypeCode39Mod43Code];
+            //            output.rectOfInterest = CGRectMake(0, 0, 1, 0)
+        }
+        session.startRunning()
     }
     
     func setupScanLine() {
@@ -156,7 +188,7 @@ class LGScanVC: BaseViewController , AVCaptureMetadataOutputObjectsDelegate{
         
         return CGRectMake(x, y, width, height)
     }
-    
+
     func makeScanCameraShadowView(innerRect: CGRect) -> UIView {
         let referenceImage = UIImageView(frame: self.view.bounds)
         
@@ -205,21 +237,40 @@ class LGScanVC: BaseViewController , AVCaptureMetadataOutputObjectsDelegate{
     
     // MARK: AVCaptureMetadataOutputObjectsDelegate
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
-        if metadataObjects.count == 0 {
-            return
+        
+        var stringValue:String?
+        if metadataObjects.count > 0 {
+            let metadataObject = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
+            stringValue = metadataObject.stringValue
         }
         
-        let metadata = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
-        let value = metadata.stringValue
-        
-        showScanCode(value)
+        self.session.stopRunning()
+        print("code is \(stringValue)")
+        let alertView = UIAlertView()
+        alertView.delegate=self
+        alertView.title = "二维码或条形码"
+        alertView.message = "扫到的内容为:\(stringValue)"
+        alertView.addButtonWithTitle("确认")
+        alertView.show()
     }
     
     // MARK: show result
     
+    
     func showScanCode(code: String) {
-        print("\(code)")
+        let soundID:SystemSoundID = 0
+        let path = NSBundle.mainBundle().pathForResource("msg", ofType: "wav")
+        let baseURL = NSURL(fileURLWithPath: path!)
+        let shake = SystemSoundID(kSystemSoundID_Vibrate)
+        AudioServicesCreateSystemSoundID(baseURL, UnsafeMutablePointer<UInt32>(bitPattern: 0))
+        AudioServicesPlayAlertSound(soundID)
+        AudioServicesPlayAlertSound(shake)
+        SweetAlert().showAlert(code)
+        print(code)
+        
+        
     }
+
     
 }
 
