@@ -75,6 +75,7 @@
 		A7316E2F1C57A0C700AC6262 /* UserHelpDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7316E221C57A0C700AC6262 /* UserHelpDetailsVC.swift */; };
 		A7316E301C57A0C700AC6262 /* UserHelpTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7316E231C57A0C700AC6262 /* UserHelpTVC.swift */; };
 		A7316E321C57A11A00AC6262 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7316E311C57A11A00AC6262 /* SCLAlertView.swift */; };
+		A73AC4681C7F6EF700551796 /* music.aiff in Resources */ = {isa = PBXBuildFile; fileRef = A73AC4671C7F6EF700551796 /* music.aiff */; };
 		A749D95A1C57C0CA00036BE5 /* Video.plist in Resources */ = {isa = PBXBuildFile; fileRef = A749D9551C57C0CA00036BE5 /* Video.plist */; };
 		A749D95B1C57C0CA00036BE5 /* STLVideoFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = A749D9571C57C0CA00036BE5 /* STLVideoFunctions.m */; };
 		A749D95C1C57C0CA00036BE5 /* STLVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A749D9591C57C0CA00036BE5 /* STLVideoViewController.m */; };
@@ -268,6 +269,7 @@
 		A7316E221C57A0C700AC6262 /* UserHelpDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserHelpDetailsVC.swift; path = ViewController/UserHelpDetailsVC.swift; sourceTree = "<group>"; };
 		A7316E231C57A0C700AC6262 /* UserHelpTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserHelpTVC.swift; path = ViewController/UserHelpTVC.swift; sourceTree = "<group>"; };
 		A7316E311C57A11A00AC6262 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCLAlertView.swift; path = SCLAlertView/SCLAlertView.swift; sourceTree = "<group>"; };
+		A73AC4671C7F6EF700551796 /* music.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = music.aiff; path = Resources/music.aiff; sourceTree = "<group>"; };
 		A749D9551C57C0CA00036BE5 /* Video.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Video.plist; sourceTree = "<group>"; };
 		A749D9561C57C0CA00036BE5 /* STLVideoFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLVideoFunctions.h; sourceTree = "<group>"; };
 		A749D9571C57C0CA00036BE5 /* STLVideoFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLVideoFunctions.m; sourceTree = "<group>"; };
@@ -638,6 +640,7 @@
 		A74BB02F1C3FFBED00AB152F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A73AC4671C7F6EF700551796 /* music.aiff */,
 				A749D95D1C57C23100036BE5 /* BridgeLoop-640p.mp4 */,
 				A7316DD71C57A01F00AC6262 /* bg0@2x.png */,
 				A7316DD81C57A01F00AC6262 /* bg1@2x.png */,
@@ -1171,6 +1174,7 @@
 				A7316E001C57A03C00AC6262 /* NoDataCell.xib in Resources */,
 				A760009F1C60C47100503648 /* UMShareEditViewControlleriPad.xib in Resources */,
 				A7316E0C1C57A05700AC6262 /* Assets.xcassets in Resources */,
+				A73AC4681C7F6EF700551796 /* music.aiff in Resources */,
 				A7316DFE1C57A03C00AC6262 /* Goods.xib in Resources */,
 				A7316DE21C57A01F00AC6262 /* bg1@2x.png in Resources */,
 				A7316DE51C57A01F00AC6262 /* pageDot.png in Resources */,

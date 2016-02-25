@@ -27,10 +27,7 @@ class LGScanVC: BaseViewController , AVCaptureMetadataOutputObjectsDelegate{
     var input  : AVCaptureDeviceInput!
     var layer  : AVCaptureVideoPreviewLayer!
     var line   : UIImageView!
-    
-  
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +35,13 @@ class LGScanVC: BaseViewController , AVCaptureMetadataOutputObjectsDelegate{
         setupScanLine()
         timer = NSTimer(timeInterval: 0.02, target: self, selector: "scanLineAnimation", userInfo: nil, repeats: true)
         NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
+    print(makeScanReaderRect().origin.x)
+        print(makeScanReaderRect().origin.y)
+        print(makeScanReaderRect().size.width)
+        print(makeScanReaderRect().size.height)
+
+
+
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -49,29 +53,22 @@ class LGScanVC: BaseViewController , AVCaptureMetadataOutputObjectsDelegate{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    /*
-    override func viewWillDisappear(animated: Bool) {
-        traceNumber = 0
-        upORdown = false
-        session.stopRunning()
-        timer.invalidate()
-        timer = nil
-        super.viewWillDisappear(animated)
-    }
-    */
+
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         traceNumber = 0
         upORdown = false
         timer.invalidate()
         timer = nil
-    
     }
     
     func setupCamera(){
         //高质量采集率
         self.session.sessionPreset = AVCaptureSessionPresetHigh
         var error : NSError?
+        let frame = self.view.frame
+        let rect = makeScanReaderRect()
+
         //输入流
         let input : AVCaptureDeviceInput!
         do{
@@ -92,37 +89,13 @@ class LGScanVC: BaseViewController , AVCaptureMetadataOutputObjectsDelegate{
         //显示图像
         layer =  AVCaptureVideoPreviewLayer(session: session)
         layer.videoGravity = AVLayerVideoGravityResizeAspectFill
-        layer.frame = self.view.frame
+        layer.frame = frame
 
         self.view.layer.insertSublayer(self.layer!, atIndex: 0)
         let output = AVCaptureMetadataOutput()
 
         //设置代理在主线程里刷新makescr
-        output.rectOfInterest = CGRectMake(0.5,0.25,0.25,0.5)
-        print(output.rectOfInterest)
-        print(makeScanReaderInterestRect())
-        /*
-        CGRect lensRect = self.lensView.frame;
-        
-        CGFloat screenW = ScreenSize.width;
-        CGFloat screenH = ScreenSize.height;
-        CGRect rectInterest = CGRectMake(CGRectGetMinY(lensRect) / screenH,
-        ((screenW-CGRectGetWidth(lensRect)))/2/screenW,
-        CGRectGetHeight(lensRect) / screenH,
-        CGRectGetWidth(lensRect) / screenW);
-        
-        [captureMetadataOutput setRectOfInterest:rectInterest];
-        
-        func makeScanReaderRect() -> CGRect {
-        let scanSize = (min(screenWidth, screenHeight) * 3) / 5
-        var scanRect = CGRectMake(0, 0, scanSize, scanSize)
-        
-        scanRect.origin.x += (screenWidth / 2) - (scanRect.size.width / 2)
-        scanRect.origin.y += (screenHeight / 2) - (scanRect.size.height / 2)
-        
-        return scanRect
-        }
-        */
+        output.rectOfInterest = CGRectMake(rect.origin.y/frame.height,rect.origin.x/frame.width,rect.height/frame.height,rect.width/frame.width)
         output.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())
         if session.canAddOutput(output) {
             session.addOutput(output)
@@ -131,7 +104,6 @@ class LGScanVC: BaseViewController , AVCaptureMetadataOutputObjectsDelegate{
                 AVMetadataObjectTypeAztecCode,
                 AVMetadataObjectTypeCode93Code,
                 AVMetadataObjectTypeEAN13Code,AVMetadataObjectTypeCode39Mod43Code];
-            //            output.rectOfInterest = CGRectMake(0, 0, 1, 0)
         }
         session.startRunning()
     }
@@ -244,28 +216,39 @@ class LGScanVC: BaseViewController , AVCaptureMetadataOutputObjectsDelegate{
             stringValue = metadataObject.stringValue
         }
         
+        if let code = stringValue{
+            print("code is \(code)")
+//            let alertView = UIAlertView()
+//            alertView.delegate=self
+//            alertView.title = "二维码或条形码"
+//            alertView.message = "扫到的内容为:\(code)"
+//            alertView.addButtonWithTitle("确认")
+//            alertView.show()
+            // MARK:msg
+            var player = AVAudioPlayer()
+
+            do{
+                let url = NSBundle.mainBundle().URLForResource("music", withExtension: "aiff")
+                player = try AVAudioPlayer(contentsOfURL: url!) 
+               
+            }catch  {
+            
+            }
+            player.prepareToPlay()
+            player.play()
+            
+//            let shake = SystemSoundID(kSystemSoundID_Vibrate)
+//            AudioServicesPlayAlertSound(shake)
+   }
         self.session.stopRunning()
-        print("code is \(stringValue)")
-        let alertView = UIAlertView()
-        alertView.delegate=self
-        alertView.title = "二维码或条形码"
-        alertView.message = "扫到的内容为:\(stringValue)"
-        alertView.addButtonWithTitle("确认")
-        alertView.show()
+
     }
     
     // MARK: show result
     
     
     func showScanCode(code: String) {
-        let soundID:SystemSoundID = 0
-        let path = NSBundle.mainBundle().pathForResource("msg", ofType: "wav")
-        let baseURL = NSURL(fileURLWithPath: path!)
-        let shake = SystemSoundID(kSystemSoundID_Vibrate)
-        AudioServicesCreateSystemSoundID(baseURL, UnsafeMutablePointer<UInt32>(bitPattern: 0))
-        AudioServicesPlayAlertSound(soundID)
-        AudioServicesPlayAlertSound(shake)
-        SweetAlert().showAlert(code)
+                SweetAlert().showAlert(code)
         print(code)
         
         
