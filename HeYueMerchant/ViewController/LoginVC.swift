@@ -9,7 +9,6 @@
 import UIKit
 
 class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
-    
     @IBOutlet weak var WelcomeLabel: UILabel!
     @IBOutlet weak var usernameTF: DesignableTextField!
     @IBOutlet weak var passwordTF: DesignableTextField!
