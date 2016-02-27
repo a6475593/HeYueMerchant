@@ -118,6 +118,9 @@
 		A77E00531C7DE47900F31E38 /* LGScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E00511C7DE47900F31E38 /* LGScanVC.swift */; };
 		A7914EE31C4FAD0200A2E087 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7914EE21C4FAD0200A2E087 /* Security.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A7914EE91C4FBF7800A2E087 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = A7914EE71C4FBF7800A2E087 /* SSKeychain.m */; };
+		A7930C121C81F9CE008EEB5A /* CheckTicketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7930C111C81F9CE008EEB5A /* CheckTicketVC.swift */; };
+		A7930C141C820AC0008EEB5A /* SelectShop.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7930C131C820AC0008EEB5A /* SelectShop.xib */; };
+		A7930C161C820B01008EEB5A /* SelectShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7930C151C820B01008EEB5A /* SelectShop.swift */; };
 		A7979D2D1C50E7D80008ED01 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A7979D2C1C50E7D80008ED01 /* libz.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A7AD71511C42A7A1000D58E6 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD71431C42A7A1000D58E6 /* Alamofire.swift */; };
 		A7AD71521C42A7A1000D58E6 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD71441C42A7A1000D58E6 /* Download.swift */; };
@@ -348,6 +351,9 @@
 		A7914EE21C4FAD0200A2E087 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A7914EE61C4FBF7800A2E087 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
 		A7914EE71C4FBF7800A2E087 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		A7930C111C81F9CE008EEB5A /* CheckTicketVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckTicketVC.swift; sourceTree = "<group>"; };
+		A7930C131C820AC0008EEB5A /* SelectShop.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectShop.xib; sourceTree = "<group>"; };
+		A7930C151C820B01008EEB5A /* SelectShop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectShop.swift; sourceTree = "<group>"; };
 		A7979D2C1C50E7D80008ED01 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A7AD71431C42A7A1000D58E6 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		A7AD71441C42A7A1000D58E6 /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
@@ -538,6 +544,7 @@
 				A77E00501C7DE47900F31E38 /* CodeVC.swift */,
 				A77E00511C7DE47900F31E38 /* LGScanVC.swift */,
 				A7AF15561C80BBE800E26468 /* ResultVC.swift */,
+				A7930C111C81F9CE008EEB5A /* CheckTicketVC.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -991,6 +998,8 @@
 				A7316DFA1C57A03C00AC6262 /* TradeDetails.xib */,
 				A7316DFB1C57A03C00AC6262 /* TradeDetailsHeader.swift */,
 				A7316DFC1C57A03C00AC6262 /* TradeDetailsHeader.xib */,
+				A7930C151C820B01008EEB5A /* SelectShop.swift */,
+				A7930C131C820AC0008EEB5A /* SelectShop.xib */,
 			);
 			name = Nibs;
 			sourceTree = "<group>";
@@ -1191,6 +1200,7 @@
 				A760009C1C60C47100503648 /* UMSCommentInputController.xib in Resources */,
 				A7316DE61C57A01F00AC6262 /* pageDot@2x.png in Resources */,
 				A7FD6B0C1C57C05F00219B4A /* notification_warring@2x.png in Resources */,
+				A7930C141C820AC0008EEB5A /* SelectShop.xib in Resources */,
 				A7316DE71C57A01F00AC6262 /* title0@2x.png in Resources */,
 				A7316DE91C57A01F00AC6262 /* title2@2x.png in Resources */,
 				A7FD6B0A1C57C05F00219B4A /* notification_success@2x.png in Resources */,
@@ -1250,6 +1260,7 @@
 				A7316DF31C57A02E00AC6262 /* DesignableTextView.swift in Sources */,
 				A7FD6B101C57DA2800219B4A /* JTSlideShadowAnimation.m in Sources */,
 				A7AD71541C42A7A1000D58E6 /* Manager.swift in Sources */,
+				A7930C161C820B01008EEB5A /* SelectShop.swift in Sources */,
 				A7316E0B1C57A05700AC6262 /* AppDelegate.swift in Sources */,
 				A7316E161C57A0AA00AC6262 /* SwiftyJSON.swift in Sources */,
 				A7316E131C57A08700AC6262 /* URLService.swift in Sources */,
@@ -1298,6 +1309,7 @@
 				A7316E2D1C57A0C700AC6262 /* TradeDetailsTVC.swift in Sources */,
 				A72D02D91C4E955500F162BF /* SDImageCache.m in Sources */,
 				A7316E251C57A0C700AC6262 /* GoodsDetailsVC.swift in Sources */,
+				A7930C121C81F9CE008EEB5A /* CheckTicketVC.swift in Sources */,
 				A7316E2F1C57A0C700AC6262 /* UserHelpDetailsVC.swift in Sources */,
 				A7FA5CEF1C3ACF4300ECC879 /* MJRefreshBackFooter.m in Sources */,
 				A7FD6B081C57C05F00219B4A /* LeafNotification.m in Sources */,

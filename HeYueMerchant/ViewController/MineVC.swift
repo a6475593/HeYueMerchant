@@ -16,8 +16,14 @@ class MineVC: BaseViewController ,UIActionSheetDelegate,UINavigationControllerDe
     @IBOutlet weak var checkPortraitBT: DesignableButton!
     @IBOutlet weak var PortraitImage: DesignableImageView!
     @IBOutlet weak var MainScrollView: UIScrollView!
+    @IBOutlet weak var CashView: UIView!
+    @IBOutlet weak var CheckView: UIView!
+    @IBOutlet weak var MyGoodsView: UIView!
     @IBOutlet weak var CashButton: UIButton!
-
+    @IBOutlet weak var CheckButton: UIButton!
+    @IBOutlet weak var MyGoodsButton: UIButton!
+    
+    
     
     var checkPortraitActionSheet = UIActionSheet()
     let PortraitPickerController = UIImagePickerController()
@@ -45,9 +51,9 @@ class MineVC: BaseViewController ,UIActionSheetDelegate,UINavigationControllerDe
         PortraitPickerController.delegate = self
         
         PortraitImage.sd_setImageWithURL(NSURL(string: "http://article.joyme.com/article/uploads/allimg/201408/1409033740225216.jpg"), placeholderImage: UIImage(named: "myheader.png"), options: .RefreshCached)
-  
-        SetUpScrollView()
         
+        SetUpScrollView()
+        SetUpView()
         
     }
     func toCheckPortrait(){
@@ -59,7 +65,7 @@ class MineVC: BaseViewController ,UIActionSheetDelegate,UINavigationControllerDe
         if usertype == 0 {
             let goodstvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ticketmerchant")
             self.navigationController?.pushViewController(goodstvc, animated: true)
-        }else if usertype == 1 {
+        }else{
             let objectvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("objectmerchant")
             self.navigationController?.pushViewController(objectvc, animated: true)
         }
@@ -104,7 +110,6 @@ class MineVC: BaseViewController ,UIActionSheetDelegate,UINavigationControllerDe
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     func SetUpScrollView(){
-        
         for var i = 1;i<60;i++ {
             let image = UIImage(named: "dropdown_anim__000\(i)")
             Idleimages.addObject(image!)
@@ -120,6 +125,16 @@ class MineVC: BaseViewController ,UIActionSheetDelegate,UINavigationControllerDe
         header.setImages(Idleimages as [AnyObject], forState: MJRefreshStateIdle)
         header.setImages(Refreshingimages as [AnyObject], forState: MJRefreshStatePulling)
         MainScrollView.header = header
+    }
+    
+    func SetUpView(){
+        if usertype == 0 || usertype == 1{
+            CheckView.hidden = false
+            MyGoodsView.hidden = false
+        }else{//商户的权限
+            CheckView.hidden = false
+            MyGoodsView.hidden = false
+        }
     }
     
     override func didReceiveMemoryWarning() {

@@ -13,7 +13,7 @@ class TradeDetailsTVC: BaseTableViewController {
     let NoDataCellIdentifier = "nodatacellidentifier"
     let Idleimages = NSMutableArray()
     let Refreshingimages = NSMutableArray()
-    let Temporary = false
+    let Temporary = true
     override func viewDidLoad() {
         super.viewDidLoad()
         
