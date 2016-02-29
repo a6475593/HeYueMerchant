@@ -23,7 +23,7 @@ let introduce2 = "一段往事，一抹回忆；一丝牵挂，一束暖阳。 �
 let introduce3 = "老奶奶看完奥运会百米赛跑后惊呼：“真吓人！几个挖煤的跪成一排，一个拿枪的要枪毙他们可没瞄准就开枪了，娃儿们吓得那个跑呀！绳子都拦不住"
 let titlearray = [title0,title1,title2,title3]
 let introducearray = [introduce0,introduce1,introduce2,introduce3]
-
+let shops = ["北国友谊店","北国和平店","北国天山店","北国XX店","北国槐底店"]
 //MARK:Umeng ID
 
 let UMENG_ID = "56a03e22e0f55a20df002b82"

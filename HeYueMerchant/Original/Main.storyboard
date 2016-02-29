@@ -1434,7 +1434,35 @@
                     <view key="view" contentMode="scaleToFill" id="OkY-gm-ICB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IG2-8g-ay2" customClass="DesignableButton" customModule="HeYueMerchant" customModuleProvider="target">
+                                <rect key="frame" x="20" y="466" width="560" height="44"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.87843137250000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DUt-5v-mQe"/>
+                                </constraints>
+                                <state key="normal" title="验    证"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IG2-8g-ay2" firstAttribute="trailing" secondItem="OkY-gm-ICB" secondAttribute="trailingMargin" id="EoF-3x-7de"/>
+                            <constraint firstItem="IG2-8g-ay2" firstAttribute="bottom" secondItem="OkY-gm-ICB" secondAttribute="bottomMargin" constant="-90" id="Rsa-5W-sfn"/>
+                            <constraint firstItem="SU6-ys-e3n" firstAttribute="top" secondItem="IG2-8g-ay2" secondAttribute="bottom" id="g7J-0O-Y2A"/>
+                            <constraint firstItem="IG2-8g-ay2" firstAttribute="leading" secondItem="OkY-gm-ICB" secondAttribute="leadingMargin" id="i5d-SL-k71"/>
+                            <constraint firstItem="SU6-ys-e3n" firstAttribute="top" secondItem="IG2-8g-ay2" secondAttribute="bottom" constant="50" id="rjr-3R-oGz"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="g7J-0O-Y2A"/>
+                                <exclude reference="rjr-3R-oGz"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Vl-Q4-uD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1583,8 +1611,8 @@
                                                             <mask key="constraints">
                                                                 <exclude reference="J1K-oN-rhi"/>
                                                                 <exclude reference="bNb-GV-rxg"/>
-                                                                <exclude reference="2DD-aI-nYG"/>
                                                                 <exclude reference="sxk-Wh-nSZ"/>
+                                                                <exclude reference="2DD-aI-nYG"/>
                                                             </mask>
                                                         </variation>
                                                     </view>
@@ -1631,8 +1659,8 @@
                                                             <mask key="constraints">
                                                                 <exclude reference="7LW-Fx-r4q"/>
                                                                 <exclude reference="9k6-Mq-YpU"/>
-                                                                <exclude reference="MOZ-al-6Jg"/>
                                                                 <exclude reference="hSK-Nf-UJi"/>
+                                                                <exclude reference="MOZ-al-6Jg"/>
                                                             </mask>
                                                         </variation>
                                                     </view>

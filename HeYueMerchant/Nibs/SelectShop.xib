@@ -12,27 +12,28 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请选择店铺" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y8w-tz-feH" customClass="DesignableTextField" customModule="HeYueMerchant" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="6" width="600" height="48"/>
+                    <rect key="frame" x="0.0" y="8" width="600" height="44"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="48" id="MGb-xG-Tm7"/>
+                        <constraint firstAttribute="height" constant="44" id="MGb-xG-Tm7"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
-                            <integer key="value" value="100"/>
+                            <integer key="value" value="80"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择店铺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkV-cp-reN">
-                    <rect key="frame" x="8" y="21" width="75" height="18"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店铺名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkV-cp-reN">
+                    <rect key="frame" x="8" y="22" width="56" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZu-le-IPZ" userLabel="调用pickviewcontroller的button">
-                    <rect key="frame" x="0.0" y="6" width="600" height="48"/>
+                    <rect key="frame" x="0.0" y="8" width="600" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
@@ -43,12 +44,22 @@
                 <constraint firstItem="KZu-le-IPZ" firstAttribute="leading" secondItem="Y8w-tz-feH" secondAttribute="leading" id="VKb-LO-87V"/>
                 <constraint firstItem="KZu-le-IPZ" firstAttribute="trailing" secondItem="Y8w-tz-feH" secondAttribute="trailing" id="XjW-73-HGX"/>
                 <constraint firstItem="Y8w-tz-feH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eaU-OZ-MnX"/>
+                <constraint firstItem="Y8w-tz-feH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="g4Z-lo-Mdk"/>
                 <constraint firstItem="fkV-cp-reN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="me8-Jz-SZ4"/>
                 <constraint firstItem="KZu-le-IPZ" firstAttribute="bottom" secondItem="Y8w-tz-feH" secondAttribute="bottom" id="tNA-IU-274"/>
                 <constraint firstAttribute="trailing" secondItem="Y8w-tz-feH" secondAttribute="trailing" id="vUl-am-0gF"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="232" y="170.5"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="IK8-gp-T4B"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="SelectShopBT" destination="KZu-le-IPZ" id="wtN-GW-quu"/>
+                <outlet property="SelectShopTF" destination="Y8w-tz-feH" id="hTv-NF-iTS"/>
+            </connections>
+            <point key="canvasLocation" x="11" y="156"/>
         </view>
     </objects>
 </document>

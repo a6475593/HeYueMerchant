@@ -118,9 +118,6 @@
 		A77E00531C7DE47900F31E38 /* LGScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E00511C7DE47900F31E38 /* LGScanVC.swift */; };
 		A7914EE31C4FAD0200A2E087 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7914EE21C4FAD0200A2E087 /* Security.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A7914EE91C4FBF7800A2E087 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = A7914EE71C4FBF7800A2E087 /* SSKeychain.m */; };
-		A7930C121C81F9CE008EEB5A /* CheckTicketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7930C111C81F9CE008EEB5A /* CheckTicketVC.swift */; };
-		A7930C141C820AC0008EEB5A /* SelectShop.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7930C131C820AC0008EEB5A /* SelectShop.xib */; };
-		A7930C161C820B01008EEB5A /* SelectShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7930C151C820B01008EEB5A /* SelectShop.swift */; };
 		A7979D2D1C50E7D80008ED01 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A7979D2C1C50E7D80008ED01 /* libz.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A7AD71511C42A7A1000D58E6 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD71431C42A7A1000D58E6 /* Alamofire.swift */; };
 		A7AD71521C42A7A1000D58E6 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD71441C42A7A1000D58E6 /* Download.swift */; };
@@ -154,6 +151,15 @@
 		A7CB2D801C56563200A2D04B /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB2D7F1C56563200A2D04B /* PickerView.swift */; };
 		A7D6C0531C53BB2800DF1E4D /* RMPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D6C0521C53BB2800DF1E4D /* RMPickerViewController.m */; };
 		A7D6C0561C53BBC000DF1E4D /* RMActionController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D6C0551C53BBC000DF1E4D /* RMActionController.m */; };
+		A7D8B09D1C84B108008BBFC2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D8B0971C84B108008BBFC2 /* Constants.swift */; };
+		A7D8B09E1C84B108008BBFC2 /* SCScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D8B0981C84B108008BBFC2 /* SCScrollView.swift */; };
+		A7D8B09F1C84B108008BBFC2 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D8B0991C84B108008BBFC2 /* SegmentedControl.swift */; };
+		A7D8B0A01C84B108008BBFC2 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D8B09A1C84B108008BBFC2 /* Style.swift */; };
+		A7D8B0A61C84B151008BBFC2 /* InputCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D8B0A21C84B151008BBFC2 /* InputCode.swift */; };
+		A7D8B0A71C84B151008BBFC2 /* InputCode.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7D8B0A31C84B151008BBFC2 /* InputCode.xib */; };
+		A7D8B0A81C84B151008BBFC2 /* SelectShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D8B0A41C84B151008BBFC2 /* SelectShop.swift */; };
+		A7D8B0A91C84B151008BBFC2 /* SelectShop.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7D8B0A51C84B151008BBFC2 /* SelectShop.xib */; };
+		A7D8B0AB1C84B181008BBFC2 /* CheckTicketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D8B0AA1C84B181008BBFC2 /* CheckTicketVC.swift */; };
 		A7FA5CEE1C3ACF4300ECC879 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FA5CC41C3ACF4300ECC879 /* MJRefreshAutoFooter.m */; };
 		A7FA5CEF1C3ACF4300ECC879 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FA5CC61C3ACF4300ECC879 /* MJRefreshBackFooter.m */; };
 		A7FA5CF01C3ACF4300ECC879 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FA5CC81C3ACF4300ECC879 /* MJRefreshComponent.m */; };
@@ -351,9 +357,6 @@
 		A7914EE21C4FAD0200A2E087 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A7914EE61C4FBF7800A2E087 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
 		A7914EE71C4FBF7800A2E087 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
-		A7930C111C81F9CE008EEB5A /* CheckTicketVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckTicketVC.swift; sourceTree = "<group>"; };
-		A7930C131C820AC0008EEB5A /* SelectShop.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectShop.xib; sourceTree = "<group>"; };
-		A7930C151C820B01008EEB5A /* SelectShop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectShop.swift; sourceTree = "<group>"; };
 		A7979D2C1C50E7D80008ED01 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A7AD71431C42A7A1000D58E6 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		A7AD71441C42A7A1000D58E6 /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
@@ -401,6 +404,15 @@
 		A7D6C0521C53BB2800DF1E4D /* RMPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMPickerViewController.m; sourceTree = "<group>"; };
 		A7D6C0541C53BBC000DF1E4D /* RMActionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMActionController.h; sourceTree = "<group>"; };
 		A7D6C0551C53BBC000DF1E4D /* RMActionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMActionController.m; sourceTree = "<group>"; };
+		A7D8B0971C84B108008BBFC2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A7D8B0981C84B108008BBFC2 /* SCScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCScrollView.swift; sourceTree = "<group>"; };
+		A7D8B0991C84B108008BBFC2 /* SegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		A7D8B09A1C84B108008BBFC2 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		A7D8B0A21C84B151008BBFC2 /* InputCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputCode.swift; path = Nibs/InputCode.swift; sourceTree = "<group>"; };
+		A7D8B0A31C84B151008BBFC2 /* InputCode.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InputCode.xib; path = Nibs/InputCode.xib; sourceTree = "<group>"; };
+		A7D8B0A41C84B151008BBFC2 /* SelectShop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectShop.swift; path = Nibs/SelectShop.swift; sourceTree = "<group>"; };
+		A7D8B0A51C84B151008BBFC2 /* SelectShop.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SelectShop.xib; path = Nibs/SelectShop.xib; sourceTree = "<group>"; };
+		A7D8B0AA1C84B181008BBFC2 /* CheckTicketVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckTicketVC.swift; path = ViewController/CheckTicketVC.swift; sourceTree = "<group>"; };
 		A7FA5CC31C3ACF4300ECC879 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		A7FA5CC41C3ACF4300ECC879 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		A7FA5CC51C3ACF4300ECC879 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -506,6 +518,7 @@
 		A721DEEC1C31568D008F34F5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A7D8B0961C84B108008BBFC2 /* SegmentedControl */,
 				A749D9541C57C0CA00036BE5 /* STLBGVideo */,
 				A7FD6B0D1C57DA2800219B4A /* JTSlideShadowAnimation */,
 				A7FD6B011C57C05F00219B4A /* LeafNotificationView */,
@@ -544,7 +557,7 @@
 				A77E00501C7DE47900F31E38 /* CodeVC.swift */,
 				A77E00511C7DE47900F31E38 /* LGScanVC.swift */,
 				A7AF15561C80BBE800E26468 /* ResultVC.swift */,
-				A7930C111C81F9CE008EEB5A /* CheckTicketVC.swift */,
+				A7D8B0AA1C84B181008BBFC2 /* CheckTicketVC.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -987,6 +1000,17 @@
 			name = Original;
 			sourceTree = "<group>";
 		};
+		A7D8B0961C84B108008BBFC2 /* SegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				A7D8B0971C84B108008BBFC2 /* Constants.swift */,
+				A7D8B0981C84B108008BBFC2 /* SCScrollView.swift */,
+				A7D8B0991C84B108008BBFC2 /* SegmentedControl.swift */,
+				A7D8B09A1C84B108008BBFC2 /* Style.swift */,
+			);
+			path = SegmentedControl;
+			sourceTree = "<group>";
+		};
 		A7FA5CA81C3AB94900ECC879 /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
@@ -998,8 +1022,10 @@
 				A7316DFA1C57A03C00AC6262 /* TradeDetails.xib */,
 				A7316DFB1C57A03C00AC6262 /* TradeDetailsHeader.swift */,
 				A7316DFC1C57A03C00AC6262 /* TradeDetailsHeader.xib */,
-				A7930C151C820B01008EEB5A /* SelectShop.swift */,
-				A7930C131C820AC0008EEB5A /* SelectShop.xib */,
+				A7D8B0A21C84B151008BBFC2 /* InputCode.swift */,
+				A7D8B0A31C84B151008BBFC2 /* InputCode.xib */,
+				A7D8B0A41C84B151008BBFC2 /* SelectShop.swift */,
+				A7D8B0A51C84B151008BBFC2 /* SelectShop.xib */,
 			);
 			name = Nibs;
 			sourceTree = "<group>";
@@ -1180,10 +1206,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7316DE11C57A01F00AC6262 /* bg0@2x.png in Resources */,
+				A7D8B0A91C84B151008BBFC2 /* SelectShop.xib in Resources */,
 				A7316E021C57A03C00AC6262 /* TradeDetails.xib in Resources */,
 				A7316DE31C57A01F00AC6262 /* bg2@2x.png in Resources */,
 				A7316E0F1C57A05700AC6262 /* Main.storyboard in Resources */,
 				A7316E001C57A03C00AC6262 /* NoDataCell.xib in Resources */,
+				A7D8B0A71C84B151008BBFC2 /* InputCode.xib in Resources */,
 				A760009F1C60C47100503648 /* UMShareEditViewControlleriPad.xib in Resources */,
 				A7316E0C1C57A05700AC6262 /* Assets.xcassets in Resources */,
 				A7316DFE1C57A03C00AC6262 /* Goods.xib in Resources */,
@@ -1200,7 +1228,6 @@
 				A760009C1C60C47100503648 /* UMSCommentInputController.xib in Resources */,
 				A7316DE61C57A01F00AC6262 /* pageDot@2x.png in Resources */,
 				A7FD6B0C1C57C05F00219B4A /* notification_warring@2x.png in Resources */,
-				A7930C141C820AC0008EEB5A /* SelectShop.xib in Resources */,
 				A7316DE71C57A01F00AC6262 /* title0@2x.png in Resources */,
 				A7316DE91C57A01F00AC6262 /* title2@2x.png in Resources */,
 				A7FD6B0A1C57C05F00219B4A /* notification_success@2x.png in Resources */,
@@ -1259,8 +1286,8 @@
 				A7C0B8B51C74C1700011C8FC /* qrinput.c in Sources */,
 				A7316DF31C57A02E00AC6262 /* DesignableTextView.swift in Sources */,
 				A7FD6B101C57DA2800219B4A /* JTSlideShadowAnimation.m in Sources */,
+				A7D8B0AB1C84B181008BBFC2 /* CheckTicketVC.swift in Sources */,
 				A7AD71541C42A7A1000D58E6 /* Manager.swift in Sources */,
-				A7930C161C820B01008EEB5A /* SelectShop.swift in Sources */,
 				A7316E0B1C57A05700AC6262 /* AppDelegate.swift in Sources */,
 				A7316E161C57A0AA00AC6262 /* SwiftyJSON.swift in Sources */,
 				A7316E131C57A08700AC6262 /* URLService.swift in Sources */,
@@ -1276,6 +1303,7 @@
 				A7316E2E1C57A0C700AC6262 /* UserGuiderVC.swift in Sources */,
 				A72D02E11C4E955500F162BF /* UIImage+GIF.m in Sources */,
 				A74E538D1C37C73300387114 /* IQTitleBarButtonItem.m in Sources */,
+				A7D8B09E1C84B108008BBFC2 /* SCScrollView.swift in Sources */,
 				A7FA5CF61C3ACF4300ECC879 /* MJRefreshBackGifFooter.m in Sources */,
 				A7316DD61C579FF100AC6262 /* UserConstants.swift in Sources */,
 				A72AD97B1C3ECA2F004628E3 /* EARestrictedScrollView.m in Sources */,
@@ -1287,11 +1315,13 @@
 				A7FA5CF31C3ACF4300ECC879 /* MJRefreshAutoGifFooter.m in Sources */,
 				A7316E241C57A0C700AC6262 /* ChangeUserInformationVC.swift in Sources */,
 				A7FA5CF91C3ACF4300ECC879 /* MJRefreshGifHeader.m in Sources */,
+				A7D8B0A01C84B108008BBFC2 /* Style.swift in Sources */,
 				A7FA5CF01C3ACF4300ECC879 /* MJRefreshComponent.m in Sources */,
 				A7316E2C1C57A0C700AC6262 /* SubmitAuthCodeVC.swift in Sources */,
 				A7B0F50B1C4805C30095966E /* PendulumView.m in Sources */,
 				A7316DF01C57A02E00AC6262 /* DesignableButton.swift in Sources */,
 				A77E00531C7DE47900F31E38 /* LGScanVC.swift in Sources */,
+				A7D8B09D1C84B108008BBFC2 /* Constants.swift in Sources */,
 				A74E538F1C37C73300387114 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				A7AD71581C42A7A1000D58E6 /* Response.swift in Sources */,
 				A7FA5CFE1C3ACF4300ECC879 /* UIScrollView+MJExtension.m in Sources */,
@@ -1309,9 +1339,9 @@
 				A7316E2D1C57A0C700AC6262 /* TradeDetailsTVC.swift in Sources */,
 				A72D02D91C4E955500F162BF /* SDImageCache.m in Sources */,
 				A7316E251C57A0C700AC6262 /* GoodsDetailsVC.swift in Sources */,
-				A7930C121C81F9CE008EEB5A /* CheckTicketVC.swift in Sources */,
 				A7316E2F1C57A0C700AC6262 /* UserHelpDetailsVC.swift in Sources */,
 				A7FA5CEF1C3ACF4300ECC879 /* MJRefreshBackFooter.m in Sources */,
+				A7D8B0A61C84B151008BBFC2 /* InputCode.swift in Sources */,
 				A7FD6B081C57C05F00219B4A /* LeafNotification.m in Sources */,
 				A7FA5CFB1C3ACF4300ECC879 /* MJRefreshStateHeader.m in Sources */,
 				A74E538C1C37C73300387114 /* IQBarButtonItem.m in Sources */,
@@ -1347,6 +1377,8 @@
 				A7AD71561C42A7A1000D58E6 /* ParameterEncoding.swift in Sources */,
 				A72AD9741C3EC961004628E3 /* EAIntroPage.m in Sources */,
 				A72AD9751C3EC961004628E3 /* EAIntroView.m in Sources */,
+				A7D8B0A81C84B151008BBFC2 /* SelectShop.swift in Sources */,
+				A7D8B09F1C84B108008BBFC2 /* SegmentedControl.swift in Sources */,
 				A7AD715C1C42A7A1000D58E6 /* Stream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
