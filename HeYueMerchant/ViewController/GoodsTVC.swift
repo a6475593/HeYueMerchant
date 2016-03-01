@@ -46,6 +46,7 @@ class GoodsTVC: BaseTableViewController {
         tableView.footer = footer
         
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -65,8 +66,6 @@ class GoodsTVC: BaseTableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let goodscell  = tableView.dequeueReusableCellWithIdentifier(GoodsCellIdentifier) as! Goods
-        
-        
         goodscell.goodsImage.sd_setImageWithURL(NSURL(string: "http://down.tutu001.com/d/file/20110415/e355ebc7e2e327ecc9a5017007_560.jpg"), placeholderImage: UIImage(named: "giraffe.png"), options: .RefreshCached)
         return goodscell
     }

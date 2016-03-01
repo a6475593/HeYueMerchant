@@ -51,7 +51,7 @@ class MineVC: BaseViewController ,UIActionSheetDelegate,UINavigationControllerDe
         PortraitPickerController.delegate = self
         
         PortraitImage.sd_setImageWithURL(NSURL(string: "http://article.joyme.com/article/uploads/allimg/201408/1409033740225216.jpg"), placeholderImage: UIImage(named: "myheader.png"), options: .RefreshCached)
-        
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         SetUpScrollView()
         SetUpView()
         

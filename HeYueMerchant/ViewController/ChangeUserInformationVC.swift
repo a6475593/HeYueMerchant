@@ -12,13 +12,15 @@ class ChangeUserInformationVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let CompleteButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "CompleteAction")
+        let CompleteButton = UIBarButtonItem(title: "完成", style: UIBarButtonItemStyle.Done, target: self, action: "CompleteAction")
+        
+        //UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "CompleteAction")
         self.navigationItem.rightBarButtonItem = CompleteButton
        
     }
 
     func CompleteAction(){
-        print("has complete user infomation ")
+        print("has update user infomation ")
         self.navigationController?.popViewControllerAnimated(true)
     }
     

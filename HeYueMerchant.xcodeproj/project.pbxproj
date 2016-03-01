@@ -75,6 +75,9 @@
 		A7316E2F1C57A0C700AC6262 /* UserHelpDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7316E221C57A0C700AC6262 /* UserHelpDetailsVC.swift */; };
 		A7316E301C57A0C700AC6262 /* UserHelpTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7316E231C57A0C700AC6262 /* UserHelpTVC.swift */; };
 		A7316E321C57A11A00AC6262 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7316E311C57A11A00AC6262 /* SCLAlertView.swift */; };
+		A7485F801C858FA30059BFC1 /* MyGoodsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7485F7F1C858FA30059BFC1 /* MyGoodsTVC.swift */; };
+		A7485F831C8599310059BFC1 /* MyGoodsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7485F811C8599310059BFC1 /* MyGoodsCell.swift */; };
+		A7485F841C8599310059BFC1 /* MyGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7485F821C8599310059BFC1 /* MyGoodsCell.xib */; };
 		A749D95A1C57C0CA00036BE5 /* Video.plist in Resources */ = {isa = PBXBuildFile; fileRef = A749D9551C57C0CA00036BE5 /* Video.plist */; };
 		A749D95B1C57C0CA00036BE5 /* STLVideoFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = A749D9571C57C0CA00036BE5 /* STLVideoFunctions.m */; };
 		A749D95C1C57C0CA00036BE5 /* STLVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A749D9591C57C0CA00036BE5 /* STLVideoViewController.m */; };
@@ -279,6 +282,9 @@
 		A7316E221C57A0C700AC6262 /* UserHelpDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserHelpDetailsVC.swift; path = ViewController/UserHelpDetailsVC.swift; sourceTree = "<group>"; };
 		A7316E231C57A0C700AC6262 /* UserHelpTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserHelpTVC.swift; path = ViewController/UserHelpTVC.swift; sourceTree = "<group>"; };
 		A7316E311C57A11A00AC6262 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCLAlertView.swift; path = SCLAlertView/SCLAlertView.swift; sourceTree = "<group>"; };
+		A7485F7F1C858FA30059BFC1 /* MyGoodsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGoodsTVC.swift; sourceTree = "<group>"; };
+		A7485F811C8599310059BFC1 /* MyGoodsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGoodsCell.swift; sourceTree = "<group>"; };
+		A7485F821C8599310059BFC1 /* MyGoodsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyGoodsCell.xib; sourceTree = "<group>"; };
 		A749D9551C57C0CA00036BE5 /* Video.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Video.plist; sourceTree = "<group>"; };
 		A749D9561C57C0CA00036BE5 /* STLVideoFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLVideoFunctions.h; sourceTree = "<group>"; };
 		A749D9571C57C0CA00036BE5 /* STLVideoFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLVideoFunctions.m; sourceTree = "<group>"; };
@@ -558,6 +564,7 @@
 				A77E00511C7DE47900F31E38 /* LGScanVC.swift */,
 				A7AF15561C80BBE800E26468 /* ResultVC.swift */,
 				A7D8B0AA1C84B181008BBFC2 /* CheckTicketVC.swift */,
+				A7485F7F1C858FA30059BFC1 /* MyGoodsTVC.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -1026,6 +1033,8 @@
 				A7D8B0A31C84B151008BBFC2 /* InputCode.xib */,
 				A7D8B0A41C84B151008BBFC2 /* SelectShop.swift */,
 				A7D8B0A51C84B151008BBFC2 /* SelectShop.xib */,
+				A7485F811C8599310059BFC1 /* MyGoodsCell.swift */,
+				A7485F821C8599310059BFC1 /* MyGoodsCell.xib */,
 			);
 			name = Nibs;
 			sourceTree = "<group>";
@@ -1207,6 +1216,7 @@
 			files = (
 				A7316DE11C57A01F00AC6262 /* bg0@2x.png in Resources */,
 				A7D8B0A91C84B151008BBFC2 /* SelectShop.xib in Resources */,
+				A7485F841C8599310059BFC1 /* MyGoodsCell.xib in Resources */,
 				A7316E021C57A03C00AC6262 /* TradeDetails.xib in Resources */,
 				A7316DE31C57A01F00AC6262 /* bg2@2x.png in Resources */,
 				A7316E0F1C57A05700AC6262 /* Main.storyboard in Resources */,
@@ -1271,6 +1281,7 @@
 				A7AD715A1C42A7A1000D58E6 /* Result.swift in Sources */,
 				A74E53861C37C73300387114 /* IQUIView+Hierarchy.m in Sources */,
 				A7C3381A1C3C1C9900FEEA10 /* SKSplashIcon.m in Sources */,
+				A7485F801C858FA30059BFC1 /* MyGoodsTVC.swift in Sources */,
 				A7FA5CF11C3ACF4300ECC879 /* MJRefreshFooter.m in Sources */,
 				A72D02D81C4E955500F162BF /* NSData+ImageContentType.m in Sources */,
 				A7316DFF1C57A03C00AC6262 /* NoDataCell.swift in Sources */,
@@ -1299,6 +1310,7 @@
 				A7316DF41C57A02E00AC6262 /* DesignableView.swift in Sources */,
 				A72D02E01C4E955500F162BF /* UIButton+WebCache.m in Sources */,
 				A7914EE91C4FBF7800A2E087 /* SSKeychain.m in Sources */,
+				A7485F831C8599310059BFC1 /* MyGoodsCell.swift in Sources */,
 				A74E53891C37C73300387114 /* IQKeyboardManager.m in Sources */,
 				A7316E2E1C57A0C700AC6262 /* UserGuiderVC.swift in Sources */,
 				A72D02E11C4E955500F162BF /* UIImage+GIF.m in Sources */,

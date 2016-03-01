@@ -15,7 +15,6 @@ class MoreVC: BaseViewController,UIAlertViewDelegate,UMSocialUIDelegate{
     @IBOutlet weak var TelePhoneButton: UIButton!
     @IBOutlet weak var ClearCacheButton: UIButton!
     @IBOutlet weak var UpdateButton: UIButton!
-    
     @IBOutlet weak var ShareButton: UIButton!
     
     
@@ -37,6 +36,7 @@ class MoreVC: BaseViewController,UIAlertViewDelegate,UMSocialUIDelegate{
         MainScrollView.header = MJRefreshHeader(refreshingBlock: { () -> Void in
             self.MainScrollView.header.endRefreshing()
         })
+      self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
     }
     
