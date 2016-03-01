@@ -13,8 +13,6 @@ class ChangeUserInformationVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let CompleteButton = UIBarButtonItem(title: "完成", style: UIBarButtonItemStyle.Done, target: self, action: "CompleteAction")
-        
-        //UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "CompleteAction")
         self.navigationItem.rightBarButtonItem = CompleteButton
        
     }
