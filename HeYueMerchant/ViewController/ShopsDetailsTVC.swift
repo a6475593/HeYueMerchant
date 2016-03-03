@@ -1,15 +1,15 @@
 //
-//  TradeDetailsTVC.swift
+//  ShopsDetailsTVC.swift
 //  HeYueMerchant
 //
-//  Created by 王玉琨 on 16/1/11.
+//  Created by 王玉琨 on 16/3/3.
 //  Copyright © 2016年 王玉琨. All rights reserved.
 //
 
 import UIKit
 
-class TradeDetailsTVC: BaseTableViewController {
-    let TradeDetailsIdentifier = "tradedetailsidentifier"
+class ShopsDetailsTVC: BaseTableViewController {
+    let ShopsDetailsIdentifier = "shopsdetailsidentifier"
     let NoDataCellIdentifier = "nodatacellidentifier"
     let Idleimages = NSMutableArray()
     let Refreshingimages = NSMutableArray()
@@ -21,12 +21,9 @@ class TradeDetailsTVC: BaseTableViewController {
         }else if GetSetValue.integerForKey(USER_TYPE) == 1{
             Temporary = false
         }
-        //MARK: Umeng 页面统计
-        SetUpTableView()
         IsTemporary()
+        SetUpTableView()
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -34,11 +31,11 @@ class TradeDetailsTVC: BaseTableViewController {
     }
     func SetUpTableView(){
         
-        let tradedetailscellnib = UINib(nibName: "TradeDetails", bundle: nil)
+        let shopsdetailscellnib = UINib(nibName: "TradeDetails", bundle: nil)
         let nodatacellnib = UINib(nibName: "NoDataCell", bundle: nil)
         tableView.separatorStyle = .None
         
-        tableView.registerNib(tradedetailscellnib, forCellReuseIdentifier: TradeDetailsIdentifier)
+        tableView.registerNib(shopsdetailscellnib, forCellReuseIdentifier: ShopsDetailsIdentifier)
         tableView.registerNib(nodatacellnib, forCellReuseIdentifier: NoDataCellIdentifier)
         
         
@@ -73,17 +70,16 @@ class TradeDetailsTVC: BaseTableViewController {
         }
         let SearchButton = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "tosearchinfomation")
         self.navigationItem.rightBarButtonItem = SearchButton
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "收银台统计", style: .Plain, target: self, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "当日情况", style: .Plain, target: self, action: nil)
     }
     
     func tosearchinfomation(){
         let searchinfomationvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("searchinfomation")
         self.navigationController?.pushViewController(searchinfomationvc, animated: true)
     }
-    
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let trandedetailsheadernib = NSBundle.mainBundle().loadNibNamed("TradeDetailsHeader", owner: self, options: nil)
-        let trandedetailsheader = trandedetailsheadernib[0] as! TradeDetailsHeader
+        let trandedetailsheadernib = NSBundle.mainBundle().loadNibNamed("ShopsDetailsHeader", owner: self, options: nil)
+        let trandedetailsheader = trandedetailsheadernib[0] as! ShopsDetailsHeader
         if Temporary {
             return trandedetailsheader
         }else{
@@ -93,7 +89,7 @@ class TradeDetailsTVC: BaseTableViewController {
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if Temporary{
-            return 44
+            return 88
         }else{
             return 0
         }
@@ -130,8 +126,11 @@ class TradeDetailsTVC: BaseTableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if Temporary {
-            let tradedetailscell = tableView.dequeueReusableCellWithIdentifier(TradeDetailsIdentifier) as! TradeDetails
-            return tradedetailscell
+            let shopsdetailscell = tableView.dequeueReusableCellWithIdentifier(ShopsDetailsIdentifier) as! TradeDetails
+            shopsdetailscell.First.text = "米莎贝尔平安店"
+            shopsdetailscell.Second.text = "6666.66"
+            shopsdetailscell.Third.text = "66"
+            return shopsdetailscell
         }else{
             let nodatacell = tableView.dequeueReusableCellWithIdentifier(NoDataCellIdentifier) as! NoDataCell
             return nodatacell
@@ -144,18 +143,23 @@ class TradeDetailsTVC: BaseTableViewController {
             return tableView.frame.height-64
         }
     }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-             self.performSegueWithIdentifier("tradedetailstoeachdetails", sender: indexPath.row)
-    }
-    
 
-    // MARK: - Navigation
-    /*
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        self.performSegueWithIdentifier("tradedetailstoeachdetails", sender: indexPath.row)
+//    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        
+    }
+    
+    
+    
+    /*
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
     

@@ -904,6 +904,34 @@
             </objects>
             <point key="canvasLocation" x="-42" y="3105"/>
         </scene>
+        <!--Shops DetailsTVC-->
+        <scene sceneID="USZ-kK-an8">
+            <objects>
+                <tableViewController id="xgw-ag-KBk" customClass="ShopsDetailsTVC" customModule="HeYueMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="e1b-FM-74T">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eachdetails" id="tBK-ZB-63u">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tBK-ZB-63u" id="GI4-pJ-xkG">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xgw-ag-KBk" id="oOL-eR-Acs"/>
+                            <outlet property="delegate" destination="xgw-ag-KBk" id="aJP-ic-222"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VH2-8I-uh6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2823" y="1239"/>
+        </scene>
         <!--Trade DetailsTVC-->
         <scene sceneID="rDe-e4-61R">
             <objects>
@@ -920,6 +948,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="xgw-ag-KBk" kind="show" identifier="tradedetailstoeachdetails" id="97I-gH-AMI"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -930,7 +961,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7I-My-CqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2687" y="487"/>
+            <point key="canvasLocation" x="2823" y="487"/>
         </scene>
         <!--Search InformationVC-->
         <scene sceneID="cNy-UP-LqK">
@@ -1190,7 +1221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZ0-PV-Vn5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3359" y="487"/>
+            <point key="canvasLocation" x="2159" y="487"/>
         </scene>
         <!--Object MerchantVC-->
         <scene sceneID="QQi-2C-H7R">
@@ -2483,7 +2514,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z5L-k6-HIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2659" y="1227"/>
+            <point key="canvasLocation" x="3477" y="487"/>
         </scene>
         <!--MainTBC-->
         <scene sceneID="pu4-t8-141">

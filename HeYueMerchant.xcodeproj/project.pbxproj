@@ -118,6 +118,10 @@
 		A77E00531C7DE47900F31E38 /* LGScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E00511C7DE47900F31E38 /* LGScanVC.swift */; };
 		A7914EE31C4FAD0200A2E087 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7914EE21C4FAD0200A2E087 /* Security.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A7914EE91C4FBF7800A2E087 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = A7914EE71C4FBF7800A2E087 /* SSKeychain.m */; };
+		A7943E951C88822000BF72D5 /* ShopsDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943E911C88822000BF72D5 /* ShopsDetailsHeader.swift */; };
+		A7943E961C88822000BF72D5 /* ShopsDetailsHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7943E921C88822000BF72D5 /* ShopsDetailsHeader.xib */; };
+		A7943E971C88822000BF72D5 /* TrandeDetailsFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943E931C88822000BF72D5 /* TrandeDetailsFooter.swift */; };
+		A7943E981C88822000BF72D5 /* TrandeDetailsFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7943E941C88822000BF72D5 /* TrandeDetailsFooter.xib */; };
 		A7979D2D1C50E7D80008ED01 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A7979D2C1C50E7D80008ED01 /* libz.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A7AD71511C42A7A1000D58E6 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD71431C42A7A1000D58E6 /* Alamofire.swift */; };
 		A7AD71521C42A7A1000D58E6 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD71441C42A7A1000D58E6 /* Download.swift */; };
@@ -160,6 +164,7 @@
 		A7D8B0A81C84B151008BBFC2 /* SelectShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D8B0A41C84B151008BBFC2 /* SelectShop.swift */; };
 		A7D8B0A91C84B151008BBFC2 /* SelectShop.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7D8B0A51C84B151008BBFC2 /* SelectShop.xib */; };
 		A7D8B0AB1C84B181008BBFC2 /* CheckTicketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D8B0AA1C84B181008BBFC2 /* CheckTicketVC.swift */; };
+		A7E03B661C884EB30083815D /* ShopsDetailsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E03B651C884EB30083815D /* ShopsDetailsTVC.swift */; };
 		A7FA5CEE1C3ACF4300ECC879 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FA5CC41C3ACF4300ECC879 /* MJRefreshAutoFooter.m */; };
 		A7FA5CEF1C3ACF4300ECC879 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FA5CC61C3ACF4300ECC879 /* MJRefreshBackFooter.m */; };
 		A7FA5CF01C3ACF4300ECC879 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FA5CC81C3ACF4300ECC879 /* MJRefreshComponent.m */; };
@@ -361,6 +366,10 @@
 		A7914EE21C4FAD0200A2E087 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A7914EE61C4FBF7800A2E087 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
 		A7914EE71C4FBF7800A2E087 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		A7943E911C88822000BF72D5 /* ShopsDetailsHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopsDetailsHeader.swift; path = Nibs/ShopsDetailsHeader.swift; sourceTree = "<group>"; };
+		A7943E921C88822000BF72D5 /* ShopsDetailsHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShopsDetailsHeader.xib; path = Nibs/ShopsDetailsHeader.xib; sourceTree = "<group>"; };
+		A7943E931C88822000BF72D5 /* TrandeDetailsFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrandeDetailsFooter.swift; path = Nibs/TrandeDetailsFooter.swift; sourceTree = "<group>"; };
+		A7943E941C88822000BF72D5 /* TrandeDetailsFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TrandeDetailsFooter.xib; path = Nibs/TrandeDetailsFooter.xib; sourceTree = "<group>"; };
 		A7979D2C1C50E7D80008ED01 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A7AD71431C42A7A1000D58E6 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		A7AD71441C42A7A1000D58E6 /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
@@ -417,6 +426,7 @@
 		A7D8B0A41C84B151008BBFC2 /* SelectShop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectShop.swift; path = Nibs/SelectShop.swift; sourceTree = "<group>"; };
 		A7D8B0A51C84B151008BBFC2 /* SelectShop.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SelectShop.xib; path = Nibs/SelectShop.xib; sourceTree = "<group>"; };
 		A7D8B0AA1C84B181008BBFC2 /* CheckTicketVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckTicketVC.swift; path = ViewController/CheckTicketVC.swift; sourceTree = "<group>"; };
+		A7E03B651C884EB30083815D /* ShopsDetailsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopsDetailsTVC.swift; path = ViewController/ShopsDetailsTVC.swift; sourceTree = "<group>"; };
 		A7FA5CC31C3ACF4300ECC879 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		A7FA5CC41C3ACF4300ECC879 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		A7FA5CC51C3ACF4300ECC879 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -558,6 +568,7 @@
 				A7316E1E1C57A0C700AC6262 /* SearchInformationVC.swift */,
 				A7316E1F1C57A0C700AC6262 /* SubmitAuthCodeVC.swift */,
 				A7316E201C57A0C700AC6262 /* TradeDetailsTVC.swift */,
+				A7E03B651C884EB30083815D /* ShopsDetailsTVC.swift */,
 				A7316E211C57A0C700AC6262 /* UserGuiderVC.swift */,
 				A7316E221C57A0C700AC6262 /* UserHelpDetailsVC.swift */,
 				A7316E231C57A0C700AC6262 /* UserHelpTVC.swift */,
@@ -566,8 +577,8 @@
 				A77E00511C7DE47900F31E38 /* LGScanVC.swift */,
 				A7AF15561C80BBE800E26468 /* ResultVC.swift */,
 				A7D8B0AA1C84B181008BBFC2 /* CheckTicketVC.swift */,
-				A7FEF8291C874F9D00E357C0 /* MyGoodsDetails.swift */,
 				A7FEF82A1C874F9D00E357C0 /* MyGoodsTVC.swift */,
+				A7FEF8291C874F9D00E357C0 /* MyGoodsDetails.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -1032,6 +1043,10 @@
 				A7316DFA1C57A03C00AC6262 /* TradeDetails.xib */,
 				A7316DFB1C57A03C00AC6262 /* TradeDetailsHeader.swift */,
 				A7316DFC1C57A03C00AC6262 /* TradeDetailsHeader.xib */,
+				A7943E911C88822000BF72D5 /* ShopsDetailsHeader.swift */,
+				A7943E921C88822000BF72D5 /* ShopsDetailsHeader.xib */,
+				A7943E931C88822000BF72D5 /* TrandeDetailsFooter.swift */,
+				A7943E941C88822000BF72D5 /* TrandeDetailsFooter.xib */,
 				A7D8B0A21C84B151008BBFC2 /* InputCode.swift */,
 				A7D8B0A31C84B151008BBFC2 /* InputCode.xib */,
 				A7D8B0A41C84B151008BBFC2 /* SelectShop.swift */,
@@ -1230,6 +1245,8 @@
 				A7316DFE1C57A03C00AC6262 /* Goods.xib in Resources */,
 				A7316DE21C57A01F00AC6262 /* bg1@2x.png in Resources */,
 				A7316DE51C57A01F00AC6262 /* pageDot.png in Resources */,
+				A7943E981C88822000BF72D5 /* TrandeDetailsFooter.xib in Resources */,
+				A7943E961C88822000BF72D5 /* ShopsDetailsHeader.xib in Resources */,
 				A76000A11C60C47100503648 /* UMSnsAccountViewController.xib in Resources */,
 				A760009B1C60C47100503648 /* UMSCommentDetailController.xib in Resources */,
 				A7316E0E1C57A05700AC6262 /* LaunchScreen.storyboard in Resources */,
@@ -1289,6 +1306,7 @@
 				A7316DFF1C57A03C00AC6262 /* NoDataCell.swift in Sources */,
 				A7FA5CF21C3ACF4300ECC879 /* MJRefreshHeader.m in Sources */,
 				A7AD715E1C42A7A1000D58E6 /* Validation.swift in Sources */,
+				A7943E951C88822000BF72D5 /* ShopsDetailsHeader.swift in Sources */,
 				A7FA5CFD1C3ACF4300ECC879 /* MJRefreshConst.m in Sources */,
 				A72AD9781C3EC96E004628E3 /* SweetAlert.swift in Sources */,
 				A74E53841C37C73300387114 /* IQNSArray+Sort.m in Sources */,
@@ -1384,6 +1402,8 @@
 				A7C0B8B81C74C1700011C8FC /* split.c in Sources */,
 				A7316E2B1C57A0C700AC6262 /* SearchInformationVC.swift in Sources */,
 				A7FA5CFF1C3ACF4300ECC879 /* UIScrollView+MJRefresh.m in Sources */,
+				A7E03B661C884EB30083815D /* ShopsDetailsTVC.swift in Sources */,
+				A7943E971C88822000BF72D5 /* TrandeDetailsFooter.swift in Sources */,
 				A77E00521C7DE47900F31E38 /* CodeVC.swift in Sources */,
 				A7316DD41C579FF100AC6262 /* BaseViewController.swift in Sources */,
 				A7FA5CF51C3ACF4300ECC879 /* MJRefreshAutoStateFooter.m in Sources */,

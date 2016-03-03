@@ -10,9 +10,12 @@ import UIKit
 
 class TradeDetails: UITableViewCell {
 
+    @IBOutlet weak var First: UILabel!
+    @IBOutlet weak var Second: UILabel!
+    @IBOutlet weak var Third: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+ 
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

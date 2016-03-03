@@ -22,14 +22,14 @@ class MyGoodsDetails: BaseViewController ,UIAlertViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
 PhoneImageButton.addTarget(self, action: "TelShopAction", forControlEvents: .TouchUpInside)
-        MyGoodsDetailsTextView.frame = CGRectMake(0, 0, MyGoodsDetailsView.frame.width, MyGoodsDetailsView.frame.height)
+        MyGoodsDetailsTextView.frame = CGRectMake(0, 0,  self.view.frame.width, MyGoodsDetailsView.frame.height)
         MyGoodsDetailsTextView.selectable = false
         MyGoodsDetailsTextView.editable = false
         MyGoodsDetailsTextView.backgroundColor = UIColor.whiteColor()
         MyGoodsDetailsTextView.font = UIFont.systemFontOfSize(14)
         MyGoodsDetailsTextView.text = "自古以来，人们不仅把柑桔当作佳美的果品，而且大量用在医药上。据科学分析，柑桔果实有大量的糖、维生素C和B,核黄素、蛋白质、钙、尼龙酸脂肪、粗纤维、磷、抗坏血酸、肌醇、无机盐铁等可食营养成份，有助消化、降血压、健脾、止咳化痰、顺气活血之功能，有益于支气管炎、高血压、胆固醇偏高、血管硬化等疾病患者饮食。柑桔果肉性味甘平、微酸，对老弱病者有调肺止渴的功效，桔子含有丰富的葡萄糖、果糖、蔗糖、多种维生素和钾盐，对小便过多、大汗淋漓、痢疾腹泻引起的脱水者，鲜桔汁是良好的滋补剂，也是预防和治疗坏血病的佳品。柑桔全身是宝，除生食外，还可加工成罐头出口。其果皮、核、络可广泛应用于食品、化学和医药工业。用柑桔酿的酒和醋，具有特殊的香味；用桔皮和桔花提炼的香精，是重要的化工原料；用桔皮提炼的果胶，还可用来制造果酱和糖果。"
         MyGoodsDetailsView.addSubview(MyGoodsDetailsTextView)
-        MyGoodsNoticeTextView.frame = CGRectMake(0, 0, MyGoodsNoticeView.frame.width, MyGoodsNoticeView.frame.height)
+        MyGoodsNoticeTextView.frame = CGRectMake(0, 0, self.view.frame.width, MyGoodsNoticeView.frame.height)
         MyGoodsNoticeTextView.selectable = false
         MyGoodsNoticeTextView.editable = false
         MyGoodsNoticeTextView.backgroundColor = UIColor.whiteColor()
