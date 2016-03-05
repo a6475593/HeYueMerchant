@@ -20,6 +20,11 @@ class CheckTicketVC: BaseViewController,showRMPickView,RegisterFirst, SegmentedC
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "验证中心"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: self, action: nil)
+
+        
         let selectshopnib = NSBundle.mainBundle().loadNibNamed("SelectShop", owner: self, options: nil)
         selectshopview = selectshopnib[0] as! SelectShop
       
@@ -28,7 +33,7 @@ class CheckTicketVC: BaseViewController,showRMPickView,RegisterFirst, SegmentedC
         inputcodeview = inputcodenib[0] as! InputCode
         
         inputcodeview.delegateRegisterFirst = self
-        configureSegmentedControl1()
+        configureSegmentedControl()
        
         
         if usertype == 1 {
@@ -104,7 +109,7 @@ class CheckTicketVC: BaseViewController,showRMPickView,RegisterFirst, SegmentedC
     }
     
     
-    private func configureSegmentedControl1() {
+    private func configureSegmentedControl() {
         let titleStrings = ["1号券", "2号券", "3号券", "4号券", "5号券","6号券", "7号券", "8号券", "9号券", "10号券"]
         let titles: [NSAttributedString] = {
             let attributes = [NSFontAttributeName: UIFont.systemFontOfSize(14), NSForegroundColorAttributeName: UIColor.blackColor()]

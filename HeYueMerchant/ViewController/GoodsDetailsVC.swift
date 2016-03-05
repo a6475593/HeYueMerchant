@@ -33,7 +33,9 @@ class GoodsDetailsVC: BaseViewController,UITextFieldDelegate,UITextViewDelegate{
     }
     
     func setupView(){
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "商品详情", style: .Plain, target: self, action: nil)
+        self.navigationItem.title = "商品详情"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: self, action: nil)
         let SearchButton = UIBarButtonItem(title: "查询余额", style: UIBarButtonItemStyle.Done, target: self, action: "searchremainingaction")
         self.navigationItem.rightBarButtonItem = SearchButton
         for var i = 1;i<60;i++ {

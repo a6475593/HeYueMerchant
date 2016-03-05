@@ -12,6 +12,9 @@ class ChangeUserInformationVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "账户信息"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: self, action: nil)
         let CompleteButton = UIBarButtonItem(title: "完成", style: UIBarButtonItemStyle.Done, target: self, action: "CompleteAction")
         self.navigationItem.rightBarButtonItem = CompleteButton
        

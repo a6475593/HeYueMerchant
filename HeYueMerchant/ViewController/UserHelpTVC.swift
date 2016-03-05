@@ -15,8 +15,9 @@ class UserHelpTVC: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "帮助列表", style: .Plain, target: self, action: nil)
-
+        self.navigationItem.title = "帮助中心"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: self, action: nil)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -52,7 +53,7 @@ class UserHelpTVC: BaseTableViewController {
         HelpCell.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
         HelpCell.selectionStyle = .None
         HelpCell.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1.0)
-
+        
         return HelpCell
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

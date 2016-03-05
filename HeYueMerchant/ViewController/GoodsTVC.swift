@@ -15,11 +15,13 @@ class GoodsTVC: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "商品列表", style: .Plain, target: self, action: nil)
+        self.navigationItem.title = "商品中心"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: self, action: nil)
         setupView()
-
+        
     }
-
+    
     func setupView(){
         let goodscellnib = UINib(nibName: "Goods", bundle: nil)
         tableView.registerNib(goodscellnib, forCellReuseIdentifier: GoodsCellIdentifier)

@@ -1,5 +1,5 @@
 //
-//  ShopsDetailsTVC.swift
+//  EveryShopDetailsTVC..swift
 //  HeYueMerchant
 //
 //  Created by 王玉琨 on 16/3/3.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ShopsDetailsTVC: BaseTableViewController {
-    let ShopsDetailsIdentifier = "shopsdetailsidentifier"
+class EveryShopDetailsTVC: BaseTableViewController {
+    let EveryShopIdentifier = "everyshopidentifier"
     let NoDataCellIdentifier = "nodatacellidentifier"
     let Idleimages = NSMutableArray()
     let Refreshingimages = NSMutableArray()
@@ -31,11 +31,11 @@ class ShopsDetailsTVC: BaseTableViewController {
     }
     func SetUpTableView(){
         
-        let shopsdetailscellnib = UINib(nibName: "TradeDetails", bundle: nil)
+        let everyshopcellnib = UINib(nibName: "TradeDetailsCell", bundle: nil)
         let nodatacellnib = UINib(nibName: "NoDataCell", bundle: nil)
         tableView.separatorStyle = .None
         
-        tableView.registerNib(shopsdetailscellnib, forCellReuseIdentifier: ShopsDetailsIdentifier)
+        tableView.registerNib(everyshopcellnib, forCellReuseIdentifier: EveryShopIdentifier)
         tableView.registerNib(nodatacellnib, forCellReuseIdentifier: NoDataCellIdentifier)
         
         
@@ -65,12 +65,14 @@ class ShopsDetailsTVC: BaseTableViewController {
     }
     
     func IsTemporary(){
+        self.navigationItem.title = "收银台统计"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: self, action: nil)
         guard Temporary else{
             return
         }
         let SearchButton = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "tosearchinfomation")
         self.navigationItem.rightBarButtonItem = SearchButton
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "当日情况", style: .Plain, target: self, action: nil)
     }
     
     func tosearchinfomation(){
@@ -126,11 +128,11 @@ class ShopsDetailsTVC: BaseTableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if Temporary {
-            let shopsdetailscell = tableView.dequeueReusableCellWithIdentifier(ShopsDetailsIdentifier) as! TradeDetails
-            shopsdetailscell.First.text = "米莎贝尔平安店"
-            shopsdetailscell.Second.text = "6666.66"
-            shopsdetailscell.Third.text = "66"
-            return shopsdetailscell
+            let everyshopscell = tableView.dequeueReusableCellWithIdentifier(EveryShopIdentifier) as! TradeDetailsCell
+            everyshopscell.First.text = "米莎贝尔平安店"
+            everyshopscell.Second.text = "6666.66"
+            everyshopscell.Third.text = "66"
+            return everyshopscell
         }else{
             let nodatacell = tableView.dequeueReusableCellWithIdentifier(NoDataCellIdentifier) as! NoDataCell
             return nodatacell
@@ -143,10 +145,10 @@ class ShopsDetailsTVC: BaseTableViewController {
             return tableView.frame.height-64
         }
     }
-
-//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        self.performSegueWithIdentifier("tradedetailstoeachdetails", sender: indexPath.row)
-//    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("shoptoorderidentifier", sender: indexPath.row)
+    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
     }

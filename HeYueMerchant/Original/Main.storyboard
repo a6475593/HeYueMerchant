@@ -904,22 +904,25 @@
             </objects>
             <point key="canvasLocation" x="-42" y="3105"/>
         </scene>
-        <!--Shops DetailsTVC-->
+        <!--Every Shop DetailsTVC-->
         <scene sceneID="USZ-kK-an8">
             <objects>
-                <tableViewController id="xgw-ag-KBk" customClass="ShopsDetailsTVC" customModule="HeYueMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="xgw-ag-KBk" customClass="EveryShopDetailsTVC" customModule="HeYueMerchant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="e1b-FM-74T">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eachdetails" id="tBK-ZB-63u">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderdetails" id="tBK-ZB-63u">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tBK-ZB-63u" id="GI4-pJ-xkG">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="McO-gW-jUi" kind="show" identifier="shoptoorderidentifier" id="gh2-xS-MNP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -930,18 +933,46 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VH2-8I-uh6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2823" y="1239"/>
+            <point key="canvasLocation" x="2823" y="1207"/>
         </scene>
-        <!--Trade DetailsTVC-->
+        <!--Every Order DetailsTVC-->
+        <scene sceneID="wv8-8w-gBH">
+            <objects>
+                <tableViewController id="McO-gW-jUi" customClass="EveryOrderDetailsTVC" customModule="HeYueMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JYP-Jc-yQh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eachdetails" id="hPe-7I-oR3">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hPe-7I-oR3" id="gwM-lF-mcU">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="McO-gW-jUi" id="qBd-qx-V4r"/>
+                            <outlet property="delegate" destination="McO-gW-jUi" id="9eh-Fk-wbG"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O40-JC-XJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2823" y="1915"/>
+        </scene>
+        <!--Every Day DetailsTVC-->
         <scene sceneID="rDe-e4-61R">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="Pfp-H1-Efj" customClass="TradeDetailsTVC" customModule="HeYueMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="Pfp-H1-Efj" customClass="EveryDayDetailsTVC" customModule="HeYueMerchant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FTL-ti-hZW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tradedetails" id="aLv-57-aX2">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="daydetails" id="aLv-57-aX2">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aLv-57-aX2" id="Pwm-aL-pfr">
@@ -949,7 +980,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="xgw-ag-KBk" kind="show" identifier="tradedetailstoeachdetails" id="97I-gH-AMI"/>
+                                    <segue destination="xgw-ag-KBk" kind="show" identifier="daytoshopidentifier" id="97I-gH-AMI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -24,8 +24,8 @@ class MoreVC: BaseViewController,UIAlertViewDelegate,UMSocialUIDelegate{
     var clearAlertViewEmpty = UIAlertView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "更多信息", style: .Plain, target: self, action: nil)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: self, action: nil)
         logoutButton.addTarget(self, action: "logoutaction", forControlEvents: .TouchUpInside)
         TelePhoneButton.addTarget(self, action: "telephoneaction", forControlEvents: .TouchUpInside)
         ClearCacheButton.addTarget(self, action: "clearcacheaction", forControlEvents: .TouchUpInside)
@@ -36,7 +36,7 @@ class MoreVC: BaseViewController,UIAlertViewDelegate,UMSocialUIDelegate{
         MainScrollView.header = MJRefreshHeader(refreshingBlock: { () -> Void in
             self.MainScrollView.header.endRefreshing()
         })
-      self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
     }
     
@@ -152,7 +152,7 @@ class MoreVC: BaseViewController,UIAlertViewDelegate,UMSocialUIDelegate{
             , shareToSnsNames:
             [   UMShareToSina,//新浪
                 UMShareToTencent,//腾讯微博
-//                UMShareToEmail,//email
+                //                UMShareToEmail,//email
                 UMShareToSms,//短信
                 UMShareToQQ,//QQ
                 UMShareToQzone,//QQ空间
@@ -176,9 +176,9 @@ class MoreVC: BaseViewController,UIAlertViewDelegate,UMSocialUIDelegate{
         
     }
     func didFinishGetUMSocialDataInViewController(response: UMSocialResponseEntity!) {
-//        if response.responseCode == UMSResponseCodeSuccess {
-//            LeafNotification.showInController(self, withText: "分享成功", type: LeafNotificationTypeSuccess)
-//        }
+        //        if response.responseCode == UMSResponseCodeSuccess {
+        //            LeafNotification.showInController(self, withText: "分享成功", type: LeafNotificationTypeSuccess)
+        //        }
     }
     
     /*

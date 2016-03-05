@@ -1,46 +1,62 @@
 //
-//  TradeDetailsTVC.swift
+//  EveryOrderDetailsTVC.swift
 //  HeYueMerchant
 //
-//  Created by 王玉琨 on 16/1/11.
+//  Created by 王玉琨 on 16/3/5.
 //  Copyright © 2016年 王玉琨. All rights reserved.
 //
 
 import UIKit
 
-class TradeDetailsTVC: BaseTableViewController {
-    let TradeDetailsIdentifier = "tradedetailsidentifier"
+class EveryOrderDetailsTVC: BaseTableViewController {
+    let EveryOrderIdentifier = "everyorderidentifier"
     let NoDataCellIdentifier = "nodatacellidentifier"
     let Idleimages = NSMutableArray()
     let Refreshingimages = NSMutableArray()
     var Temporary = true
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         super.viewDidLoad()
         if GetSetValue.integerForKey(USER_TYPE) == 0 {
             Temporary = true
         }else if GetSetValue.integerForKey(USER_TYPE) == 1{
             Temporary = false
         }
-        //MARK: Umeng 页面统计
-        SetUpTableView()
         IsTemporary()
+        SetUpTableView()
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func IsTemporary(){
+        self.navigationItem.title = "当日统计"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: self, action: nil)
+        guard Temporary else{
+            return
+        }
+        let SearchButton = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "tosearchinfomation")
+        self.navigationItem.rightBarButtonItem = SearchButton
+    }
+    
+    func tosearchinfomation(){
+        let searchinfomationvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("searchinfomation")
+        self.navigationController?.pushViewController(searchinfomationvc,animated: true)
+    }
+    
     func SetUpTableView(){
         
-        let tradedetailscellnib = UINib(nibName: "TradeDetails", bundle: nil)
+        let everyorderdetailscellnib = UINib(nibName: "OrderDetailsCell", bundle: nil)
         let nodatacellnib = UINib(nibName: "NoDataCell", bundle: nil)
         tableView.separatorStyle = .None
         
-        tableView.registerNib(tradedetailscellnib, forCellReuseIdentifier: TradeDetailsIdentifier)
+        tableView.registerNib(everyorderdetailscellnib, forCellReuseIdentifier: EveryOrderIdentifier)
         tableView.registerNib(nodatacellnib, forCellReuseIdentifier: NoDataCellIdentifier)
-        
         
         for var i = 1;i<60;i++ {
             let image = UIImage(named: "dropdown_anim__000\(i)")
@@ -67,25 +83,12 @@ class TradeDetailsTVC: BaseTableViewController {
         }
     }
     
-    func IsTemporary(){
-        guard Temporary else{
-            return
-        }
-        let SearchButton = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "tosearchinfomation")
-        self.navigationItem.rightBarButtonItem = SearchButton
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "收银台统计", style: .Plain, target: self, action: nil)
-    }
-    
-    func tosearchinfomation(){
-        let searchinfomationvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("searchinfomation")
-        self.navigationController?.pushViewController(searchinfomationvc, animated: true)
-    }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let trandedetailsheadernib = NSBundle.mainBundle().loadNibNamed("TradeDetailsHeader", owner: self, options: nil)
-        let trandedetailsheader = trandedetailsheadernib[0] as! TradeDetailsHeader
+        let orderdetailsheadernib = NSBundle.mainBundle().loadNibNamed("OrderDetailsHeader", owner: self, options: nil)
+        let orderdetailsheader = orderdetailsheadernib[0] as! OrderDetailsHeader
         if Temporary {
-            return trandedetailsheader
+            return orderdetailsheader
         }else{
             return nil
         }
@@ -93,29 +96,12 @@ class TradeDetailsTVC: BaseTableViewController {
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if Temporary{
-            return 44
+            return 88
         }else{
             return 0
         }
     }
     
-    override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let trandedetailsfooternib = NSBundle.mainBundle().loadNibNamed("TrandeDetailsFooter", owner: self, options: nil)
-        let trandedetailsfooter = trandedetailsfooternib[0] as! TrandeDetailsFooter
-        if Temporary {
-            return trandedetailsfooter
-        }else{
-            return nil
-        }
-    }
-    
-    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        if Temporary{
-            return 44
-        }else{
-            return 0
-        }
-    }
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -130,8 +116,9 @@ class TradeDetailsTVC: BaseTableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if Temporary {
-            let tradedetailscell = tableView.dequeueReusableCellWithIdentifier(TradeDetailsIdentifier) as! TradeDetails
-            return tradedetailscell
+            let orderdetailscell = tableView.dequeueReusableCellWithIdentifier(EveryOrderIdentifier) as! OrderDetailsCell
+            
+            return orderdetailscell
         }else{
             let nodatacell = tableView.dequeueReusableCellWithIdentifier(NoDataCellIdentifier) as! NoDataCell
             return nodatacell
@@ -139,23 +126,19 @@ class TradeDetailsTVC: BaseTableViewController {
     }
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if Temporary{
-            return 44
+            return 88
         }else{
             return tableView.frame.height-64
         }
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-             self.performSegueWithIdentifier("tradedetailstoeachdetails", sender: indexPath.row)
-    }
-    
-
-    // MARK: - Navigation
     /*
+    // MARK: - Navigation
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
     

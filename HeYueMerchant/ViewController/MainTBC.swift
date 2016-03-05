@@ -26,7 +26,6 @@ class MainTBC: UITabBarController ,SKSplashDelegate{
         TabBarItem.image = UIImage(named: Image)?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         TabBarItem.selectedImage = UIImage(named: SelectedImage)?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         TabBarItem.title = title
-        //UIColor(red: 22, green: 169, blue: 238, alpha: 1)
         TabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor(red: 22/255, green: 169/255, blue: 238/255, alpha: 1.0)], forState: UIControlState.Selected)
         TabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.grayColor()], forState: UIControlState.Normal)
         
