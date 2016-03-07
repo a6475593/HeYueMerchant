@@ -119,6 +119,7 @@
 		A760FFAB1C60ACF400503648 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A760FFAA1C60ACF400503648 /* libsqlite3.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A760FFAD1C60ACFD00503648 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A760FFAC1C60ACFD00503648 /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A760FFAF1C60AD0400503648 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A760FFAE1C60AD0400503648 /* libstdc++.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A76800AC1C8DE0AB008312BA /* DealDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76800AB1C8DE0AB008312BA /* DealDetailsVC.swift */; };
 		A77E00521C7DE47900F31E38 /* CodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E00501C7DE47900F31E38 /* CodeVC.swift */; };
 		A77E00531C7DE47900F31E38 /* LGScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E00511C7DE47900F31E38 /* LGScanVC.swift */; };
 		A7914EE31C4FAD0200A2E087 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7914EE21C4FAD0200A2E087 /* Security.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -199,7 +200,6 @@
 		A7FEF82C1C874F9D00E357C0 /* MyGoodsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FEF82A1C874F9D00E357C0 /* MyGoodsTVC.swift */; };
 		A7FEF82F1C874FA800E357C0 /* MyGoodsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FEF82D1C874FA800E357C0 /* MyGoodsCell.swift */; };
 		A7FEF8301C874FA800E357C0 /* MyGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7FEF82E1C874FA800E357C0 /* MyGoodsCell.xib */; };
-		A7FF5ADB1C8DCD5500629E17 /* DealDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FF5ADA1C8DCD5500629E17 /* DealDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -372,6 +372,7 @@
 		A760FFAC1C60ACFD00503648 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		A760FFAE1C60AD0400503648 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		A760FFD71C60BFC900503648 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		A76800AB1C8DE0AB008312BA /* DealDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DealDetailsVC.swift; path = ViewController/DealDetailsVC.swift; sourceTree = "<group>"; };
 		A77E00501C7DE47900F31E38 /* CodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CodeVC.swift; path = ViewController/CodeVC.swift; sourceTree = "<group>"; };
 		A77E00511C7DE47900F31E38 /* LGScanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LGScanVC.swift; path = ViewController/LGScanVC.swift; sourceTree = "<group>"; };
 		A7914EE21C4FAD0200A2E087 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -488,7 +489,6 @@
 		A7FEF82A1C874F9D00E357C0 /* MyGoodsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyGoodsTVC.swift; path = ViewController/MyGoodsTVC.swift; sourceTree = "<group>"; };
 		A7FEF82D1C874FA800E357C0 /* MyGoodsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyGoodsCell.swift; path = Nibs/MyGoodsCell.swift; sourceTree = "<group>"; };
 		A7FEF82E1C874FA800E357C0 /* MyGoodsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyGoodsCell.xib; path = Nibs/MyGoodsCell.xib; sourceTree = "<group>"; };
-		A7FF5ADA1C8DCD5500629E17 /* DealDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -582,7 +582,7 @@
 				A7316E201C57A0C700AC6262 /* EveryDayDetailsTVC.swift */,
 				A7E03B651C884EB30083815D /* EveryShopDetailsTVC.swift */,
 				A72766E51C8AF605000A5641 /* EveryOrderDetailsTVC.swift */,
-				A7FF5ADA1C8DCD5500629E17 /* DealDetailsVC.swift */,
+				A76800AB1C8DE0AB008312BA /* DealDetailsVC.swift */,
 				A7316E211C57A0C700AC6262 /* UserGuiderVC.swift */,
 				A7316E221C57A0C700AC6262 /* UserHelpDetailsVC.swift */,
 				A7316E231C57A0C700AC6262 /* UserHelpTVC.swift */,
@@ -1345,6 +1345,7 @@
 				A7FEF82C1C874F9D00E357C0 /* MyGoodsTVC.swift in Sources */,
 				A749D95B1C57C0CA00036BE5 /* STLVideoFunctions.m in Sources */,
 				A7316E271C57A0C700AC6262 /* LoginVC.swift in Sources */,
+				A76800AC1C8DE0AB008312BA /* DealDetailsVC.swift in Sources */,
 				A7316DF21C57A02E00AC6262 /* DesignableTextField.swift in Sources */,
 				A7C0B8B51C74C1700011C8FC /* qrinput.c in Sources */,
 				A7316DF31C57A02E00AC6262 /* DesignableTextView.swift in Sources */,
@@ -1387,7 +1388,6 @@
 				A7316DF01C57A02E00AC6262 /* DesignableButton.swift in Sources */,
 				A77E00531C7DE47900F31E38 /* LGScanVC.swift in Sources */,
 				A7D8B09D1C84B108008BBFC2 /* Constants.swift in Sources */,
-				A7FF5ADB1C8DCD5500629E17 /* DealDetailsVC.swift in Sources */,
 				A74E538F1C37C73300387114 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				A7AD71581C42A7A1000D58E6 /* Response.swift in Sources */,
 				A7FA5CFE1C3ACF4300ECC879 /* UIScrollView+MJExtension.m in Sources */,
