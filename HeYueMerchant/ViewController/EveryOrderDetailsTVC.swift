@@ -132,6 +132,9 @@ class EveryOrderDetailsTVC: BaseTableViewController {
         }
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("ordertodealidentifier", sender: indexPath.row)
+    }
     /*
     // MARK: - Navigation
     

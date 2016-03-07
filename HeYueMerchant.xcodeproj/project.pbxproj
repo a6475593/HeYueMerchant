@@ -199,6 +199,7 @@
 		A7FEF82C1C874F9D00E357C0 /* MyGoodsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FEF82A1C874F9D00E357C0 /* MyGoodsTVC.swift */; };
 		A7FEF82F1C874FA800E357C0 /* MyGoodsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FEF82D1C874FA800E357C0 /* MyGoodsCell.swift */; };
 		A7FEF8301C874FA800E357C0 /* MyGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7FEF82E1C874FA800E357C0 /* MyGoodsCell.xib */; };
+		A7FF5ADB1C8DCD5500629E17 /* DealDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FF5ADA1C8DCD5500629E17 /* DealDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -487,6 +488,7 @@
 		A7FEF82A1C874F9D00E357C0 /* MyGoodsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyGoodsTVC.swift; path = ViewController/MyGoodsTVC.swift; sourceTree = "<group>"; };
 		A7FEF82D1C874FA800E357C0 /* MyGoodsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyGoodsCell.swift; path = Nibs/MyGoodsCell.swift; sourceTree = "<group>"; };
 		A7FEF82E1C874FA800E357C0 /* MyGoodsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyGoodsCell.xib; path = Nibs/MyGoodsCell.xib; sourceTree = "<group>"; };
+		A7FF5ADA1C8DCD5500629E17 /* DealDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -580,6 +582,7 @@
 				A7316E201C57A0C700AC6262 /* EveryDayDetailsTVC.swift */,
 				A7E03B651C884EB30083815D /* EveryShopDetailsTVC.swift */,
 				A72766E51C8AF605000A5641 /* EveryOrderDetailsTVC.swift */,
+				A7FF5ADA1C8DCD5500629E17 /* DealDetailsVC.swift */,
 				A7316E211C57A0C700AC6262 /* UserGuiderVC.swift */,
 				A7316E221C57A0C700AC6262 /* UserHelpDetailsVC.swift */,
 				A7316E231C57A0C700AC6262 /* UserHelpTVC.swift */,
@@ -1384,6 +1387,7 @@
 				A7316DF01C57A02E00AC6262 /* DesignableButton.swift in Sources */,
 				A77E00531C7DE47900F31E38 /* LGScanVC.swift in Sources */,
 				A7D8B09D1C84B108008BBFC2 /* Constants.swift in Sources */,
+				A7FF5ADB1C8DCD5500629E17 /* DealDetailsVC.swift in Sources */,
 				A74E538F1C37C73300387114 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				A7AD71581C42A7A1000D58E6 /* Response.swift in Sources */,
 				A7FA5CFE1C3ACF4300ECC879 /* UIScrollView+MJExtension.m in Sources */,
