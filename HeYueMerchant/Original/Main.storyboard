@@ -818,8 +818,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="iJO-WJ-lQ0" secondAttribute="trailing" constant="-20" id="4W9-Jc-k4x"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eoe-CJ-e9K" secondAttribute="trailing" constant="20" id="8Pc-de-gJc"/>
                             <constraint firstItem="Urp-hp-fg4" firstAttribute="top" secondItem="2iY-cQ-kex" secondAttribute="bottom" id="E6I-uU-oSt"/>
+                            <constraint firstItem="iJO-WJ-lQ0" firstAttribute="top" secondItem="gSv-sP-tGU" secondAttribute="topMargin" id="Z3h-QG-ky0"/>
                             <constraint firstItem="iJO-WJ-lQ0" firstAttribute="top" secondItem="2iY-cQ-kex" secondAttribute="bottom" id="Zs8-dt-iLJ"/>
                             <constraint firstItem="YtY-a4-WCY" firstAttribute="top" secondItem="iJO-WJ-lQ0" secondAttribute="bottom" id="fUO-QD-OZm"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="iJO-WJ-lQ0" secondAttribute="bottom" id="hrE-bH-TYJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Urp-hp-fg4" secondAttribute="trailing" constant="-20" id="jkN-3x-z0Z"/>
                             <constraint firstItem="iJO-WJ-lQ0" firstAttribute="leading" secondItem="gSv-sP-tGU" secondAttribute="leadingMargin" constant="-20" id="leb-18-Yg0"/>
                             <constraint firstItem="eoe-CJ-e9K" firstAttribute="top" secondItem="2iY-cQ-kex" secondAttribute="bottom" constant="20" id="nDu-nc-1Nh"/>
@@ -828,6 +830,12 @@
                             <constraint firstItem="eoe-CJ-e9K" firstAttribute="leading" secondItem="gSv-sP-tGU" secondAttribute="leadingMargin" constant="20" id="tCW-Sr-00w"/>
                             <constraint firstItem="YtY-a4-WCY" firstAttribute="top" secondItem="eoe-CJ-e9K" secondAttribute="bottom" constant="20" id="xtg-g0-V2s"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Zs8-dt-iLJ"/>
+                                <exclude reference="fUO-QD-OZm"/>
+                            </mask>
+                        </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="55V-2B-c7Z">

@@ -53,6 +53,7 @@ class MoreVC: BaseViewController,UIAlertViewDelegate,UMSocialUIDelegate{
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
     }
+    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         VersionMessageImage.cornerRadius = VersionMessageImage.frame.width / 2
