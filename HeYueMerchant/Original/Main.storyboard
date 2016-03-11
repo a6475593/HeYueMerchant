@@ -763,13 +763,18 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jGS-OT-uLP">
-                                        <rect key="frame" x="1" y="130" width="518" height="287"/>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" editable="NO" text="版本介绍。" translatesAutoresizingMaskIntoConstraints="NO" id="xIm-PL-Drp" userLabel="VersionMessageTV">
+                                        <rect key="frame" x="1" y="128" width="518" height="281"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwW-aE-waz" customClass="DesignableButton" customModule="HeYueMerchant" customModuleProvider="target">
-                                        <rect key="frame" x="1" y="417" width="518" height="30"/>
+                                        <rect key="frame" x="0.0" y="409" width="520" height="38"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="OGv-Cc-Bde"/>
+                                        </constraints>
                                         <state key="normal" title="取消">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -777,25 +782,25 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="jGS-OT-uLP" firstAttribute="leading" secondItem="eoe-CJ-e9K" secondAttribute="leading" constant="1" id="6e0-6k-3qQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="uwW-aE-waz" secondAttribute="trailing" id="2nR-tT-Pih"/>
                                     <constraint firstItem="TrC-DY-Ced" firstAttribute="top" secondItem="eoe-CJ-e9K" secondAttribute="top" constant="8" id="6hM-4q-QsD"/>
                                     <constraint firstAttribute="bottom" secondItem="5xm-VP-bmS" secondAttribute="bottom" id="ETE-Nk-CgU"/>
-                                    <constraint firstItem="uwW-aE-waz" firstAttribute="top" secondItem="jGS-OT-uLP" secondAttribute="bottom" id="Gi2-8V-bYn"/>
-                                    <constraint firstAttribute="trailing" secondItem="jGS-OT-uLP" secondAttribute="trailing" constant="1" id="Ihd-IJ-Jbs"/>
+                                    <constraint firstAttribute="trailing" secondItem="xIm-PL-Drp" secondAttribute="trailing" constant="1" id="HFz-Nu-3dU"/>
                                     <constraint firstItem="Wc2-J8-zFZ" firstAttribute="centerX" secondItem="eoe-CJ-e9K" secondAttribute="centerX" id="KIr-eH-g4z"/>
                                     <constraint firstItem="5xm-VP-bmS" firstAttribute="leading" secondItem="eoe-CJ-e9K" secondAttribute="leading" id="Kn2-EW-sz5"/>
                                     <constraint firstItem="KiD-Ga-dQw" firstAttribute="width" secondItem="eoe-CJ-e9K" secondAttribute="width" multiplier="1:7" id="NHB-56-Ggu"/>
+                                    <constraint firstItem="uwW-aE-waz" firstAttribute="leading" secondItem="eoe-CJ-e9K" secondAttribute="leading" id="RHg-kv-pjT"/>
                                     <constraint firstItem="oOE-oy-hUb" firstAttribute="top" secondItem="eoe-CJ-e9K" secondAttribute="top" constant="30" id="UEp-bJ-RH7"/>
-                                    <constraint firstItem="uwW-aE-waz" firstAttribute="trailing" secondItem="jGS-OT-uLP" secondAttribute="trailing" id="VHu-ff-Aav"/>
+                                    <constraint firstItem="uwW-aE-waz" firstAttribute="top" secondItem="xIm-PL-Drp" secondAttribute="bottom" id="Uz7-3a-dMS"/>
+                                    <constraint firstItem="xIm-PL-Drp" firstAttribute="leading" secondItem="eoe-CJ-e9K" secondAttribute="leading" constant="1" id="WoL-GW-eP6"/>
                                     <constraint firstItem="Wc2-J8-zFZ" firstAttribute="top" secondItem="KiD-Ga-dQw" secondAttribute="bottom" constant="4" id="Zgu-7L-4vI"/>
                                     <constraint firstItem="KiD-Ga-dQw" firstAttribute="top" secondItem="oOE-oy-hUb" secondAttribute="bottom" constant="4" id="acK-Nw-qeZ"/>
                                     <constraint firstAttribute="trailing" secondItem="oOE-oy-hUb" secondAttribute="trailing" constant="20" id="d0q-SJ-jB6"/>
+                                    <constraint firstItem="xIm-PL-Drp" firstAttribute="top" secondItem="Wc2-J8-zFZ" secondAttribute="bottom" id="eIx-eu-cAj"/>
                                     <constraint firstAttribute="trailing" secondItem="5xm-VP-bmS" secondAttribute="trailing" id="hkw-oV-OWe"/>
                                     <constraint firstItem="TrC-DY-Ced" firstAttribute="centerX" secondItem="eoe-CJ-e9K" secondAttribute="centerX" id="iSZ-f9-Pr5"/>
                                     <constraint firstItem="KiD-Ga-dQw" firstAttribute="centerX" secondItem="eoe-CJ-e9K" secondAttribute="centerX" id="kZy-6g-XQF"/>
-                                    <constraint firstItem="uwW-aE-waz" firstAttribute="leading" secondItem="jGS-OT-uLP" secondAttribute="leading" id="lBt-fJ-YK5"/>
                                     <constraint firstAttribute="bottom" secondItem="uwW-aE-waz" secondAttribute="bottom" id="q20-xK-e2P"/>
-                                    <constraint firstItem="jGS-OT-uLP" firstAttribute="top" secondItem="Wc2-J8-zFZ" secondAttribute="bottom" constant="2" id="tza-DY-JVb"/>
                                     <constraint firstItem="oOE-oy-hUb" firstAttribute="leading" secondItem="eoe-CJ-e9K" secondAttribute="leading" constant="20" id="y9l-He-YTm"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -871,12 +876,12 @@
                         <outlet property="ClearCacheButton" destination="NHR-Pz-4fA" id="Unm-tM-axq"/>
                         <outlet property="DismissVersionMessage" destination="iJO-WJ-lQ0" id="fOa-DG-ugV"/>
                         <outlet property="MainScrollView" destination="Urp-hp-fg4" id="WT9-AM-l4m"/>
+                        <outlet property="MessageTextView" destination="xIm-PL-Drp" id="XzP-fL-axe"/>
                         <outlet property="ShareButton" destination="ras-un-IMg" id="RBW-ls-iu8"/>
                         <outlet property="ShowVersionMessage" destination="dcU-Fu-c3c" id="icV-Rq-KoB"/>
                         <outlet property="TelePhoneButton" destination="p2Y-Qu-ahh" id="na3-ZE-TKj"/>
                         <outlet property="VersionMessageDismissButton" destination="uwW-aE-waz" id="WuB-L3-p0C"/>
                         <outlet property="VersionMessageImage" destination="KiD-Ga-dQw" id="SrO-G9-AvS"/>
-                        <outlet property="VersionMessageTView" destination="jGS-OT-uLP" id="W3Y-Wo-8Dx"/>
                         <outlet property="VersionMessageView" destination="eoe-CJ-e9K" id="d9g-le-ntJ"/>
                         <outlet property="logoutButton" destination="95x-du-KRl" id="mcH-gD-O2o"/>
                     </connections>
@@ -3399,13 +3404,12 @@
                                                     <constraint firstAttribute="height" constant="1" id="6cG-MA-ef7"/>
                                                 </constraints>
                                             </view>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCN-uV-WZY" customClass="DesignableTextView" customModule="HeYueMerchant" customModuleProvider="target">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" editable="NO" text="这里是商家信息" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCN-uV-WZY">
                                                 <rect key="frame" x="20" y="549" width="560" height="90"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="oWE-X4-EBN"/>
                                                 </constraints>
-                                                <string key="text">这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。这里是商家信息的简介。</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
@@ -3513,6 +3517,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="MerchantIntroTextView" destination="eCN-uV-WZY" id="lC1-uq-3PW"/>
                         <outlet property="confirmButton" destination="LyV-wN-RVO" id="thO-N5-DcL"/>
                         <outlet property="goodsCountsButton" destination="auZ-9w-yIv" id="1h4-Cu-9DJ"/>
                         <outlet property="goodsCountsTextField" destination="kpM-sU-JLH" id="WKf-Ye-Rzm"/>
