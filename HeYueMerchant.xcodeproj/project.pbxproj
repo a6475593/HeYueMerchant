@@ -10,8 +10,6 @@
 		A71BDC961C9AAD2900B83BF5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71BDC831C9AAD2900B83BF5 /* Alamofire.swift */; };
 		A71BDC971C9AAD2900B83BF5 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71BDC841C9AAD2900B83BF5 /* Download.swift */; };
 		A71BDC981C9AAD2900B83BF5 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71BDC851C9AAD2900B83BF5 /* Error.swift */; };
-		A71BDC991C9AAD2900B83BF5 /* Info-tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = A71BDC861C9AAD2900B83BF5 /* Info-tvOS.plist */; };
-		A71BDC9A1C9AAD2900B83BF5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A71BDC871C9AAD2900B83BF5 /* Info.plist */; };
 		A71BDC9B1C9AAD2900B83BF5 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71BDC881C9AAD2900B83BF5 /* Manager.swift */; };
 		A71BDC9C1C9AAD2900B83BF5 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71BDC891C9AAD2900B83BF5 /* MultipartFormData.swift */; };
 		A71BDC9D1C9AAD2900B83BF5 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71BDC8A1C9AAD2900B83BF5 /* NetworkReachabilityManager.swift */; };
@@ -228,12 +226,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A71BDC821C9AAD2900B83BF5 /* Alamofire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alamofire.h; sourceTree = "<group>"; };
 		A71BDC831C9AAD2900B83BF5 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		A71BDC841C9AAD2900B83BF5 /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
 		A71BDC851C9AAD2900B83BF5 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
-		A71BDC861C9AAD2900B83BF5 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
-		A71BDC871C9AAD2900B83BF5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A71BDC881C9AAD2900B83BF5 /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		A71BDC891C9AAD2900B83BF5 /* MultipartFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
 		A71BDC8A1C9AAD2900B83BF5 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
@@ -569,12 +564,9 @@
 		A71BDC811C9AAD2900B83BF5 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				A71BDC821C9AAD2900B83BF5 /* Alamofire.h */,
 				A71BDC831C9AAD2900B83BF5 /* Alamofire.swift */,
 				A71BDC841C9AAD2900B83BF5 /* Download.swift */,
 				A71BDC851C9AAD2900B83BF5 /* Error.swift */,
-				A71BDC861C9AAD2900B83BF5 /* Info-tvOS.plist */,
-				A71BDC871C9AAD2900B83BF5 /* Info.plist */,
 				A71BDC881C9AAD2900B83BF5 /* Manager.swift */,
 				A71BDC891C9AAD2900B83BF5 /* MultipartFormData.swift */,
 				A71BDC8A1C9AAD2900B83BF5 /* NetworkReachabilityManager.swift */,
@@ -1337,7 +1329,6 @@
 			files = (
 				A7316DE11C57A01F00AC6262 /* bg0@2x.png in Resources */,
 				A7D8B0A91C84B151008BBFC2 /* SelectShop.xib in Resources */,
-				A71BDC991C9AAD2900B83BF5 /* Info-tvOS.plist in Resources */,
 				A7FEF8301C874FA800E357C0 /* MyGoodsCell.xib in Resources */,
 				A7316E021C57A03C00AC6262 /* TradeDetailsCell.xib in Resources */,
 				A7316DE31C57A01F00AC6262 /* bg2@2x.png in Resources */,
@@ -1345,7 +1336,6 @@
 				A7316E001C57A03C00AC6262 /* NoDataCell.xib in Resources */,
 				A7D8B0A71C84B151008BBFC2 /* InputCode.xib in Resources */,
 				A760009F1C60C47100503648 /* UMShareEditViewControlleriPad.xib in Resources */,
-				A71BDC9A1C9AAD2900B83BF5 /* Info.plist in Resources */,
 				A7316E0C1C57A05700AC6262 /* Assets.xcassets in Resources */,
 				A7316DFE1C57A03C00AC6262 /* Goods.xib in Resources */,
 				A7316DE21C57A01F00AC6262 /* bg1@2x.png in Resources */,
