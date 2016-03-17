@@ -141,7 +141,7 @@ public func AlamofireRequest(
 
     - returns: The created request.
 */
-public func AlamofireRequest(URLRequest: URLRequestConvertible) -> Request {
+public func Alamofirerequest(URLRequest: URLRequestConvertible) -> Request {
     return Manager.sharedInstance.request(URLRequest.URLRequest)
 }
 
@@ -159,7 +159,7 @@ public func AlamofireRequest(URLRequest: URLRequestConvertible) -> Request {
 
     - returns: The created upload request.
 */
-public func AlamofireUpload(
+public func Alamofireupload(
     method: Method,
     _ URLString: URLStringConvertible,
     headers: [String: String]? = nil,
@@ -177,7 +177,7 @@ public func AlamofireUpload(
 
     - returns: The created upload request.
 */
-public func AlamofireUpload(URLRequest: URLRequestConvertible, file: NSURL) -> Request {
+public func Alamofireupload(URLRequest: URLRequestConvertible, file: NSURL) -> Request {
     return Manager.sharedInstance.upload(URLRequest, file: file)
 }
 
@@ -193,7 +193,7 @@ public func AlamofireUpload(URLRequest: URLRequestConvertible, file: NSURL) -> R
 
     - returns: The created upload request.
 */
-public func AlamofireUpload(
+public func Alamofireupload(
     method: Method,
     _ URLString: URLStringConvertible,
     headers: [String: String]? = nil,
@@ -211,7 +211,7 @@ public func AlamofireUpload(
 
     - returns: The created upload request.
 */
-public func AlamofireUpload(URLRequest: URLRequestConvertible, data: NSData) -> Request {
+public func Alamofireupload(URLRequest: URLRequestConvertible, data: NSData) -> Request {
     return Manager.sharedInstance.upload(URLRequest, data: data)
 }
 
@@ -227,7 +227,7 @@ public func AlamofireUpload(URLRequest: URLRequestConvertible, data: NSData) -> 
 
     - returns: The created upload request.
 */
-public func AlamofireUpload(
+public func Alamofireupload(
     method: Method,
     _ URLString: URLStringConvertible,
     headers: [String: String]? = nil,
@@ -245,7 +245,7 @@ public func AlamofireUpload(
 
     - returns: The created upload request.
 */
-public func AlamofireUpload(URLRequest: URLRequestConvertible, stream: NSInputStream) -> Request {
+public func Alamofireupload(URLRequest: URLRequestConvertible, stream: NSInputStream) -> Request {
     return Manager.sharedInstance.upload(URLRequest, stream: stream)
 }
 
@@ -262,7 +262,7 @@ public func AlamofireUpload(URLRequest: URLRequestConvertible, stream: NSInputSt
                                          `MultipartFormDataEncodingMemoryThreshold` by default.
     - parameter encodingCompletion:      The closure called when the `MultipartFormData` encoding is complete.
 */
-public func AlamofireUpload(
+public func Alamofireupload(
     method: Method,
     _ URLString: URLStringConvertible,
     headers: [String: String]? = nil,
@@ -289,7 +289,7 @@ public func AlamofireUpload(
                                          `MultipartFormDataEncodingMemoryThreshold` by default.
     - parameter encodingCompletion:      The closure called when the `MultipartFormData` encoding is complete.
 */
-public func AlamofireUpload(
+public func Alamofireupload(
     URLRequest: URLRequestConvertible,
     multipartFormData: MultipartFormData -> Void,
     encodingMemoryThreshold: UInt64 = Manager.MultipartFormDataEncodingMemoryThreshold,
@@ -319,7 +319,7 @@ public func AlamofireUpload(
 
     - returns: The created download request.
 */
-public func AlamofireDownload(
+public func Alamofiredownload(
     method: Method,
     _ URLString: URLStringConvertible,
     parameters: [String: AnyObject]? = nil,
@@ -346,7 +346,7 @@ public func AlamofireDownload(
 
     - returns: The created download request.
 */
-public func AlamofireDownload(URLRequest: URLRequestConvertible, destination: Request.DownloadFileDestination) -> Request {
+public func Alamofiredownload(URLRequest: URLRequestConvertible, destination: Request.DownloadFileDestination) -> Request {
     return Manager.sharedInstance.download(URLRequest, destination: destination)
 }
 
@@ -363,6 +363,6 @@ public func AlamofireDownload(URLRequest: URLRequestConvertible, destination: Re
 
     - returns: The created download request.
 */
-public func AlamofireDownload(resumeData data: NSData, destination: Request.DownloadFileDestination) -> Request {
+public func Alamofiredownload(resumeData data: NSData, destination: Request.DownloadFileDestination) -> Request {
     return Manager.sharedInstance.download(data, destination: destination)
 }

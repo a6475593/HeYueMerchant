@@ -35,7 +35,6 @@ public class Manager {
     */
     public static let sharedInstance: Manager = {
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
-        configuration.timeoutIntervalForRequest = 5
         configuration.HTTPAdditionalHeaders = Manager.defaultHTTPHeaders
 
         return Manager(configuration: configuration)
@@ -452,6 +451,8 @@ public class Manager {
             } else if let delegate = self[task] {
                 delegate.URLSession(session, task: task, didCompleteWithError: error)
             }
+
+            NSNotificationCenter.defaultCenter().postNotificationName(Notifications.Task.DidComplete, object: task)
 
             self[task] = nil
         }
