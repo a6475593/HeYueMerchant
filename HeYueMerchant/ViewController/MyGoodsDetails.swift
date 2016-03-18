@@ -26,7 +26,7 @@ class MyGoodsDetails: BaseViewController ,UIAlertViewDelegate{
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: self, action: nil)
 
         
-        PhoneImageButton.addTarget(self, action: "TelShopAction", forControlEvents: .TouchUpInside)
+        PhoneImageButton.addTarget(self, action: #selector(MyGoodsDetails.TelShopAction), forControlEvents: .TouchUpInside)
         MyGoodsDetailsTextView.frame = CGRectMake(0, 0,  self.view.frame.width, MyGoodsDetailsView.frame.height)
         MyGoodsDetailsTextView.selectable = false
         MyGoodsDetailsTextView.editable = false

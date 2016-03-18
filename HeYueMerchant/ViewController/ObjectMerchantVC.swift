@@ -13,7 +13,7 @@ class ObjectMerchantVC: BaseViewController {
     @IBOutlet weak var userPhoneTextField: DesignableTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let SearchButton = UIBarButtonItem(title: "查询余额", style: UIBarButtonItemStyle.Done, target: self, action: "searchremainingaction")
+        let SearchButton = UIBarButtonItem(title: "查询余额", style: UIBarButtonItemStyle.Done, target: self, action: #selector(ObjectMerchantVC.searchremainingaction))
         self.navigationItem.rightBarButtonItem = SearchButton
         
     }

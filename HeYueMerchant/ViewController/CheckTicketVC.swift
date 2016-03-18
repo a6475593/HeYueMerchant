@@ -54,7 +54,7 @@ class CheckTicketVC: BaseViewController,showRMPickView,RegisterFirst, SegmentedC
             
             let picker = (controller as! RMPickerViewController).picker
             var selectString = String()
-            for var i=0;i<picker.numberOfComponents;i++ {
+            for i in 0 ..< picker.numberOfComponents {
                 selectString = shops[picker.selectedRowInComponent(i)]
             }
             self.selectshopview.SelectShopTF.text = selectString

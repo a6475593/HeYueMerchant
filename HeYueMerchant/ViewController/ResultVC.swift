@@ -19,7 +19,7 @@ class ResultVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Stop, target: self, action: "closeself")
+      self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Stop, target: self, action: #selector(ResultVC.closeself))
         self.view.backgroundColor = UIColor.grayColor()
         label.text = labelstring
        label.frame = CGRectMake(0, 64, 10, 20)

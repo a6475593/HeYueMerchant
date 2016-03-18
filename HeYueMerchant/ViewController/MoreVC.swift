@@ -34,13 +34,13 @@ class MoreVC: BaseViewController,UIAlertViewDelegate,UMSocialUIDelegate{
         super.viewDidLoad()
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: self, action: nil)
-        logoutButton.addTarget(self, action: "logoutaction", forControlEvents: .TouchUpInside)
-        TelePhoneButton.addTarget(self, action: "telephoneaction", forControlEvents: .TouchUpInside)
-        ClearCacheButton.addTarget(self, action: "clearcacheaction", forControlEvents: .TouchUpInside)
-        ShowVersionMessage.addTarget(self, action: "showversionmessage", forControlEvents: .TouchUpInside)
-        DismissVersionMessage.addTarget(self, action: "dismissversionmessage", forControlEvents: .TouchUpInside)
-        VersionMessageDismissButton.addTarget(self, action: "dismissversionmessage", forControlEvents: .TouchUpInside)
-        ShareButton.addTarget(self, action: "shareaction", forControlEvents: .TouchUpInside)
+        logoutButton.addTarget(self, action: #selector(MoreVC.logoutaction), forControlEvents: .TouchUpInside)
+        TelePhoneButton.addTarget(self, action: #selector(MoreVC.telephoneaction), forControlEvents: .TouchUpInside)
+        ClearCacheButton.addTarget(self, action: #selector(MoreVC.clearcacheaction), forControlEvents: .TouchUpInside)
+        ShowVersionMessage.addTarget(self, action: #selector(MoreVC.showversionmessage), forControlEvents: .TouchUpInside)
+        DismissVersionMessage.addTarget(self, action: #selector(MoreVC.dismissversionmessage), forControlEvents: .TouchUpInside)
+        VersionMessageDismissButton.addTarget(self, action: #selector(MoreVC.dismissversionmessage), forControlEvents: .TouchUpInside)
+        ShareButton.addTarget(self, action: #selector(MoreVC.shareaction), forControlEvents: .TouchUpInside)
         
         
         SetUpClearAlertView()

@@ -21,7 +21,7 @@ class InputCode: UIView {
     @IBOutlet weak var CodeTypeControl: SegmentedControl!
     
     override func drawRect(rect: CGRect) {
-        InputCodeBT.addTarget(self, action: "InputCodeAction", forControlEvents: .TouchUpInside)
+        InputCodeBT.addTarget(self, action: #selector(InputCode.InputCodeAction), forControlEvents: .TouchUpInside)
     }
     
     func InputCodeAction(){

@@ -40,7 +40,7 @@ class SearchInformationVC: BaseViewController,UIPickerViewDelegate,UIPickerViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let Search = UIBarButtonItem(title: "搜索", style: UIBarButtonItemStyle.Done, target: self, action: "Search")
+        let Search = UIBarButtonItem(title: "搜索", style: UIBarButtonItemStyle.Done, target: self, action: #selector(SearchInformationVC.Search))
         self.navigationItem.rightBarButtonItem = Search
         
         let year = Int(NSString(string: String(NSDate())).substringWithRange(NSMakeRange(0, 4)))!
@@ -68,10 +68,10 @@ class SearchInformationVC: BaseViewController,UIPickerViewDelegate,UIPickerViewD
             IsNoLessThanThirtyOne = true
         }
         
-        for var i=2000;i<2101;i++ {
+        for i in 2000 ..< 2101 {
             years.addObject("\(i)年")
         }
-        for var i=1;i<32;i++ {
+        for i in 1 ..< 32 {
             days.addObject("\(i)日")
         }
     }
@@ -89,7 +89,7 @@ class SearchInformationVC: BaseViewController,UIPickerViewDelegate,UIPickerViewD
         let selectAction = RMAction.init(title: "确定", style: .Destructive) { (controller:RMActionController) -> Void in
             let selectRows = NSMutableArray()
             let picker = (controller as! RMPickerViewController).picker
-            for var i=0;i<picker.numberOfComponents;i++ {
+            for i in 0 ..< picker.numberOfComponents {
                 selectRows.addObject(picker.selectedRowInComponent(i))
             }
             var Date = String()
@@ -134,7 +134,7 @@ class SearchInformationVC: BaseViewController,UIPickerViewDelegate,UIPickerViewD
         let selectAction = RMAction.init(title: "确定", style: .Destructive) { (controller:RMActionController) -> Void in
             let selectRows = NSMutableArray()
             let picker = (controller as! RMPickerViewController).picker
-            for var i=0;i<picker.numberOfComponents;i++ {
+            for i in 0 ..< picker.numberOfComponents {
                 selectRows.addObject(picker.selectedRowInComponent(i))
             }
             var Date = String()
@@ -179,7 +179,7 @@ class SearchInformationVC: BaseViewController,UIPickerViewDelegate,UIPickerViewD
         let selectAction = RMAction.init(title: "确定", style: .Destructive) { (controller:RMActionController) -> Void in
             let picker = (controller as! RMPickerViewController).picker
             var selectString = String()
-            for var i=0;i<picker.numberOfComponents;i++ {
+            for i in 0 ..< picker.numberOfComponents {
                 selectString = self.orderstatus[picker.selectedRowInComponent(i)]
             }
             self.orderStatusTextField.text = selectString
@@ -363,21 +363,21 @@ class SearchInformationVC: BaseViewController,UIPickerViewDelegate,UIPickerViewD
         }
     }
     func setCalendar(picker:RMPickerViewController){
-        for var i=2000;i<2101;i++ {
+        for i in 2000 ..< 2101 {
             let year = NSString(string: String(NSDate())).substringWithRange(NSMakeRange(0, 4))
             if String(i) == year {
                 picker.picker.selectRow(i-2000, inComponent: 0, animated: true)
             }
         }
         
-        for var i=0;i<12;i++ {
+        for i in 0 ..< 12 {
             let month = Int(NSString(string: String(NSDate())).substringWithRange(NSMakeRange(5, 2)))!
             if i == month{
                 picker.picker.selectRow(i-1, inComponent: 1, animated: true)
             }
         }
         
-        for var i=0;i<31;i++ {
+        for i in 0 ..< 31 {
             let day = NSString(string: String(NSDate())).substringWithRange(NSMakeRange(8, 2))
             if String(i) == day{
                 picker.picker.selectRow(i-1, inComponent: 2, animated: true)

@@ -24,9 +24,9 @@ class SubmitAuthCodeVC: BaseViewController,UITextFieldDelegate {
        
         ObtainAuthCodeTextField.delegate = self
         obtainauthcodeaction()
-        ObtainAuthCodeButton.addTarget(self, action: "obtainauthcodeaction", forControlEvents: .TouchUpInside)
-        SubmitAutoCode.addTarget(self, action: "submitautocodeaction", forControlEvents: .TouchUpInside)
-        let Obtain = UITapGestureRecognizer(target: self, action: "foucus")
+        ObtainAuthCodeButton.addTarget(self, action: #selector(SubmitAuthCodeVC.obtainauthcodeaction), forControlEvents: .TouchUpInside)
+        SubmitAutoCode.addTarget(self, action: #selector(SubmitAuthCodeVC.submitautocodeaction), forControlEvents: .TouchUpInside)
+        let Obtain = UITapGestureRecognizer(target: self, action: #selector(SubmitAuthCodeVC.foucus))
         ObtainAuthCodeImage.addGestureRecognizer(Obtain)
     }
     func foucus(){
@@ -43,7 +43,7 @@ class SubmitAuthCodeVC: BaseViewController,UITextFieldDelegate {
     
     func obtainauthcodeaction(){
         //MARK 验证验证码的操作
-        countDownTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "timeFireMethod", userInfo: nil, repeats: true)
+        countDownTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(SubmitAuthCodeVC.timeFireMethod), userInfo: nil, repeats: true)
         countDownTimer.fire()
     }
     
@@ -52,7 +52,7 @@ class SubmitAuthCodeVC: BaseViewController,UITextFieldDelegate {
         if secondCountDown > 0{
             ObtainAuthCodeButton.backgroundColor = UIColor.grayColor()
             ObtainAuthCodeButton.enabled = false
-            secondCountDown--
+            secondCountDown -= 1
             ObtainAuthCodeButton.titleLabel?.text = "\(secondCountDown)秒后获取"
             ObtainAuthCodeButton.setTitle("\(secondCountDown)秒后获取", forState: UIControlState.Normal)
         }else if secondCountDown == 0{

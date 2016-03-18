@@ -20,7 +20,7 @@ class SelectShop: UIView {
     
     override func drawRect(rect: CGRect) {
         // Drawing code
-        SelectShopBT.addTarget(self, action: "showRMPcikViewAction", forControlEvents: .TouchUpInside)
+        SelectShopBT.addTarget(self, action: #selector(SelectShop.showRMPcikViewAction), forControlEvents: .TouchUpInside)
         
     }
     func showRMPcikViewAction(){

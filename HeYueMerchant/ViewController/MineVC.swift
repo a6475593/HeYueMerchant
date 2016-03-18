@@ -44,8 +44,8 @@ class MineVC: BaseViewController ,UIActionSheetDelegate,UINavigationControllerDe
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: self, action: nil)
         checkPortraitBT.addTarget(self, action:
-            "toCheckPortrait", forControlEvents: .TouchUpInside)
-        CashButton.addTarget(self, action: "cashaction", forControlEvents: .TouchUpInside)
+            #selector(MineVC.toCheckPortrait), forControlEvents: .TouchUpInside)
+        CashButton.addTarget(self, action: #selector(MineVC.cashaction), forControlEvents: .TouchUpInside)
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
         PortraitPickerController.allowsEditing = true
         PortraitPickerController.delegate = self
@@ -110,11 +110,11 @@ class MineVC: BaseViewController ,UIActionSheetDelegate,UINavigationControllerDe
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     func SetUpScrollView(){
-        for var i = 1;i<60;i++ {
+        for i in 1 ..< 60 {
             let image = UIImage(named: "dropdown_anim__000\(i)")
             Idleimages.addObject(image!)
         }
-        for var i = 1 ; i < 3; i++ {
+        for i in 1  ..< 3 {
             let image = UIImage(named: "dropdown_loading_0\(i)")
             Refreshingimages.addObject(image!)
         }

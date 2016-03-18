@@ -120,9 +120,7 @@ public func AlamofireRequest(
     _ URLString: URLStringConvertible,
     parameters: [String: AnyObject]? = nil,
     encoding: ParameterEncoding = .URL,
-    headers: [String: String]? = nil)
-    -> Request
-{
+    headers: [String: String]? = nil)-> Request{
     return Manager.sharedInstance.request(
         method,
         URLString,

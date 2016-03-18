@@ -40,7 +40,7 @@ class EveryOrderDetailsTVC: BaseTableViewController {
         guard Temporary else{
             return
         }
-        let SearchButton = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "tosearchinfomation")
+        let SearchButton = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: #selector(EveryOrderDetailsTVC.tosearchinfomation))
         self.navigationItem.rightBarButtonItem = SearchButton
     }
     
@@ -58,11 +58,11 @@ class EveryOrderDetailsTVC: BaseTableViewController {
         tableView.registerNib(everyorderdetailscellnib, forCellReuseIdentifier: EveryOrderIdentifier)
         tableView.registerNib(nodatacellnib, forCellReuseIdentifier: NoDataCellIdentifier)
         
-        for var i = 1;i<60;i++ {
+        for i in 1 ..< 60 {
             let image = UIImage(named: "dropdown_anim__000\(i)")
             Idleimages.addObject(image!)
         }
-        for var i = 1 ; i < 3; i++ {
+        for i in 1  ..< 3 {
             let image = UIImage(named: "dropdown_loading_0\(i)")
             Refreshingimages.addObject(image!)
         }

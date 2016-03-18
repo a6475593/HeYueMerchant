@@ -59,14 +59,14 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         ShadowAnimation.start()
-        isRememberBT.addTarget(self, action: "isRememberpasswordBTAction", forControlEvents: .TouchUpInside)
-        resigntextfieldBT.addTarget(self, action: "resignfirsttextfield", forControlEvents: .TouchUpInside)
+        isRememberBT.addTarget(self, action: #selector(LoginVC.isRememberpasswordBTAction), forControlEvents: .TouchUpInside)
+        resigntextfieldBT.addTarget(self, action: #selector(LoginVC.resignfirsttextfield), forControlEvents: .TouchUpInside)
         
-        let usernamerecognizer = UITapGestureRecognizer(target: self, action: "userbecomefirst")
+        let usernamerecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginVC.userbecomefirst))
         usernameImage.addGestureRecognizer(usernamerecognizer)
-        let passwordrecognizer = UITapGestureRecognizer(target: self, action: "passwordbecomefirst")
+        let passwordrecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginVC.passwordbecomefirst))
         passwordImage.addGestureRecognizer(passwordrecognizer)
-        loginButton.addTarget(self, action: "loginAction", forControlEvents: .TouchUpInside)
+        loginButton.addTarget(self, action: #selector(LoginVC.loginAction), forControlEvents: .TouchUpInside)
         WhethershowUserGuider()
         mainIndicator.stopAnimating()
         ShareAPPlication.networkActivityIndicatorVisible = false
@@ -115,7 +115,7 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
             let page4 = EAIntroPage()
             let pagearray = [page1,page2,page3,page4]
             
-            for var i = 0 ; i < 4; i++ {
+            for i in 0  ..< 4 {
                 pagearray[i].title = titlearray[i]
                 pagearray[i].desc = introducearray[i]
                 pagearray[i].bgImage = UIImage(named: "bg\(i).png")

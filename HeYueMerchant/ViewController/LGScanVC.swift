@@ -39,7 +39,7 @@ class LGScanVC: BaseViewController , AVCaptureMetadataOutputObjectsDelegate{
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.setupCamera()
-        timer = NSTimer(timeInterval: 0.02, target: self, selector: "scanLineAnimation", userInfo: nil, repeats: true)
+        timer = NSTimer(timeInterval: 0.02, target: self, selector: #selector(LGScanVC.scanLineAnimation), userInfo: nil, repeats: true)
         NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
         self.session.startRunning()
         
@@ -184,7 +184,7 @@ class LGScanVC: BaseViewController , AVCaptureMetadataOutputObjectsDelegate{
         let downHeight = rect.size.height
         
         if upORdown == false {
-            traceNumber++
+            traceNumber += 1
             line.frame = CGRectMake(lineFrameX, lineFrameY + CGFloat(2 * traceNumber), downHeight, 2)
             if CGFloat(2 * traceNumber) > downHeight - 2 {
                 upORdown = true
@@ -192,7 +192,7 @@ class LGScanVC: BaseViewController , AVCaptureMetadataOutputObjectsDelegate{
         }
         else
         {
-            traceNumber--
+            traceNumber -= 1
             line.frame = CGRectMake(lineFrameX, lineFrameY + CGFloat(2 * traceNumber), downHeight, 2)
             if traceNumber == 0 {
                 upORdown = false
