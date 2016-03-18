@@ -210,9 +210,9 @@ class MoreVC: BaseViewController,UIAlertViewDelegate,UMSocialUIDelegate{
         
     }
     func didFinishGetUMSocialDataInViewController(response: UMSocialResponseEntity!) {
-        //        if response.responseCode == UMSResponseCodeSuccess {
-        //            LeafNotification.showInController(self, withText: "分享成功", type: LeafNotificationTypeSuccess)
-        //        }
+                if response.responseCode == UMSResponseCodeSuccess {
+                    LeafNotification.showInController(self, withText: "分享成功", type: LeafNotificationTypeSuccess)
+                }
     }
     
     /*

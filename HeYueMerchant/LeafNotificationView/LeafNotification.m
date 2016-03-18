@@ -28,13 +28,13 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.layer.backgroundColor = [UIColor whiteColor].CGColor;
+        self.layer.backgroundColor = [UIColor blackColor].CGColor;
         self.layer.cornerRadius = 5.0f;
-        self.layer.opacity = 0.75f;
+        self.layer.opacity = 0.75;
         
         _textLabel = [[UILabel alloc] initWithFrame:frame];
 //        self.textLabel.backgroundColor = [UIColor clearColor];
-        self.textLabel.textColor = [UIColor blackColor];
+        self.textLabel.textColor = [UIColor whiteColor];
         _flagImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, DEFAULT_EDGE, DEFAULT_EDGE)];
         self.duration = DEFAULT_DURATION;
         
@@ -62,8 +62,7 @@
     }
 }
 -(instancetype)initWithController:(UIViewController *)controller text:(NSString *)text{
-    self = [self initWithFrame:CGRectMake(0, -DEFAULT_HEIGHT, controller.view.bounds.size.width*DEFAULT_RATE_WIDTH, DEFAULT_HEIGHT)];
-    if(self){
+    if([self initWithFrame:CGRectMake(0, -DEFAULT_HEIGHT, controller.view.bounds.size.width*DEFAULT_RATE_WIDTH, DEFAULT_HEIGHT)]){
         self.text = text;
         self.controller = controller;
         self.textLabel.text = text;
@@ -84,16 +83,12 @@
 }
 -(void)showWithAnimation:(BOOL)animation{
     CGRect frame = self.frame;
-    if([self.controller.parentViewController isKindOfClass:[UINavigationController class]] && !self.controller.navigationController.navigationBar.isHidden ){
-        frame.origin.y = -DEFAULT_SPACE_IMG_TEXT;
-    }
-    /*
-     else if ([self.controller.parentViewController isKindOfClass:[UINavigationController class]] && !self.controller.navigationController.navigationBar.isHidden && self.controller.edgesForExtendedLayout != UIRectEdgeNone){
-     frame.origin.y = -DEFAULT_SPACE_IMG_TEXT;
-     }
-    */
-    else{
+    if([self.controller.parentViewController isKindOfClass:[UINavigationController class]] && !self.controller.navigationController.navigationBar.isHidden && self.controller.automaticallyAdjustsScrollViewInsets == false){
         frame.origin.y = 64-DEFAULT_SPACE_IMG_TEXT;
+    }else if ([self.controller.parentViewController isKindOfClass:[UINavigationController class]] && !self.controller.navigationController.navigationBar.isHidden && self.controller.automaticallyAdjustsScrollViewInsets == true ){
+        frame.origin.y = -DEFAULT_SPACE_IMG_TEXT;
+    }else{
+        frame.origin.y = -DEFAULT_SPACE_IMG_TEXT;
     }
     if(animation){
         [UIView animateWithDuration:DEFAULT_ANIMATON_DURATION animations:^{

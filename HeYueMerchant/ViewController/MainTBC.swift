@@ -12,9 +12,10 @@ class MainTBC: UITabBarController ,SKSplashDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+     
         self.view.backgroundColor = UIColor(red: 234/255, green: 234/255, blue: 234/255, alpha: 1.0)
         let allItems  = self.tabBar.items!
-        
         
         let MineTabbarItem = allItems[0]
         let MoreTabbarItem = allItems[1]

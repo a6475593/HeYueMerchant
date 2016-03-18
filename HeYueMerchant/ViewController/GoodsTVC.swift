@@ -19,7 +19,7 @@ class GoodsTVC: BaseTableViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: self, action: nil)
         setupView()
-        
+    
     }
     
     func setupView(){

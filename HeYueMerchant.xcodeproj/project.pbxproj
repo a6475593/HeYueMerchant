@@ -1299,7 +1299,6 @@
 				TargetAttributes = {
 					A721DEBA1C31540E008F34F5 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 9E8S8ZZBL6;
 					};
 				};
 			};
@@ -1651,7 +1650,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LanchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: YuKun Wang (2ZVL48HM7Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/HeYueMerchant/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI";
 				INFOPLIST_FILE = HeYueMerchant/Original/Info.plist;
@@ -1677,7 +1676,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LanchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: YuKun Wang (2ZVL48HM7Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/HeYueMerchant/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI";
 				INFOPLIST_FILE = HeYueMerchant/Original/Info.plist;

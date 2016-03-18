@@ -58,6 +58,9 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         ShadowAnimation.start()
         isRememberBT.addTarget(self, action: #selector(LoginVC.isRememberpasswordBTAction), forControlEvents: .TouchUpInside)
         resigntextfieldBT.addTarget(self, action: #selector(LoginVC.resignfirsttextfield), forControlEvents: .TouchUpInside)
@@ -86,6 +89,7 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
     func resignfirsttextfield(){
         usernameTF.resignFirstResponder()
         passwordTF.resignFirstResponder()
+        
     }
     
     func userbecomefirst(){
@@ -153,10 +157,20 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
         let password = self.passwordTF.text?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         if identifier == "logintomine"{
             let url = "http://apis.baidu.com/netpopo/express/express2"
+            /*
+             var ala : Manager?
+             let con = NSURLSessionConfiguration.defaultSessionConfiguration()
+             con.timeoutIntervalForRequest = 5
+             ala = Manager(configuration:  con)
+             */
             AlamofireRequest(.GET, url, parameters: nil, encoding: .JSON).responseJSON { (response) -> Void in
                 if response.result.isFailure {
+                    if response.result.error ==  NSURLErrorTimedOut{
+                        LeafNotification.showInController(self, withText: "网络连接超时", type: LeafNotificationTypeWarrning)
+                    }
                     LeafNotification.showInController(self, withText: "您的网络好像挂了", type: LeafNotificationTypeWarrning)
                     self.mainIndicator.stopAnimating()
+                    //
                 }else if response.result.isSuccess {
                     //MARK
                     
@@ -208,29 +222,29 @@ class LoginVC: BaseViewController,EAIntroDelegate,UITextFieldDelegate{
     
 }
 /*
-
-
-
-
-let url = "http://192.168.1.109:8080/ws/fastPayResultSearch.action"
-let softurl = "http://www.test.and361.com:9064/ws/fastPayResultSearch.action"
-//        let url = "http://192.168.1.109:8080/ws/queryBalance.action"
-//        let softurl = "http://www.test.and361.com:9064/ws/queryBalance.action"
-//let parameters = ["shopId":"2888","terminalNo":"88156408","encodingType":"1","signType":"1","orderId":"20160127094158000005","amount":"2","signData":"61ED50B5CBB73FF67792763C4AD1CBFB"]
-//        let parameters = ["shopId":"2888","terminalNo":"88156408","encodingType":"1","signType":"1","mobile":"18232184018","signData":"40B42209E9CED00113D2BCE21CBEAB81"]//,"signData":"61ED50B5CBB73FF67792763C4AD1CBFB"
-
-//B0365DB899094D593D3CB2D7514CD153
-let parameters = ["shopId":"2888","terminalNo":"88156408","encodingType":"1","signType":"1","orderId":"20160128134112000019","signData":"B0365DB899094D593D3CB2D7514CD153"]
-
-let parameter : NSString = "shopId=2888&terminalNo=88156408&encodingType=1&signType=1&orderId=20160128134112000019"
-
-AlamofireRequest(.POST, softurl, parameters: parameters, encoding: ParameterEncoding.URL).responseJSON { (response) -> Void in
-print(response.result.error)
-if let value = response.result.value{
-let data = JSON(value)
-print("from huaiyu data is  \(data)")
-}
-}
-let shuzi = "123456"
-print( shuzi.MD5HexDigest() )
-*/
+ 
+ 
+ 
+ 
+ let url = "http://192.168.1.109:8080/ws/fastPayResultSearch.action"
+ let softurl = "http://www.test.and361.com:9064/ws/fastPayResultSearch.action"
+ //        let url = "http://192.168.1.109:8080/ws/queryBalance.action"
+ //        let softurl = "http://www.test.and361.com:9064/ws/queryBalance.action"
+ //let parameters = ["shopId":"2888","terminalNo":"88156408","encodingType":"1","signType":"1","orderId":"20160127094158000005","amount":"2","signData":"61ED50B5CBB73FF67792763C4AD1CBFB"]
+ //        let parameters = ["shopId":"2888","terminalNo":"88156408","encodingType":"1","signType":"1","mobile":"18232184018","signData":"40B42209E9CED00113D2BCE21CBEAB81"]//,"signData":"61ED50B5CBB73FF67792763C4AD1CBFB"
+ 
+ //B0365DB899094D593D3CB2D7514CD153
+ let parameters = ["shopId":"2888","terminalNo":"88156408","encodingType":"1","signType":"1","orderId":"20160128134112000019","signData":"B0365DB899094D593D3CB2D7514CD153"]
+ 
+ let parameter : NSString = "shopId=2888&terminalNo=88156408&encodingType=1&signType=1&orderId=20160128134112000019"
+ 
+ AlamofireRequest(.POST, softurl, parameters: parameters, encoding: ParameterEncoding.URL).responseJSON { (response) -> Void in
+ print(response.result.error)
+ if let value = response.result.value{
+ let data = JSON(value)
+ print("from huaiyu data is  \(data)")
+ }
+ }
+ let shuzi = "123456"
+ print( shuzi.MD5HexDigest() )
+ */
